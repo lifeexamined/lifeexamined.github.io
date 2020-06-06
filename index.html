@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>Nick Novik Design</title>
+        <link href="main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="jquery-latest.min.js"></script>
+        <script id="data" type="application/json"></script>
+    </head>
+    <body>
+        <div id="bg-cover"><div>
+        <div data-include="header"></div>
+
+        <!-- <div class="container">
+        <div class="title"></div>
+        <div class="content"></div>
+        </div>
+        
+        <script src="blogpost.js"></script>
+        <script>
+        console.warn(window.blog);
+        var blogpostObj = window.blog;
+        console.log(blogpostObj.June[0].content);
+        
+        for(i=0; i < blogpostObj.June.length; i++) {
+            $(document.body).append("<div class='title'><h2>" + blogpostObj.June[i].title + "</h2></div>");        
+    
+                if(window.blog.June[i].content[0].length > 100){ 
+                    
+                    $(document.body).append("<div class='content'><p>" + window.blog.June[i].content[0].substr(0, window.blog.June[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p></div>");
+
+                } else { $(document.body).append("<div class='content'><p>" + window.blog.June[i].content + "</p></div>"); }
+        }
+
+        </script> -->
+        <div data-include="footer"></div>
+        <script>
+            $(function(){
+              var includes = $('[data-include]');
+              jQuery.each(includes, function(){
+                var file = $(this).data('include') + '.html';
+                $(this).load(file);
+              });
+            });
+          </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>Nick Novik Design</title>
+        <link href="blog.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="jquery-latest.min.js"></script>
+        <script id="data" type="application/json"></script>
+    </head>
+    <body>
+        <div id="bg-cover"><div>
+        
+        <div data-include="single-header"></div>
+
+        <div class="content-wrapper">
+        <div class="container">
+        <div class="title"><h2>Gallery</h2></div>
+        <div class="content"><img src='blogposts/06-2020/06-02-2020/001.jpg'></div>
+        </div>
+        </div>
+        <div data-include="single-footer"></div>
+        <script>
+            $(function(){
+              var includes = $('[data-include]');
+              jQuery.each(includes, function(){
+                var file = $(this).data('include') + '.html';
+                $(this).load(file);
+              });
+            });
+        </script>
+    </body>
+</html>
