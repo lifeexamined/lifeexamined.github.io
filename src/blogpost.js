@@ -14,7 +14,7 @@ window.blog = {
                     [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec consequat eros. Suspendisse in dolor volutpat sem varius ultrices dignissim ut dolor. Pellentesque volutpat justo purus, at tincidunt nisl commodo id. Donec cursus rutrum enim et ullamcorper. Nullam dolor mauris, efficitur et vestibulum eget, fermentum a lectus. Quisque non augue finibus, sollicitudin felis sit amet, pulvinar augue. Proin vehicula ante at tortor efficitur, et pretium elit auctor. Sed id ultrices neque. Nam viverra neque quis sem ornare, a efficitur tortor sagittis. Donec interdum viverra lorem, eget bibendum leo luctus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis id neque vitae metus efficitur iaculis.",
 
-                    "<img src='blogposts/06-2020/06-02-2020/001.jpg'>", 
+                    "<img src='/blogposts/06-2020/06-02-2020/001.jpg'>", 
 
                     "Quisque ac nisi in nibh iaculis ullamcorper a lacinia felis. Maecenas eu mi aliquet, facilisis erat at, porta odio. Morbi at lacus hendrerit, vestibulum purus quis, sagittis tellus. Nam malesuada ex ac maximus porta. Integer tempus congue urna, eget luctus ex ultrices sit amet. Quisque sagittis rutrum augue, vitae ornare neque facilisis et. Donec mollis diam massa, vitae cursus elit hendrerit a. Etiam id finibus est. In tincidunt, massa et eleifend pretium, nisi ligula iaculis ex, id posuere purus lorem a massa.",
                     
