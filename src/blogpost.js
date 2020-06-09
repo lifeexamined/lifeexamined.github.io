@@ -9,7 +9,8 @@ window.blog = {
                 {
                 "number":"001",
                 "date":"06-05-2020",
-                "title":"The Road", 
+                "title":"The Road",
+                "twitterImage": window.location.href + "/blogposts/06-2020/06-05/2020",
                 "content": 
                     [
                     
