@@ -25,23 +25,15 @@
         </div>
         </div>  
         <div data-include="single-footer"></div>
+        
         <script src="blogpost.js"></script>
+        
         <script src="https://spreadsheets.google.com/feeds/cells/1xqQ-hLPEGfZ5Wq78Opvaf-sqMRUfUcHWHkpskaHZQ8Q/1/public/full?alt=json"></script>
+        
         <script>
         console.warn(window.blog);
         var blogpostObj = window.blog;
         console.log(blogpostObj.blog[0].date, blogpostObj.blog[0].data[0].date);
-         
-        // for(i=0; i < blogpostObj.June.length; i++) {
-        //     $(".container").append("<div class='title'><h2>" + blogpostObj.June[i].title + "</h2></div>");        
-    
-        //         if(window.blog.June[i].content[0].length > 100){ 
-                    
-        //             $(".container").append("<div class='content'><p>" + window.blog.June[i].content[0].substr(0, window.blog.June[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p></div>");
-
-        //         } else { $(".container").append("<div class='content'><p>" + window.blog.June[i].content + "</p></div>"); }
-        // }
-
 
         console.log(Array.isArray(blogpostObj.blog[0].data[0].content));
 
@@ -51,7 +43,9 @@
             for(var t=0; t < blogpostObj.blog[i].data.length; t++) {
                 console.log(blogpostObj.blog[i].data[t].date, blogpostObj.blog[i].data[t].title);
 
-                $(".container").append("<div class='mdl-layout mdl-js-layout mdl-color--grey-100'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><div class='img-container'><img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></div></figure><div class='card-content no-padding-bottom'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div></div><hr class='mdl-card-divider'><div class='card-content'><div class='mdl-card__actions mdl-card--border'><a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><a class='twitter-share-button' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title.toString() + " target='_blank'><i class='fa fa-share-alt' aria-hidden='true'></i></a></div></div</div></div></main></div>");
+                var postTitle = blogpostObj.blog[i].data[t].postTitle.toString();
+
+                $(".container").append("<div class='mdl-layout mdl-js-layout mdl-color--grey-100'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><div class='img-container'><img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></div></figure><div class='card-content no-padding-bottom'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div></div><hr class='mdl-card-divider'><div class='card-content'><div class='mdl-card__actions mdl-card--border'><a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><a class='twitter-share-button' target='_blank' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title + " " + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 97)) + "... " + window.location.href + "?id1=" + i + "&id2=" + t + "'><i class='fa fa-share-alt' aria-hidden='true'></i></a></div></div</div></div></main></div>");
 
                 $("#card-" + i + "-" + t + "-title").append("<h3 data-id1='" + i + "' data-id2='" + t + "' id='" +  i + "-" + t + "' class='blog-title'>" + blogpostObj.blog[i].data[t].title + "</h3></a>");
                 
