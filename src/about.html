@@ -7,7 +7,7 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <title>Examined!</title>
-        <link href="blog.css" rel="stylesheet">
+        <link href="about.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
         <script type="text/javascript" src="jquery-latest.min.js"></script>
         <script id="data" type="application/json"></script>
@@ -20,7 +20,83 @@
         <div class="content-wrapper">
         <div class="container">
         <div class="title"><h2>About</h2></div>
-        <div class="content"><p>"Unexamined life is not worth living," the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p></div>
+        <div class="content">
+          <p>"Unexamined life is not worth living," the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
+        </div>
+        <div class="content-container">
+        <div class='mdl-layout mdl-js-layout mdl-color--grey-100'>
+          <main class='mdl-layout__content'>
+            <div class='mdl-grid'>
+              <div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'>
+                <figure class='mdl-card__media'>
+                  <div class='img-container'>
+                    <img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../about/kirill-novik.jpg'>
+                  </div>
+                </figure>
+                <div class='card-content no-padding-bottom'>
+                  <div id='card-" + i + "-" + t + "-title' class='mdl-card__title'>
+                    <h3>Kirill Novik</h3>
+                  </div>
+                    <div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'>
+                      <p>Web Developer</p>
+                    </div>
+                  </div>
+                  <hr class='mdl-card-divider'>
+                  <div class='card-content'>
+                    <div class='mdl-card__actions mdl-card--border'>
+                      <a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>
+                        Read More
+                      </a>
+                      <div class='mdl-layout-spacer'>
+                      </div>
+                      <a class='twitter-share-button' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title.toString() + " target='_blank'>
+                        <i class='fa fa-share-alt' aria-hidden='true'>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+
+          <div class='mdl-layout mdl-js-layout mdl-color--grey-100'>
+            <main class='mdl-layout__content'>
+              <div class='mdl-grid'>
+                <div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'>
+                  <figure class='mdl-card__media'>
+                    <div class='img-container'>
+                      <img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../about/kirill-novik.jpg'>
+                    </div>
+                  </figure>
+                  <div class='card-content no-padding-bottom'>
+                    <div id='card-" + i + "-" + t + "-title' class='mdl-card__title'>
+                      <h3>Nikita Novik</h3>
+                    </div>
+                      <div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'>
+                        <p>Full-Stack Web Designer</p>
+                      </div>
+                    </div>
+                    <hr class='mdl-card-divider'>
+                    <div class='card-content'>
+                      <div class='mdl-card__actions mdl-card--border'>
+                        <a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>
+                          Read More
+                        </a>
+                        <div class='mdl-layout-spacer'>
+                        </div>
+                        <a class='twitter-share-button' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title.toString() + " target='_blank'>
+                          <i class='fa fa-share-alt' aria-hidden='true'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+            </div>
+
         </div>
         </div>
         <div data-include="single-footer"></div>
