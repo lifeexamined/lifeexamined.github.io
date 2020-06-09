@@ -6,7 +6,12 @@
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
-        <title>Nick Novik Design</title>
+        <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="https://lifeexamined.github.io" />
+            <meta name="twitter:title" content="" />
+            <meta name="twitter:description" content="" />
+            <meta name="twitter:image" content="" />
+        <title>Examined!</title>
         <link href="blog.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
         <script type="text/javascript" src="jquery-latest.min.js"></script>
@@ -24,57 +29,9 @@
         </div>
         </div>  
         <div data-include="single-footer"></div>
+
         <script src="blogpost.js"></script>
-        <!-- <script>
-        console.warn(window.blog);
-        var blogpostObj = window.blog;
-        console.log(blogpostObj.blog[0].date, blogpostObj.blog[0].data[0].date);
-         
-        // for(i=0; i < blogpostObj.June.length; i++) {
-        //     $(".container").append("<div class='title'><h2>" + blogpostObj.June[i].title + "</h2></div>");        
-    
-        //         if(window.blog.June[i].content[0].length > 100){ 
-                    
-        //             $(".container").append("<div class='content'><p>" + window.blog.June[i].content[0].substr(0, window.blog.June[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p></div>");
-
-        //         } else { $(".container").append("<div class='content'><p>" + window.blog.June[i].content + "</p></div>"); }
-        // }
-
-
-        console.log(Array.isArray(blogpostObj.blog[0].data[0].content));
-
-        for (var i=0; i < blogpostObj.blog.length; i++){
-            console.log(blogpostObj.blog[i].date);        
-
-            for(var t=0; t < blogpostObj.blog[i].data.length; t++) {
-                console.log(blogpostObj.blog[i].data[t].date, blogpostObj.blog[i].data[t].title);
-
-                $(".container").append("<h3 id='" +  i + "-" + t + "' class='blog-title'>" + blogpostObj.blog[i].data[t].title + "</h3></a>");
-                
-                console.log(blogpostObj.blog[i].data[t].content[0].length);
-
-
-                if(blogpostObj.blog[i].data[t].content[0].length > 100){
-                    
-                    $(".container").append("<p>" + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
-                    
-                 } else {
-                    $(".container").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
-                }
-
-
-                // if(Array.isArray(blogpostObj.blog[i].data[t].content)){
-                //     for(var j=0; blogpostObj.blog[i].data[t].content[j]; j++){
-                //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content[j] + "</p>");
-                //     }
-                //  } else {
-                //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
-                // }
-                }
-            }
-
-
-        </script> -->
+        
         <script>
             $(function(){
               var includes = $('[data-include]');
@@ -84,6 +41,7 @@
               });
             });
         </script>
+
         <script>
             var a;
             var b;
@@ -104,6 +62,12 @@
             if(queryString != null){
 
                 console.log("not null");
+
+                //Adding Twitter Link Card
+                $('head').append( "<meta name='twitter:title' content='" + blogpostObj.blog[a].data[b].title + "'>");
+                $('head').append( "<meta name='twitter:description' content='" + blogpostObj.blog[a].data[b].content[0].substr(0, blogpostObj.blog[a].data[b].content[0].lastIndexOf(' ', 17)) + '...' + "'>" );
+                $('head').append( "<meta name='twitter:image' content='" + blogpostObj.blog[a].data[b].twitterImage + "'>" );
+
 
                 $(".container").empty();
                 $(".container").append("<h2 id='" + pageId1 + "-" + pageId2  + "' class='blog-title'>" + blogpostObj.blog[a].data[b].title + "</h2></a>");
@@ -133,47 +97,15 @@
 
             }
 
-// if(localStorage.getItem("pageId") != null){
+    </script>
 
-//                 a = localStorage.getItem("pageId")[0];
-//                 b = localStorage.getItem("pageId")[2];
+    <script type='text/javascript'>
+        $('button').on('click', function() {
+            // Just replacing the value of the 'content' attribute will not work.
+            $('meta[name=description]').remove();
+            $('head').append( '<meta name="description" content="this is new">' );
+        });
+    </script>
 
-//                 console.log(a, b);
-//                 console.log("not null");
-
-//                 $(".container").empty();
-//                 $(".container").append("<h2 id='" +  a + "-" + b + "' class='blog-title'>" + blogpostObj.blog[a].data[b].title + "</h2></a>");
-                
-//                  if(Array.isArray(blogpostObj.blog[a].data[b].content)){
-//                     for(var j=0; blogpostObj.blog[a].data[b].content[j]; j++){
-//                     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
-//                     }
-//                  } else {
-//                     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content + "</p>");
-//                 }
-
-//             } else {
-
-//                 console.log("null, man");
-
-//                 $(".container").empty();
-//                 $(".container").append("<h2 id='" +  0 + "-" + 0 + "' class='blog-title'>" + blogpostObj.blog[0].data[0].title + "</h2></a>");
-                
-//                  if(Array.isArray(blogpostObj.blog[0].data[0].content)){
-//                     for(var j=0; blogpostObj.blog[0].data[0].content[j]; j++){
-//                     $(".container").append("<p>" + blogpostObj.blog[0].data[0].content[j] + "</p>");
-//                     }
-//                  } else {
-//                     $(".container").append("<p>" + blogpostObj.blog[0].data[0].content + "</p>");
-//                 }
-
-            // }
-
-        </script>
-        <script>
-
-            // window.onload = alert(localStorage.getItem("pageId"));
-
-        </script>
-    </body>
+</body>
 </html>
