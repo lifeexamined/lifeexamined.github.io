@@ -64,7 +64,7 @@ a {
   }
 
 body {
-    background-image: url("cover-photo.jpg");
+    background-image: url("./cover-photo.jpg");
     background-position-x: center;
     background-position-y: -220px;
     background-size: 1900px;
@@ -218,4 +218,8 @@ i {
     align-items: center;
 
     margin: 0px 5px;
+}
+
+.footer-icon {
+    text-shadow: none;
 }

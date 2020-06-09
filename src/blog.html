@@ -9,6 +9,7 @@
         <title>Nick Novik Design</title>
         <link href="blog.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./font-awesome.min.css">
         <script type="text/javascript" src="jquery-latest.min.js"></script>
         <script id="data" type="application/json"></script>
     </head>
@@ -25,6 +26,7 @@
         </div>  
         <div data-include="single-footer"></div>
         <script src="blogpost.js"></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1xqQ-hLPEGfZ5Wq78Opvaf-sqMRUfUcHWHkpskaHZQ8Q/1/public/full?alt=json"></script>
         <script>
         console.warn(window.blog);
         var blogpostObj = window.blog;
@@ -49,7 +51,7 @@
             for(var t=0; t < blogpostObj.blog[i].data.length; t++) {
                 console.log(blogpostObj.blog[i].data[t].date, blogpostObj.blog[i].data[t].title);
 
-                $(".container").append("<div class='mdl-layout mdl-js-layout mdl-color--grey-100'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><img src='blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></figure><div class='card-content'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div><div class='mdl-card__actions mdl-card--border'><a class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><button class='mdl-button mdl-button--icon mdl-button--colored'><i class='material-icons'>favorite</i></button><button class='mdl-button mdl-button--icon mdl-button--colored'><i class='material-icons'>share</i></button></div></div</div></div></main></div>");
+                $(".container").append("<div class='mdl-layout mdl-js-layout mdl-color--grey-100'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><div class='img-container'><img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></div></figure><div class='card-content no-padding-bottom'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div></div><hr class='mdl-card-divider'><div class='card-content'><div class='mdl-card__actions mdl-card--border'><a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><a class='twitter-share-button' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title.toString() + " target='_blank'><i class='fa fa-share-alt' aria-hidden='true'></i></a></div></div</div></div></main></div>");
 
                 $("#card-" + i + "-" + t + "-title").append("<h3 data-id1='" + i + "' data-id2='" + t + "' id='" +  i + "-" + t + "' class='blog-title'>" + blogpostObj.blog[i].data[t].title + "</h3></a>");
                 
@@ -90,7 +92,7 @@
             var a;
             var b;
 
-             $(".blog-title").click(function() {
+             $(".blog-title, .blog-image, .read-more").click(function() {
                 var clickedId= $(this).attr("data-id1");
                 var clickedId2= $(this).attr("data-id2");
                 console.log(clickedId);
@@ -119,5 +121,6 @@
 
             });
         </script>
+        <script src="./fa2065fef8.js" crossorigin="anonymous"></script>
     </body>
 </html>
