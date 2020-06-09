@@ -10,7 +10,7 @@ window.blog = {
                 "number":"001",
                 "date":"06-05-2020",
                 "title":"The Road",
-                "twitterImage": window.location.href + "/blogposts/06-2020/06-05/2020",
+                "twitterImage": "https://lifeexamined.github.io/blogposts/06-2020/06-05-2020/000.jpg",
                 "content": 
                     [
                     
