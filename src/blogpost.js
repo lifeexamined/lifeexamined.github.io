@@ -51,6 +51,7 @@ window.blog = {
                     {
                     "title":"Kirill Novik",
                     "photo":"kirill-novik.jpg",
+                    "email":"kirill.novik.csci@gmail.com",
                     "content": 
                         [                        
                         "Kirill Novik is a talented senior web developer. His resume includes such projects as Automation Hero, Isonas and Discount Tire.",
@@ -74,6 +75,7 @@ window.blog = {
                     {
                     "title":"Nikita Novik",
                     "photo":"nikita-novik.jpg",
+                    "email":"nikita.a.novik@gmail.com",
                     "content": 
                     [                        
                         "Kirill Novik is a talented senior web developer. His resume includes such projects as Automation Hero, Isonas and Discount Tire.",
