@@ -41,42 +41,21 @@
                 <script>
 
                   var blogpostObj = window.blog;
-                  const numberOfPhotos = 9;
+                  const numberOfPhotos = 12;
                   
                    for(i=numberOfPhotos; i >= 0; i -=3) {
-                     $("#column-1").append("<a href='../photos/original/00" + i + ".jpg'><img src='../photos/00" + i + ".jpg'></a>");
+                     $("#column-1").append("<a href='../photos/original/" + i + ".jpg'><img src='../photos/" + i + ".jpg'></a>");
                      console.log(i);
                    }
 
                    for(i=numberOfPhotos-1; i >= 0; i -=3) {
-                     $("#column-2").append("<a href='../photos/original/00" + i + ".jpg'><img src='../photos/00" + i + ".jpg'></a>");
+                     $("#column-2").append("<a href='../photos/original/" + i + ".jpg'><img src='../photos/" + i + ".jpg'></a>");
                    }
 
                    for(i=numberOfPhotos-2; i >= 0; i -=3) {
-                     $("#column-3").append("<a href='../photos/original/00" + i + ".jpg'><img src='../photos/00" + i + ".jpg'></a>");
+                     $("#column-3").append("<a href='../photos/original/" + i + ".jpg'><img src='../photos/" + i + ".jpg'></a>");
                    }
 
-                  // for(i=0; i < blogpostObj.June.length; i++) {
-                  //     $(".container").append("<div class='title'><h2>" + blogpostObj.June[i].title + "</h2></div>");        
-              
-                  //         if(window.blog.June[i].content[0].length > 100){ 
-                              
-                  //             $(".container").append("<div class='content'><p>" + window.blog.June[i].content[0].substr(0, window.blog.June[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p></div>");
-          
-                  //         } else { $(".container").append("<div class='content'><p>" + window.blog.June[i].content + "</p></div>"); }
-                  // }
-          
-          
-                  
-                          // if(Array.isArray(blogpostObj.blog[i].data[t].content)){
-                          //     for(var j=0; blogpostObj.blog[i].data[t].content[j]; j++){
-                          //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content[j] + "</p>");
-                          //     }
-                          //  } else {
-                          //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
-                          // }
-
-          
                   </script>
     </body>
 </html>
