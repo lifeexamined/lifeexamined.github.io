@@ -44,7 +44,7 @@
                 console.log(blogpostObj.blog[i].data[t].date, blogpostObj.blog[i].data[t].title);
 
                 var postTitle = blogpostObj.blog[i].data[t].postTitle;
-                var postUrl = window.location.hostname + "/src/single-blog.html?id1=" + i + "%26" + "id2=" + t; 
+                var postUrl = "https://" + window.location.hostname + "/src/single-blog.html?id1=" + i + "%26" + "id2=" + t; 
 
                 $(".container").append("<div class='mdl-layout mdl-js-layout mdl-color--grey-100'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><div class='img-container'><img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></div></figure><div class='card-content no-padding-bottom'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div></div><hr class='mdl-card-divider'><div class='card-content'><div class='mdl-card__actions mdl-card--border'><a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><a class='twitter-share-button' target='_blank' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title + ". " + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 57)) + "... " + postUrl + "'><i class='fa fa-share-alt' aria-hidden='true'></i></a></div></div</div></div></main></div>");
 
