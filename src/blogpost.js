@@ -10,10 +10,8 @@ window.blog = {
                 "number":"001",
                 "date":"06-05-2020",
                 "title":"The Road",
-                "postTitle": "The%20Road%20to%20Hartsel",
                 "content": 
                     [
-                    
                     "We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back in 2017. Since then we haven't had a chance to built anything on it, but the idea has always been very tempting. The location of the land is perfect: it’s a minute away from Hartsel and 30 minutes away from Buena Vista. The land is a dream.",
 
                     "It was an exhausting 14 hour drive from Phoenix, Arizona, but it was totally worth it. Upon arrival we set up our tent and had a few beers while listening to music through the speakers connected to the converter that we plugged into the cigarette lighter.",
@@ -44,9 +42,61 @@ window.blog = {
                 }
 
             ]
-         }
+         },
+
+         {
+                "name":"about",
+                "data":[
+    
+                    {
+                    "title":"Kirill Novik",
+                    "photo":"kirill-novik.jpg",
+                    "content": 
+                        [                        
+                        "Kirill Novik is a talented senior web developer. His resume includes such projects as Automation Hero, Isonas and Discount Tire.",
+    
+                        "It was an exhausting 14 hour drive from Phoenix, Arizona, but it was totally worth it. Upon arrival we set up our tent and had a few beers while listening to music through the speakers connected to the converter that we plugged into the cigarette lighter.",
+
+                        "<a href='../about/kirill-novik/original/000.jpg'><img src='../about/kirill-novik/000.jpg'>",
+                        
+                        "The night was cold and a bit scary, because that’s when coyotes come out on the prowl, but as the morning came everything was back to normal.",
+                        
+                        "For the longest time my brother and I were thinking about alternative ways of living, and owning a land totally allows for it.",
+    
+                        "<a href='../about/kirill-novik/original/001.jpg'><img src='../about/kirill-novik/001.jpg'>", 
+    
+                        "Quisque ac nisi in nibh iaculis ullamcorper a lacinia felis. Maecenas eu mi aliquet, facilisis erat at, porta odio. Morbi at lacus hendrerit, vestibulum purus quis, sagittis tellus. Nam malesuada ex ac maximus porta. Integer tempus congue urna, eget luctus ex ultrices sit amet. Quisque sagittis rutrum augue, vitae ornare neque facilisis et. Donec mollis diam massa, vitae cursus elit hendrerit a. Etiam id finibus est. In tincidunt, massa et eleifend pretium, nisi ligula iaculis ex, id posuere purus lorem a massa.",
+
+                        "<div class='content-container'><a href='../about/kirill-novik/original/002.jpg'><img src='../about/kirill-novik/002.jpg'><a href='../about/kirill-novik/original/003.jpg'><img src='../about/kirill-novik/003.jpg'></div>"
+                        ]
+                    },
+
+                    {
+                    "title":"Nikita Novik",
+                    "photo":"nikita-novik.jpg",
+                    "content": 
+                    [                        
+                        "Kirill Novik is a talented senior web developer. His resume includes such projects as Automation Hero, Isonas and Discount Tire.",
+    
+                        "It was an exhausting 14 hour drive from Phoenix, Arizona, but it was totally worth it. Upon arrival we set up our tent and had a few beers while listening to music through the speakers connected to the converter that we plugged into the cigarette lighter.",
+
+                        "<a href='../about/kirill-novik/original/000.jpg'><img src='../about/kirill-novik/000.jpg'>",
+                        
+                        "The night was cold and a bit scary, because that’s when coyotes come out on the prowl, but as the morning came everything was back to normal.",
+                        
+                        "For the longest time my brother and I were thinking about alternative ways of living, and owning a land totally allows for it.",
+    
+                        "<a href='../about/kirill-novik/original/001.jpg'><img src='../about/kirill-novik/001.jpg'>", 
+    
+                        "Quisque ac nisi in nibh iaculis ullamcorper a lacinia felis. Maecenas eu mi aliquet, facilisis erat at, porta odio. Morbi at lacus hendrerit, vestibulum purus quis, sagittis tellus. Nam malesuada ex ac maximus porta. Integer tempus congue urna, eget luctus ex ultrices sit amet. Quisque sagittis rutrum augue, vitae ornare neque facilisis et. Donec mollis diam massa, vitae cursus elit hendrerit a. Etiam id finibus est. In tincidunt, massa et eleifend pretium, nisi ligula iaculis ex, id posuere purus lorem a massa.",
+
+                        "<div class='content-container'><a href='../about/kirill-novik/original/002.jpg'><img src='../about/kirill-novik/002.jpg'><a href='../about/kirill-novik/original/003.jpg'><img src='../about/kirill-novik/003.jpg'></div>"
+                        ]
+                    }
+                
 
         
 ]
 }
-
+]
+}

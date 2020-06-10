@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="https://lifeexamined.github.io/src/single-blog.html/id1=0&id2=0" />
+            <meta name="twitter:title" content="Examined!" />
+            <meta name="twitter:description" content="Read the latest post at Examined!" />
+            <meta name="twitter:image" content="https://lifeexamined.github.io/photos/000.jpg" />
+        <title>Examined!</title>
+        <link href="about.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="jquery-latest.min.js"></script>
+        <script id="data" type="application/json"></script>
+    </head>
+    <body>
+        <div id="bg-cover"><div>
+        
+            <div data-include="single-header"></div>
+
+        <div class="content-wrapper">
+        <div class="container">
+        <div class="title"><h2>Blog</h2></div>
+        <div class="content"></div>
+        </div>
+        </div>  
+        <div data-include="single-footer"></div>
+
+        <script src="blogpost.js"></script>
+        
+        <script>
+            $(function(){
+              var includes = $('[data-include]');
+              jQuery.each(includes, function(){
+                var file = $(this).data('include') + '.html';
+                $(this).load(file);
+              });
+            });
+        </script>
+
+        <script>
+            var a;
+            var b;
+            var blogpostObj = window.blog;
+
+            const queryString = window.location.search;
+            console.log(queryString);
+
+            const urlParams = new URLSearchParams(queryString);
+
+            const pageId1 = urlParams.get('id1');
+            const pageId2 = urlParams.get('id2');
+            console.log(pageId1, pageId2);
+
+            var a = pageId1;
+            var b = pageId2;
+
+            if(queryString != null){
+
+                console.log("not null");
+
+                // //Adding Twitter Link Card
+                // $('head').append( "<meta name='twitter:card' content='summary' />");
+                // $('head').append( "<meta name='twitter:title' content='" + blogpostObj.blog[a].data[b].title + "'>");
+                // $('head').append( "<meta name='twitter:description' content='" + blogpostObj.blog[a].data[b].content[0].substr(0, blogpostObj.blog[a].data[b].content[0].lastIndexOf(' ', 17)) + '...' + "'>" );
+                // $('head').append( "<meta name='twitter:image' content='" + blogpostObj.blog[a].data[b].twitterImage + "'>" );
+
+
+                $(".container").empty();
+                $(".container").append("<h2 id='" + pageId1 + "-" + pageId2  + "' class='blog-title'>" + blogpostObj.blog[a].data[b].title + "</h2></a>");
+                
+                 if(Array.isArray(blogpostObj.blog[a].data[b].content)){
+                    for(var j=0; blogpostObj.blog[a].data[b].content[j]; j++){
+                    $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
+                    }
+                 } else {
+                    $(".container").append("<p>" + blogpostObj.blog[a].data[b].content + "</p>");
+                }
+
+            } else {
+
+                console.log("null, man");
+
+                $(".container").empty();
+                $(".container").append("<h2 id='" +  0 + "-" + 0 + "' class='blog-title'>" + blogpostObj.blog[0].data[0].title + "</h2></a>");
+                
+                 if(Array.isArray(blogpostObj.blog[0].data[0].content)){
+                    for(var j=0; blogpostObj.blog[0].data[0].content[j]; j++){
+                    $(".container").append("<p>" + blogpostObj.blog[0].data[0].content[j] + "</p>");
+                    }
+                 } else {
+                    $(".container").append("<p>" + blogpostObj.blog[0].data[0].content + "</p>");
+                }
+
+            }
+
+    </script>
+
+</body>
+</html>

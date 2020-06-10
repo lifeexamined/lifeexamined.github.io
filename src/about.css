@@ -131,8 +131,16 @@ a {
 .content-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 600px;
     justify-content: center;
+}
+
+.content-container > a {
+    margin: 5px;
+}
+
+.content-container > a > img {
+    width: 100%;
 }
 
 /* 
