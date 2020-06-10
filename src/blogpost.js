@@ -29,11 +29,11 @@ window.blog = {
                 },
 
                 {
-                "title":"'Unexamined Life is Not Worth Living'", 
+                "title":"Unexamined Life is Not Worth Living", 
                 "date":"06-01-2020",
                 "content": 
                     [
-                    "'Unexamined Life is Not Worth Living'. These words might seem a bit harsh but it's true. Just like an unread book is not worth keeping or uncooked popcorn is not worth eating, life requires some studying. The examples above seem clear, even ridiculously so, but if we zoom out a little bit, life often resembles that unread book we keep on the shelf (or the uncooked popcorn, for the argument's sake).",
+                    "Unexamined Life is Not Worth Living. These words might seem a bit harsh but it's true. Just like an unread book is not worth keeping or uncooked popcorn is not worth eating, life requires some studying. The examples above seem clear, even ridiculously so, but if we zoom out a little bit, life often resembles that unread book we keep on the shelf (or the uncooked popcorn, for the argument's sake).",
 
                     "<a href='../blogposts/06-2020/06-01-2020/original/000.jpg'><img src='../blogposts/06-2020/06-01-2020/000.jpg'>",
 
