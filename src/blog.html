@@ -37,7 +37,7 @@
 
         console.log(Array.isArray(blogpostObj.blog[0].data[0].content));
 
-        for (var i=0; i < blogpostObj.blog.length; i++){
+        for (var i=0; i < blogpostObj.blog.length-1; i++){
             console.log(blogpostObj.blog[i].date);        
 
             for(var t=0; t < blogpostObj.blog[i].data.length; t++) {
@@ -60,15 +60,6 @@
                  } else {
                     $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
                 }
-
-
-                // if(Array.isArray(blogpostObj.blog[i].data[t].content)){
-                //     for(var j=0; blogpostObj.blog[i].data[t].content[j]; j++){
-                //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content[j] + "</p>");
-                //     }
-                //  } else {
-                //     $(".container").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
-                // }
                 }
             }
 
@@ -96,21 +87,6 @@
                 b = clickedId2;
                 console.log(a, b);
                 var pageAb = a + "-" + b;
-                // alert(pageAb);
-
-                // localStorage.setItem("pageId", pageAb);
-                
-                
-                // $(".container").empty();
-                // $(".container").append("<h2 id='" +  a + "-" + b + "' class='blog-title'>" + blogpostObj.blog[a].data[b].title + "</h2></a>");
-                
-                //  if(Array.isArray(blogpostObj.blog[a].data[b].content)){
-                //     for(var j=0; blogpostObj.blog[a].data[b].content[j]; j++){
-                //     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
-                //     }
-                //  } else {
-                //     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content + "</p>");
-                // }
 
                 window.location = "single-blog.html?id1=" + a + "&id2=" + b;
 
