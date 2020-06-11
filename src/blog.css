@@ -28,7 +28,7 @@ img {
     color: rgb(24, 197, 255);
 }
 
-h1 {
+.maintitle {
     font-size: 72px;
     font-family: 'Oleo Script', cursive;
     font-weight: 100;
