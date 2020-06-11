@@ -263,10 +263,14 @@ i {
         width:320px;
     }
 
-    .mdl-card {
+    /* .mdl-card {
         width: 320px;
         margin: 16px 0px;
         
+    } */
+
+    .mdl-grid {
+        max-width: 320px;
     }
 
 }
