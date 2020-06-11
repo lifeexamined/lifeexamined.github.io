@@ -34,9 +34,9 @@ img {
     font-weight: 100;
 
     text-align: center;
-    line-height: 10px;
+    line-height: 10px !important;
 
-    color: black;
+    color: black !important;
 }
 
 h2, h3, h4, h5, p, ul {
