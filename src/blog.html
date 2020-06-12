@@ -75,20 +75,14 @@
 
                          }
 
-                         $( document ).ready(function() {
-console.log('ready');
-for(i=cardNumber-1; i >= 0; i--) {
-               
-               $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
-                        
-                       }});
-
                        var explode = function(){
-  alert("Boom!");
+  
   for(i=cardNumber-1; i >= 0; i--) {
                
                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
-                        
+
+               $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-content").append("<p>" + blogpostObj.blog[0].data[i].content[0].substr(0, blogpostObj.blog[0].data[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
+
                        }
 };
 setTimeout(explode, 2000);
