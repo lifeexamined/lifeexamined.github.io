@@ -9,24 +9,29 @@
         <title>Examined!</title>
         <link href="blog.css" rel="stylesheet">
         <link href="material.teal-red.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+        <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
         <script type="text/javascript" src="jquery-latest.min.js"></script>
         <script id="data" type="application/json"></script>
     </head>
     <body>
         <div id="bg-cover"></div>
         
-            <div data-include="single-header"></div>
+            <div data-include="single-header" data-cardid="first"></div>
 
         <div class="content-wrapper">
-        <div class="container">
+        <div class="container"> 
             
         <div class="title"><h2>Blog</h2></div>
         <div class="content"></div>
+        <div class='mdl-layout mdl-js-layout mdl-color--grey-100'>
+            <div class='mdl-grid'>
+                <div data-include="single-card">
+                </div>
+            </div>
         </div>
-        </div>  
+        </div>
+        </div> 
         <div data-include="single-footer"></div>
         
         <script src="blogpost.js"></script>
@@ -34,7 +39,7 @@
         
         <script src="https://spreadsheets.google.com/feeds/cells/1xqQ-hLPEGfZ5Wq78Opvaf-sqMRUfUcHWHkpskaHZQ8Q/1/public/full?alt=json"></script>
         
-        <script>
+        <!-- <script>
         console.warn(window.blog);
         var blogpostObj = window.blog;
         console.log(blogpostObj.blog[0].date, blogpostObj.blog[0].data[0].date);
@@ -68,7 +73,7 @@
             }
 
 
-        </script>
+        </script> -->
         <script>
             $(function(){
               var includes = $('[data-include]');
