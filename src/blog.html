@@ -79,14 +79,14 @@
   
   for(i=cardNumber-1; i >= 0; i--) {
                 $("#examined-card-0-" + i + " > div > figure > div > img").remove();
-                $("#examined-card-0-" + i + " > div > figure > div").append("<img src='" + blogPostObj.blog[0].data[i].coverPhoto + "'>");
+                $("#examined-card-0-" + i + " > div > figure > div").append("<a href='" + blogPostObj.blog[0].data[i].photo + "original/000.jpg'><img class='blog-image' src='" + blogPostObj.blog[0].data[i].photo + "/cover-photo.jpg'>");
                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
 
                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-content").append("<p>" + blogPostObj.blog[0].data[i].content[0].substr(0, blogPostObj.blog[0].data[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
 
                        }
 };
-setTimeout(explode, 2000);
+setTimeout(explode, 700);
 
 
         </script>
