@@ -70,7 +70,11 @@ li:hover {
 }
 
 .mdl-layout {
-	background-color: rgb(220, 220, 220);
+	/* background-color: rgb(220, 220, 220); */
+	width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 img {
