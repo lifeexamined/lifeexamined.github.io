@@ -25,8 +25,7 @@
         <div class="content"></div>
         <div class='mdl-layout mdl-js-layout mdl-color--grey-100'>
             <div class='mdl-grid'>
-                <div data-include="single-card" data-card="card1">
-                </div>
+
             </div>
         </div>
         </div>
@@ -78,8 +77,7 @@
 
              for(i=cardNumber; i >= 0; i--) {
                 
-                $(".examined-card-0-" + i + " > div > .card-content > div").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
-
+                $("#examined-card-0-" + 0 + " > div > div #card-0-" + i + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
              }
 
         </script>
