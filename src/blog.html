@@ -72,12 +72,13 @@
             for(i=cardNumber; i >= 0; i--) {
                 
                 $('.mdl-grid').append("<div id='examined-card-0-" + i + "' data-include='single-card' data-cardId1='0' data-cardId2='" + i + "'></div>");
-            
+                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
+
              }
 
              for(i=cardNumber; i >= 0; i--) {
                 
-                $("#examined-card-0-" + i + " > div > div #card-0-" + i + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
+                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
              }
 
         </script>
