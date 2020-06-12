@@ -38,41 +38,6 @@
         
         <script src="https://spreadsheets.google.com/feeds/cells/1xqQ-hLPEGfZ5Wq78Opvaf-sqMRUfUcHWHkpskaHZQ8Q/1/public/full?alt=json"></script>
         
-        <!-- <script>
-        console.warn(window.blog);
-        var blogpostObj = window.blog;
-        console.log(blogpostObj.blog[0].date, blogpostObj.blog[0].data[0].date);
-
-        console.log(Array.isArray(blogpostObj.blog[0].data[0].content));
-
-        for (var i=0; i < blogpostObj.blog.length-1; i++){
-            console.log(blogpostObj.blog[i].date);        
-
-            for(var t=0; t < blogpostObj.blog[i].data.length; t++) {
-                console.log(blogpostObj.blog[i].data[t].date, blogpostObj.blog[i].data[t].title);
-
-                var postTitle = blogpostObj.blog[i].data[t].postTitle;
-                var postUrl = "https://" + window.location.hostname + "/src/single-blog.html?id1=" + i + "%26" + "id2=" + t; 
-
-                $(".container").append("<div class='mdl-layout mdl-js-layout'><main class='mdl-layout__content'><div class='mdl-grid'><div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'><figure class='mdl-card__media'><div class='img-container'><img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='../blogposts/" + blogpostObj.blog[i].date + "/" + blogpostObj.blog[i].data[t].date + "/" + "cover-photo.jpg'></div></figure><div class='card-content no-padding-bottom'><div id='card-" + i + "-" + t + "-title' class='mdl-card__title'></div><div id='card-" + i + "-" + t + "-content' class='mdl-card__supporting-text'></div><div class='mdl-card__actions mdl-card--border'><a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a><div class='mdl-layout-spacer'></div><a class='twitter-share-button' target='_blank' href='https://twitter.com/intent/tweet?text=" + blogpostObj.blog[i].data[t].title + ". " + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 57)) + "... " + postUrl + "'><button class='mdl-button mdl-button--icon mdl-button--colored'><i class='material-icons'>share</i></button></a></div></div></div></div></main></div>");
-
-                $("#card-" + i + "-" + t + "-title").append("<h1 data-id1='" + i + "' data-id2='" + t + "' id='" +  i + "-" + t + "' class='mdl-card__title-text'>" + blogpostObj.blog[i].data[t].title + "</h1></a>");
-                
-                console.log(blogpostObj.blog[i].data[t].content[0].length);
-
-
-                if(blogpostObj.blog[i].data[t].content[0].length > 100){
-                    
-                    $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
-
-                 } else {
-                    $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
-                }
-                }
-            }
-
-
-        </script> -->
         <script>
             $(function(){
               var includes = $('[data-include]');
@@ -82,11 +47,13 @@
               });
             });
           </script>
+
             <script>
             var a;
             var b;
 
              $(".blog-title, .blog-image, .read-more").click(function() {
+
                 var clickedId= $(this).attr("data-id1");
                 var clickedId2= $(this).attr("data-id2");
                 console.log(clickedId);
@@ -99,6 +66,22 @@
                 window.location = "single-blog.html?id1=" + a + "&id2=" + b;
 
             });
+        </script>
+        <script>
+            blogPostObj = window.blog;
+            cardNumber = blogPostObj.blog[0].data.length;
+            for(i=cardNumber; i >= 0; i--) {
+                
+                $('.mdl-grid').append("<div id='examined-card-0-" + i + "' data-include='single-card' data-cardId1='0' data-cardId2='" + i + "'></div>");
+            
+             }
+
+             for(i=cardNumber; i >= 0; i--) {
+                
+                $(".examined-card-0-" + i + " > div > .card-content > div").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
+
+             }
+
         </script>
         <script src="./fa2065fef8.js" crossorigin="anonymous"></script>
     </body>
