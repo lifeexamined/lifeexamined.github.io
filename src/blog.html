@@ -67,8 +67,8 @@
             });
         </script>
         <script>
-            blogPostObj = window.blog;
-            cardNumber = blogPostObj.blog[0].data.length;
+            const blogPostObj = window.blog;
+            const cardNumber = blogPostObj.blog[0].data.length;
             for(i=cardNumber; i >= 0; i--) {
                 
                 $('.mdl-grid').append("<div id='examined-card-0-" + i + "' data-include='single-card' data-cardId1='0' data-cardId2='" + i + "'></div>");
