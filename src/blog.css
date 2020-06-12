@@ -314,7 +314,7 @@ i {
 	}
 	.mdl-layout {
 		/* background-color: rgb(220, 220, 220); */
-		width: 599px;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
