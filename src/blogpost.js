@@ -50,9 +50,9 @@ window.blog = {
                     "content": 
                         [
                            
-                            "<a href='../blogposts/06-2020/06-05-2020/original/000.jpg'><img src='../blogposts/06-2020/06-12-2020/cover-photo.jpg'>", 
+                            "Schmetterling is a web party app that allows you to create playlists based on your favorite artists. Check it out at https://schmetterling-app.herokuapp.com and be excellent to each other!",
 
-                            "Schmetterling is a web party app that allows you to create playlists based on your favorite artists. Check it out at https://schmetterling-app.herokuapp.com and be excellent to each other!"
+                            "<a href='../blogposts/06-2020/06-05-2020/original/000.jpg'><img src='../blogposts/06-2020/06-12-2020/cover-photo.jpg'>"
 
                                  ]
                     }
