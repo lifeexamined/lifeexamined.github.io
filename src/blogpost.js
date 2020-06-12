@@ -41,7 +41,23 @@ window.blog = {
 
                     "Quisque ac nisi in nibh iaculis ullamcorper a lacinia felis. Maecenas eu mi aliquet, facilisis erat at, porta odio. Morbi at lacus hendrerit, vestibulum purus quis, sagittis tellus. Nam malesuada ex ac maximus porta. Integer tempus congue urna, eget luctus ex ultrices sit amet. Quisque sagittis rutrum augue, vitae ornare neque facilisis et. Donec mollis diam massa, vitae cursus elit hendrerit a. Etiam id finibus est. In tincidunt, massa et eleifend pretium, nisi ligula iaculis ex, id posuere purus lorem a massa."
                     ]
-                }
+                },
+
+                {
+                    "date":"06-12-2020",
+                    "title":"Schmetterling",
+                    "photo":"../blogposts/06-2020/06-12-2020",
+                    "content": 
+                        [
+                           
+                            "<a href='../blogposts/06-2020/06-05-2020/original/000.jpg'><img src='../blogposts/06-2020/06-12-2020/cover-photo.jpg'>", 
+
+                            "Schmetterling is a web party app that allows you to create playlists based on your favorite artists. Check it out at https://schmetterling-app.herokuapp.com and be excellent to each other!"
+
+                                 ]
+                    }
+
+
 
             ]
          },
@@ -80,7 +96,7 @@ window.blog = {
                     "email":"nikita.a.novik@gmail.com",
                     "content": 
                     [                        
-                        "Kirill Novik is a talented senior web developer. His resume includes such projects as Automation Hero, Isonas and Discount Tire.",
+                        "Nikita Novik is a talented full-stack web designer. His resume includes this website.",
     
                         "It was an exhausting 14 hour drive from Phoenix, Arizona, but it was totally worth it. Upon arrival we set up our tent and had a few beers while listening to music through the speakers connected to the converter that we plugged into the cigarette lighter.",
 
