@@ -81,9 +81,12 @@
   for(i=cardNumber-1; i >= 0; i--) {
                 $("#examined-card-0-" + i + " > div > figure > div > img").remove();
                 $("#examined-card-0-" + i + " > div > figure > div").append("<a href='https://lifeexamined.github.io/src/single-blog.html?id1=0&id2=" + i + "'><img class='blog-image' src='" + blogPostObj.blog[0].data[i].photo + "/cover-photo.jpg'>");
-               $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h2>" + blogPostObj.blog[0].data[i].title + "</h2>");
+                 $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h3>" + blogPostObj.blog[0].data[i].title + "</h3>");
 
                $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-content").append("<p>" + blogPostObj.blog[0].data[i].content[0].substr(0, blogPostObj.blog[0].data[i].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
+
+               $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-content > div #mdl-card__actions > a").remove();
+               $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-content > div #mdl-card__actions").append("<a class='read-more mdl-button' href='https://lifeexamined.github.io/src/single-blog.html?id1=0&id2=" + i + "'><p>Read More</p></a>");
 
                        }
 };
