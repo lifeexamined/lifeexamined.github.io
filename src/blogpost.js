@@ -10,6 +10,7 @@ window.blog = {
                 "number":"001",
                 "date":"06-05-2020",
                 "title":"The Road",
+                "coverPhoto":"../blogposts/06-2020/06-05-2020/cover-photo.jpg",
                 "content": 
                     [
                     "We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back in 2017. Since then we haven't had a chance to built anything on it, but the idea has always been very tempting. The location of the land is perfect: it’s a minute away from Hartsel and 30 minutes away from Buena Vista. The land is a dream.",
@@ -29,6 +30,7 @@ window.blog = {
                 {
                 "title":"Unexamined Life is Not Worth Living", 
                 "date":"06-01-2020",
+                "coverPhoto":"../blogposts/06-2020/06-01-2020/cover-photo.jpg",
                 "content": 
                     [
                     "Unexamined Life is Not Worth Living. These words might seem a bit harsh but it's true. Just like an unread book is not worth keeping or uncooked popcorn is not worth eating, life requires some studying. The examples above seem clear, even ridiculously so, but if we zoom out a little bit, life often resembles that unread book we keep on the shelf (or the uncooked popcorn, for the argument's sake).",
