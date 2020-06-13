@@ -67,7 +67,7 @@
                               $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content[0].substr(0, blogpostObj.blog[i].data[t].content[0].lastIndexOf(' ', 97)) + '...' + "</p>");
           
                            } else {
-                              $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content + "</p>");
+                              $("#card-" + i + "-" + t + "-content").append("<p>" + blogpostObj.blog[i].data[t].content[0] + "</p>");
                           }
                           }
                       }
