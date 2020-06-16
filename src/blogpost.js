@@ -208,11 +208,3 @@ const replaceAboutImg = () => {
 
 replaceImg();
 replaceAboutImg();
-
-const updateTitle = () => {
-    for(i=0; i < objLength(0); i++){
-        window.blog.blog[0].data[i].title += " Examined!";
-    }
-}
-
-updateTitle();
