@@ -75,7 +75,9 @@
                 
                  if(Array.isArray(blogpostObj.blog[a].data[b].content)){
                     for(var j=0; blogpostObj.blog[a].data[b].content[j]; j++){
-                    $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
+                        if(!blogpostObj.blog[a].data[b].content[j].photo){
+                        $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
+                    } else {$(".container").append("<a href='" + blogpostObj.blog[a].data[b].content[j].original + "'><img src='" + blogpostObj.blog[a].data[b].content[j].photo + "'>");}
                     }
                  } else {
                     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content + "</p>");

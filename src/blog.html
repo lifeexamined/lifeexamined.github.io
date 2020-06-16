@@ -42,7 +42,7 @@
             $(function(){
               var includes = $('[data-include]');
               jQuery.each(includes, function(){
-                var file = $(this).data('include') + '.html';
+                var file = 'https://lifeexamined.github.io/src/' + $(this).data('include') + '.html';
                 $(this).load(file);
               });
             });
@@ -69,17 +69,51 @@
         </script>
         <script>
             const blogPostObj = window.blog;
+            // const blogPostObj = workableObj; 
             const cardNumber = blogPostObj.blog[0].data.length;
+
             for(i=cardNumber-1; i >= 0; i--) {
                 
                 $('.mdl-grid').append("<div id='examined-card-0-" + i + "' data-include='single-card' data-cardId1='0' data-cardId2='" + i + "'></div>");
 
                          }
+                         
+        var outerExplode = function(){ 
+            let explodeNumber = cardNumber;
+            console.log("the integer is " + explodeNumber);
+          
+                 var explode = function(){
+                 
+                 if(explodeNumber >= 2){ 
+                   console.log(explodeNumber);
+                  for(i = explodeNumber; i > explodeNumber-2; i--){
+                  console.log("explode number is " + i);
+                    
+                    cardInsert(i-1);
 
-                       var explode = function(){
-  
-  for(i=cardNumber-1; i >= 0; i--) {
-                $("#examined-card-0-" + i + " > div > figure > div > img").remove();
+                }
+                  explodeNumber = explodeNumber - 2;
+                  console.log(explodeNumber);
+
+                  if(explodeNumber >= 2){
+
+                setTimeout(explode, 200);
+              
+                }
+
+              } else { setTimeout(cardInsert(0), 200); console.log("last explode number is " + explodeNumber);}
+
+                } 
+
+                setTimeout(explode, 200);
+
+              }
+
+              setTimeout(outerExplode, 700);
+                
+const cardInsert = (i) => {
+
+               $("#examined-card-0-" + i + " > div > figure > div > img").remove();
                 $("#examined-card-0-" + i + " > div > figure > div").append("<a href='https://lifeexamined.github.io/src/single-blog.html?id1=0&id2=" + i + "'><img class='blog-image' src='" + blogPostObj.blog[0].data[i].photo + "/cover-photo.jpg'>");
                  $("#examined-card-0-" + i + " > div > div #card-0-" + 0 + "-title").append("<h3>" + blogPostObj.blog[0].data[i].title + "</h3>");
 
@@ -88,10 +122,7 @@
                $("#examined-card-0-" + i + " > div > div > .mdl-card__actions").empty();
                $("#examined-card-0-" + i + " > div > div > .mdl-card__actions").append("<a class='read-more mdl-button' href='https://lifeexamined.github.io/src/single-blog.html?id1=0&id2=" + i + "'><p>Read More</p></a><div class='mdl-layout-spacer'></div><p>" + blogPostObj.blog[0].data[i].date + "</p>");
 
-                       }
-};
-setTimeout(explode, 700);
-
+}
 
         </script>
         <script src="./fa2065fef8.js" crossorigin="anonymous"></script>

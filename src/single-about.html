@@ -63,19 +63,14 @@
 
                 console.log("not null");
 
-                // //Adding Twitter Link Card
-                // $('head').append( "<meta name='twitter:card' content='summary' />");
-                // $('head').append( "<meta name='twitter:title' content='" + blogpostObj.blog[a].data[b].title + "'>");
-                // $('head').append( "<meta name='twitter:description' content='" + blogpostObj.blog[a].data[b].content[0].substr(0, blogpostObj.blog[a].data[b].content[0].lastIndexOf(' ', 17)) + '...' + "'>" );
-                // $('head').append( "<meta name='twitter:image' content='" + blogpostObj.blog[a].data[b].twitterImage + "'>" );
-
-
                 $(".container").empty();
                 $(".container").append("<h2 id='" + pageId1 + "-" + pageId2  + "' class='blog-title'>" + blogpostObj.blog[a].data[b].title + "</h2></a>");
                 
-                 if(Array.isArray(blogpostObj.blog[a].data[b].content)){
+                if(Array.isArray(blogpostObj.blog[a].data[b].content)){
                     for(var j=0; blogpostObj.blog[a].data[b].content[j]; j++){
-                    $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
+                        if(!blogpostObj.blog[a].data[b].content[j].photo){
+                        $(".container").append("<p>" + blogpostObj.blog[a].data[b].content[j] + "</p>");
+                    } else {$(".container").append("<a href='" + blogpostObj.blog[a].data[b].content[j].original + "'><img src='" + blogpostObj.blog[a].data[b].content[j].photo + "'>");}
                     }
                  } else {
                     $(".container").append("<p>" + blogpostObj.blog[a].data[b].content + "</p>");
@@ -88,12 +83,12 @@
                 $(".container").empty();
                 $(".container").append("<h2 id='" +  0 + "-" + 0 + "' class='blog-title'>" + blogpostObj.blog[0].data[0].title + "</h2></a>");
                 
-                 if(Array.isArray(blogpostObj.blog[0].data[0].content)){
-                    for(var j=0; blogpostObj.blog[0].data[0].content[j]; j++){
-                    $(".container").append("<p>" + blogpostObj.blog[0].data[0].content[j] + "</p>");
+                if(Array.isArray(blogpostObj.blog[0].data[1].content)){
+                    for(var j=0; blogpostObj.blog[0].data[1].content[j]; j++){
+                    $(".container").append("<p>" + blogpostObj.blog[0].data[1].content[j] + "</p>");
                     }
                  } else {
-                    $(".container").append("<p>" + blogpostObj.blog[0].data[0].content + "</p>");
+                    $(".container").append("<p>" + blogpostObj.blog[0].data[1].content + "</p>");
                 }
 
             }
