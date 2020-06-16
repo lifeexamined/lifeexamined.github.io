@@ -188,17 +188,25 @@ body {
     align-items: center;
 }
 
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
 .container {
     top: 500px;
     position: relative;
 }
 
 .page-footer {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     bottom:50px;
+    left: calc(50% - 90px);
 }
 
 i {
