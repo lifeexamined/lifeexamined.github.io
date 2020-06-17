@@ -23,6 +23,13 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    background-image: url("../images/0.jpg");
+    background-position-x: center;
+    background-position-y: -220px;
+    background-size: 1900px;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow-y: hidden;
 }
 
 
@@ -156,6 +163,9 @@ pre {
  * Wrapper
  */
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
