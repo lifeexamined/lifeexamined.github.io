@@ -1,0 +1,48 @@
+#parallax {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/images/kirill.png), url(/assets/images/bground.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -220px;
+    background-size: 1900px;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: 361px) and (max-width: 768px) {
+    #parallax {
+        background-position-x: center;
+        background-position-y: 0px;
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        background-color: black;
+    
+        overflow-y: hidden;
+    
+        z-index: -1;
+
+        /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */
+
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    #parallax {
+        background-position-x: center;
+        background-position-y: 0px;
+        background-size: 1200px;
+        background-repeat: no-repeat;
+        background-color: black;
+    
+        overflow-y: hidden;
+    
+        z-index: -1;
+
+        /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */
+
+    }
+}

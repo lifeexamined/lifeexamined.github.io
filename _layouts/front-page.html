@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div id="parallax"></div>
+        <!-- {{ content }} -->
+      </div>
+    </div>
+
+     <!-- include footer.html -->
+
+    <script src="{{ base.url | prepend: site.url }}/assets/js/parallax.js"></script>
+
+  </body>
+
+</html>
