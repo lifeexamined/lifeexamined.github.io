@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll 2!"
 date:   2020-05-16 14:54:36 -0700
-categories: jekyll update
+categories: science
 image: /assets/images/0.jpg
 
 ---

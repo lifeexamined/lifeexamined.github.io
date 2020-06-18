@@ -1,9 +1,4 @@
 
-
-.card-wrapper {
-	background-color: rgb(220, 220, 220);
-}
-
 img {
 	width: 600px;
 	height: auto;
@@ -27,15 +22,22 @@ ul {
 
 .blue-hover {
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+	
 }
 
 .blue-hover:hover {
 	color: rgb(24, 197, 255);
 }
 
+a.blue-hover {
+	font-size: 18px;
+	color: rgb(0, 190, 95);
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
+
 }
 
 .mdl-button {
@@ -91,160 +93,58 @@ a {
 	align-items: center;
 }
 
-.container {
-	padding-bottom: 75px;
-	width: 500px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 0px 20px 0px 20px;
-}
-
-.page-footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100vw;
-	bottom: 0;
-}
-
-i {
-	color: white;
-	scale: 125%;
-}
-
-.icon-container {
-	background-color: black;
-	width: 50px;
-	height: 50px;
-	border-radius: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	margin: 15px 5px;
-}
-
-.blog-card {
-	display: flex;
-	flex-direction: column;
-	width: 400px;
-	padding: 5px 15px;
-	margin: 10px 0px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
-}
-
-.mdl-card {
-	background-color: white;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-	margin: 25px 5px;
-}
-
-.mdl-card:hover {
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-.mdl-card:hover .blog-image {
-	transform: scale(110%);
-	opacity: 70%;
-}
-
-.mdl-card-divider {
-	width: 100%;
-	border: 0;
-	height: 1px;
-	background: rgb(192, 192, 192);
-	margin-top: 0;
-	margin-bottom: 20px;
-}
-
-.img-container {
-	background-color: white;
-	overflow: hidden;
-	line-height: 0;
-}
-
 .mdl-grid {
 	max-width: 600px;
+	display: flex !important;
+	flex-direction: column !important;
+	align-content: center;
+	padding: 8px 50px !important;
 }
 
 .mdl-card__media {
 	margin: 0;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
+	background-color: white;
 }
 
-.mdl-card__media>img {
-	width: 100%;
+.mdl-card__media > img {
+	max-width: 100%;
 }
-
 .mdl-card__actions {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	box-sizing: border-box;
+	box-sizing:border-box;
 	align-items: center;
 }
-
-.mdl-card__actions>.mdl-button--icon {
-	color: black;
+.mdl-card__actions > .mdl-button--icon {
 	margin-right: 3px;
 	margin-left: 3px;
 }
 
-.card-content {
-	padding: 0px 20px 20px 20px;
-}
-
-.card-1 {
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.mdl-card {
+	width: 600px !important;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
 
-.gallery {
-	display: flex;
-	flex-direction: row;
-}
-
-.column {
-	display: flex;
-	flex-direction: column;
-	width: 33.3333%;
-	padding: 3px;
-}
-
-.column img {
-	width: 100%;
-	margin-bottom: 6px;
-}
-
-.column a {
-	line-height: 0;
-}
-
-@media (max-width: 600px) {
-	.content-container {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
+	&__title{
+		padding: 26px 16px 0px 16px !important;
 	}
-	img {
-		width: 320px;
+
+	&__supporting-text {
+		padding: 0px 16px !important;
 	}
-	.mdl-card {
-		width: 320px;
-		margin: 16px 0px;
+
+	&:hover{
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
 	}
 }
 
-p>a {
-	line-height: 0;
-}
+.mdl-card:hover > a > figure > img {
+		color: white !important;
+		transform: scale(110%);
+		opacity: 70%;}
 
-.no-padding-bottom {
-	padding-bottom: 0;
-}
 
+.mdl-cell {
+	margin: 8px 0px 25px 0px !important;
+}
