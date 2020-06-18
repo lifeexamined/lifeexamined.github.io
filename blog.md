@@ -11,3 +11,5 @@ You can find the source code for the Jekyll new theme at:
 
 You can find the source code for Jekyll at
 [jekyll](https://github.com/jekyll/jekyll)
+
+    {% include examined-card.html %}

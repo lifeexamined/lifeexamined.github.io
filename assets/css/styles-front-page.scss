@@ -1,3 +1,6 @@
+---
+---
+
 
 @charset "utf-8";
 
@@ -41,18 +44,7 @@ $on-laptop:        800px;
     }
 }
 
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        // "base",
-        // "layout",
-        // "syntax-highlighting",
-        "examined",
-        "fonts",
-        "icons",
-        "examined-card"
-
-;
-
-
+@import "front-page",
+"fonts",
+"icons",
+"parallax";

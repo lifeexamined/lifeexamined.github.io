@@ -1,0 +1,82 @@
+I"Y<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for the Jekyll new theme at:
+<a href="https://github.com/jglovier/jekyll-new">jekyll-new</a></p>
+
+<p>You can find the source code for Jekyll at
+<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                &lt;div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'&gt;
+				  &lt;figure class='mdl-card__media'&gt;
+					 &lt;div class='img-container'&gt;
+						&lt;img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg'&gt;
+					 &lt;/div&gt;
+				  &lt;/figure&gt;
+				  &lt;div class='card-content no-padding-bottom'&gt;
+					 &lt;div id='card-0-0-title' class='mdl-card__title'&gt;Welcome to Jekyll!&lt;/div&gt;
+					 &lt;div id='card-0-0-content' class='mdl-card__supporting-text'&gt;&lt;p&gt;You’ll find this post in your &lt;code class="language-plaintext highlighter-rouge"&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class="language-plaintext highlighter-rouge"&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+</code></pre></div></div>
+<p>&lt;/div&gt;
+					  &lt;/div&gt;
+					  &lt;hr class='mdl-card-divider'&gt;
+					  &lt;div class='card-content'&gt;
+						 &lt;div class='mdl-card__actions mdl-card--border'&gt;
+							<a data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+							&lt;div class='mdl-layout-spacer'&gt;&lt;/div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>						&lt;p&gt;&lt;a class='blue-hover twitter-share-button' href=''&gt;Jun 05&lt;/a&gt; in 
+												 &lt;a class='blue-hover twitter-share-button' href=''&gt;Uncategorized&lt;/a&gt;&lt;/p&gt;
+					 &lt;/div&gt;
+				  &lt;/div&gt;
+               &lt;/div&gt;
+               
+                &lt;div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'&gt;
+				  &lt;figure class='mdl-card__media'&gt;
+					 &lt;div class='img-container'&gt;
+						&lt;img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg'&gt;
+					 &lt;/div&gt;
+				  &lt;/figure&gt;
+				  &lt;div class='card-content no-padding-bottom'&gt;
+					 &lt;div id='card-0-0-title' class='mdl-card__title'&gt;Examined Life is not Worth Living&lt;/div&gt;
+					 &lt;div id='card-0-0-content' class='mdl-card__supporting-text'&gt;&lt;p&gt;You’ll find this post in your &lt;code class="language-plaintext highlighter-rouge"&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class="language-plaintext highlighter-rouge"&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is about&lt;/p&gt;
+</code></pre></div></div>
+<p>&lt;/div&gt;
+					  &lt;/div&gt;
+					  &lt;hr class='mdl-card-divider'&gt;
+					  &lt;div class='card-content'&gt;
+						 &lt;div class='mdl-card__actions mdl-card--border'&gt;
+							<a data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+							&lt;div class='mdl-layout-spacer'&gt;&lt;/div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>						&lt;p&gt;&lt;a class='blue-hover twitter-share-button' href=''&gt;Jun 05&lt;/a&gt; in 
+												 &lt;a class='blue-hover twitter-share-button' href=''&gt;Uncategorized&lt;/a&gt;&lt;/p&gt;
+					 &lt;/div&gt;
+				  &lt;/div&gt;
+               &lt;/div&gt;
+               
+                &lt;div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'&gt;
+				  &lt;figure class='mdl-card__media'&gt;
+					 &lt;div class='img-container'&gt;
+						&lt;img data-id1='" + i + "' data-id2='" + t + "' class='blog-image' src='https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg'&gt;
+					 &lt;/div&gt;
+				  &lt;/figure&gt;
+				  &lt;div class='card-content no-padding-bottom'&gt;
+					 &lt;div id='card-0-0-title' class='mdl-card__title'&gt;Welcome to Jekyll 2!&lt;/div&gt;
+					 &lt;div id='card-0-0-content' class='mdl-card__supporting-text'&gt;&lt;p&gt;You’ll find this post in your &lt;code class="language-plaintext highlighter-rouge"&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class="language-plaintext highlighter-rouge"&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+</code></pre></div></div>
+<p>&lt;/div&gt;
+					  &lt;/div&gt;
+					  &lt;hr class='mdl-card-divider'&gt;
+					  &lt;div class='card-content'&gt;
+						 &lt;div class='mdl-card__actions mdl-card--border'&gt;
+							<a data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+							&lt;div class='mdl-layout-spacer'&gt;&lt;/div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>						&lt;p&gt;&lt;a class='blue-hover twitter-share-button' href=''&gt;Jun 05&lt;/a&gt; in 
+												 &lt;a class='blue-hover twitter-share-button' href=''&gt;Uncategorized&lt;/a&gt;&lt;/p&gt;
+					 &lt;/div&gt;
+				  &lt;/div&gt;
+               &lt;/div&gt;
+</code></pre></div></div>
+
+:ET
