@@ -4,19 +4,20 @@
   {% include head.html %}
 
   <body>
+    <div class="front-page">
+    {% include front-page-header.html %}
+    </div>
 
-    {% include header.html %}
-
-    <div class="page-content">
+    <div class="front-page page-content">
       <div class="wrapper">
         <div id="parallax"></div>
         <!-- {{ content }} -->
       </div>
     </div>
 
-     <!-- include footer.html -->
+     {% include footer.html %}
 
-    <script src="{{ base.url | prepend: site.url }}/assets/js/parallax.js"></script>
+    <!-- <script src="{{ base.url | prepend: site.url }}/assets/js/parallax.js"></script> -->
 
   </body>
 
