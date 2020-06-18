@@ -1,4 +1,4 @@
-h1 {
+.front-page h1 {
     font-size: 72px;
     font-family: 'Oleo Script', cursive;
 
@@ -19,8 +19,22 @@ h1 {
     0 20px 20px rgba(0,0,0,.15);
 }
 
+h1 {
+    font-size: 72px;
+    font-family: 'Oleo Script', cursive;
+
+    text-align: center;
+    line-height: 10px;
+
+}
+
 h1, h2, h3, h4, h5, p, ul {
-    color: white;
+    color: black;
+}
+
+.front-page {
+    color: white !important;
+
 }
 
 ul {
@@ -48,7 +62,7 @@ li:hover {
     color: royalblue;
 }
 
-a {
+.front-page a {
     text-decoration: none;
     color: white;
     text-shadow:     
@@ -63,13 +77,34 @@ a {
     font-size: 24px;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+
 body {
     background-image: url("./cover-photo.jpg");
     background-position-x: center;
     background-position-y: -220px;
     background-size: 1900px;
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: none;
 
     overflow-y: hidden;
 

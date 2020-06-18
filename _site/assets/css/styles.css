@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
-h1 { font-size: 72px; font-family: 'Oleo Script', cursive; text-align: center; line-height: 10px; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+.front-page h1 { font-size: 72px; font-family: 'Oleo Script', cursive; text-align: center; line-height: 10px; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-h1, h2, h3, h4, h5, p, ul { color: white; }
+h1 { font-size: 72px; font-family: 'Oleo Script', cursive; text-align: center; line-height: 10px; }
+
+h1, h2, h3, h4, h5, p, ul { color: black; }
+
+.front-page { color: white !important; }
 
 ul { list-style: none; display: flex; flex-direction: row; padding: 0; justify-content: center; margin: 10px 0px 0px; }
 
@@ -9,9 +13,15 @@ li { font-family: 'Roboto', sans-serif; padding: 0px 10px; transition: transform
 
 li:hover { transform: scale(107%); color: royalblue; }
 
-a { text-decoration: none; color: white; text-shadow: 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); /* transition: all 0.3s cubic-bezier(.25,.8,.25,1); */ font-size: 24px; }
+.front-page a { text-decoration: none; color: white; text-shadow: 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); /* transition: all 0.3s cubic-bezier(.25,.8,.25,1); */ font-size: 24px; }
 
-body { background-image: url("./cover-photo.jpg"); background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: black; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
+a { text-decoration: none; color: black; font-size: 24px; }
+
+.header-wrapper { display: flex; justify-content: center; flex-direction: row; align-items: center; }
+
+.page-content { display: flex; flex-direction: row; width: 100%; justify-content: center; }
+
+body { background-image: url("./cover-photo.jpg"); background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: none; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
 
 @media screen and (max-width: 360px) { body { background-image: url("cover-photo.jpg"); background-position-x: center; background-position-y: 0px; background-size: 850px; background-repeat: no-repeat; background-color: black; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
 
@@ -62,10 +72,8 @@ i { color: black; scale: 125%; }
 
 .footer-icon { text-shadow: none; }
 
-#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-image: url(/assets/images/kirill.png), url(/assets/images/bground.jpg); background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: 1900px; background-position: 50% 50%; }
+#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: calc(100% + 100px); background-position: 50% 50%; background-image: url(/assets/images/0.jpg); background-repeat: no-repeat; background-color: black; overflow-y: hidden; }
 
-@media (min-width: 361px) and (max-width: 768px) { #parallax { background-position-x: center; background-position-y: 0px; background-size: 1000px; background-repeat: no-repeat; background-color: black; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
-
-@media (min-width: 769px) and (max-width: 1200px) { #parallax { background-position-x: center; background-position-y: 0px; background-size: 1200px; background-repeat: no-repeat; background-color: black; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
+@media screen and (max-width: 800px) { #parallax { background-size: auto calc(100% + 100px); } }
 
 /*# sourceMappingURL=styles.css.map */
