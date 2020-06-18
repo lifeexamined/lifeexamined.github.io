@@ -1,4 +1,4 @@
-I"Â<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+I"Ä<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
 
 <p>You can find the source code for the Jekyll new theme at:
 <a href="https://github.com/jglovier/jekyll-new">jekyll-new</a></p>
@@ -16,7 +16,7 @@
                     <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 					  <figure class="mdl-card__media">
 						 <div class="img-container">
-							<img data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="blog-image" src="https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg" />
+							
 						 </div>
 					  </figure>
 					  <div class="card-content no-padding-bottom">
@@ -39,7 +39,7 @@
                     <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 					  <figure class="mdl-card__media">
 						 <div class="img-container">
-							<img data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="blog-image" src="https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg" />
+							
 						 </div>
 					  </figure>
 					  <div class="card-content no-padding-bottom">
@@ -62,7 +62,7 @@
                     <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 					  <figure class="mdl-card__media">
 						 <div class="img-container">
-							<img data-id1="&quot; + i + &quot;" data-id2="&quot; + t + &quot;" class="blog-image" src="https://lifeexamined.github.io/blogposts/06-2020/06-01-2020/cover-photo.jpg" />
+							
 						 </div>
 					  </figure>
 					  <div class="card-content no-padding-bottom">
