@@ -1,38 +1,35 @@
-
-<div class="card-wrapper">
-	<div class="content-container">
-	   <div class="card-container">
-		  <div class='mdl-layout mdl-js-layout mdl-color--grey-100'>
-			  
-				<div class='mdl-grid'>
-                   {% for post in site.posts %}
-                    <div class='mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp'>
-					  <figure class='mdl-card__media'>
-						 <div class='img-container'>
-							<img src="{{ post.image }}">
-						 </div>
-					  </figure>
-					  <div class='card-content no-padding-bottom'>
-						 <div id='card-0-0-title' class='mdl-card__title'>{{ post.title }}</div>
-						 <div id='card-0-0-content' class='mdl-card__supporting-text'>{{ post.excerpt }}</div>
-					  </div>
-					  <hr class='mdl-card-divider'>
-					  <div class='card-content'>
-						 <div class='mdl-card__actions mdl-card--border'>
-							<a data-id1='" + i + "' data-id2='" + t + "' class='read-more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Read More</a>
-							<div class='mdl-layout-spacer'></div>
-						   
-							<p><a class='blue-hover twitter-share-button' href=''>Jun 05</a> in 
-													 <a class='blue-hover twitter-share-button' href=''>Uncategorized</a></p>
-						 </div>
-					  </div>
-                   </div>
-                   {% endfor %}
-				</div>
-
-		  </div>
-	   </div>
-	</div>
- </div>
  
+ <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+	<main class="mdl-layout__content">
+		<div class="mdl-grid">
+
+			{% for post in site.posts %}
+
+			<a href="{{ post.url }}">
+			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<figure class="mdl-card__media">
+					<img src="{{ post.image }}" alt="" />
+				</figure>
+				<div class="mdl-card__title">
+					<h1 class="mdl-card__title-text">{{ post.title }}</h1>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>{{ post.excerpt }}</p>
+				</div>
+								<div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+    <div class="mdl-layout-spacer"></div>
+    	<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+	  </div>
+			</div>
+			</a>
+			
+			{% endfor %}
+
+			
+			
+		</div>
+	</main>
+</div>
  
