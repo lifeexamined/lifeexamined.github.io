@@ -15,5 +15,8 @@ url: "https://lifeexamined.github.io" # the base hostname & protocol for your si
 twitter_username: examined13
 github_username:  lifeexamined
 
+#Permalink for Posts
+permalink: /blog/:categories/:year/:month/:day/:title:output_ext
+
 # Build settings
 markdown: kramdown
