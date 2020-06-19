@@ -1,8 +1,8 @@
 
-img {
-	width: 600px;
-	height: auto;
-}
+// img {
+// 	width: 600px;
+// 	height: auto;
+// }
 
 .blog-image {
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
@@ -81,9 +81,9 @@ a {
 	margin: 5px;
 }
 
-.content-container>a>img {
-	width: 100%;
-}
+// .content-container>a>img {
+// 	width: 600px;
+// }
 
 .content-wrapper {
 	padding-top: 50px;
@@ -98,18 +98,24 @@ a {
 	display: flex !important;
 	flex-direction: column !important;
 	align-content: center;
-	padding: 8px 50px !important;
+	padding: 8px 0px !important;
+
+	@include media-query($on-palm) {
+		width: 100vw !important;
+	}
 }
 
 .mdl-card__media {
 	margin: 0;
 	overflow: hidden;
-	transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
-	background-color: white;
+	background-color: white !important;
+	position: relative;
 }
 
 .mdl-card__media > img {
 	max-width: 100%;
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
+
 }
 .mdl-card__actions {
 	display: flex;
@@ -122,24 +128,39 @@ a {
 }
 
 .mdl-card {
-	width: 600px !important;
+	width: 90% !important;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+	// height: 75vh !important;
 
 	&__title{
 		padding: 26px 16px 0px 16px !important;
 	}
 
 	&__supporting-text {
-		padding: 0px 16px !important;
+		padding: 16px 16px 0px 16px !important;
 	}
 
 	&:hover{
 		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 
 	}
+
+	&__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	@include media-query($on-palm){
+		width: 90vw !important;
+	}
+
 }
 
+
 .mdl-card:hover > a > figure > img {
+		position: relative;
 		color: white !important;
 		transform: scale(110%);
 		opacity: 70%;}
@@ -147,4 +168,8 @@ a {
 
 .mdl-cell {
 	margin: 8px 0px 25px 0px !important;
+}
+
+.post {
+	width: 90%;
 }

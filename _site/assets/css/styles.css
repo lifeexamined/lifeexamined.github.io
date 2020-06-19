@@ -1,15 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.1.1/css/all.css");
-.front-page h1 { font-size: 72px; font-family: 'Oleo Script', cursive; text-align: center; line-height: 10px; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
-
-h1 { font-size: 72px; font-family: 'Oleo Script', cursive; text-align: center; line-height: 10px; }
+h1 { font-size: 72px !important; font-family: 'Oleo Script', cursive !important; text-align: center; line-height: 10px; margin-top: 25px !important; margin-bottom: 0px !important; }
 
 h1, h2, h3, h4, h5, p, ul { color: black; }
 
 .front-page { color: white !important; }
 
-ul { list-style: none; display: flex; flex-direction: row; padding: 0; justify-content: center; margin: 10px 0px 0px; }
+ul { list-style: none; display: flex; flex-direction: row; padding: 0; justify-content: center; margin: 10px 0px; }
 
 li { font-family: 'Roboto', sans-serif; padding: 0px 10px; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); font-size: 24px; }
 
@@ -25,7 +23,7 @@ a { text-decoration: none; color: black; font-size: 24px; }
 
 .page-content { display: flex; flex-direction: row; width: 100%; justify-content: center; }
 
-body { background-image: url("./cover-photo.jpg"); background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: none; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
+body { background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: none; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
 
 @media screen and (max-width: 360px) { body { background-image: url("cover-photo.jpg"); background-position-x: center; background-position-y: 0px; background-size: 850px; background-repeat: no-repeat; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
 
@@ -42,6 +40,8 @@ body { background-image: url("./cover-photo.jpg"); background-position-x: center
 #header { /* background-color: grey; */ top: 25px; position: relative; display: flex; flex-direction: row; justify-content: center; }
 
 .wrapper { display: flex; justify-content: center; flex-direction: column; width: 600px; align-items: center; }
+
+@media screen and (max-width: 600px) { .wrapper { width: 90% !important; } }
 
 .site-header { display: flex; justify-content: center; flex-direction: row; align-items: center; }
 
@@ -74,11 +74,11 @@ i { color: black; scale: 125%; }
 
 .footer-icon { text-shadow: none; }
 
+h2.post-title { font-size: 36px; }
+
 @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v52/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"); }
 
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -moz-font-feature-settings: 'liga'; -moz-osx-font-smoothing: grayscale; }
-
-img { width: 600px; height: auto; }
 
 .blog-image { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; width: 100%; }
 
@@ -108,33 +108,39 @@ a { text-decoration: none; color: inherit; }
 
 .content-container > a { margin: 5px; }
 
-.content-container > a > img { width: 100%; }
-
 .content-wrapper { padding-top: 50px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
 
-.mdl-grid { max-width: 600px; display: flex !important; flex-direction: column !important; align-content: center; padding: 8px 50px !important; }
+.mdl-grid { max-width: 600px; display: flex !important; flex-direction: column !important; align-content: center; padding: 8px 0px !important; }
 
-.mdl-card__media { margin: 0; overflow: hidden; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; background-color: white; }
+@media screen and (max-width: 600px) { .mdl-grid { width: 100vw !important; } }
 
-.mdl-card__media > img { max-width: 100%; }
+.mdl-card__media { margin: 0; overflow: hidden; background-color: white !important; position: relative; }
+
+.mdl-card__media > img { max-width: 100%; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; }
 
 .mdl-card__actions { display: flex; box-sizing: border-box; align-items: center; }
 
 .mdl-card__actions > .mdl-button--icon { margin-right: 3px; margin-left: 3px; }
 
-.mdl-card { width: 600px !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.mdl-card { width: 90% !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .mdl-card__title { padding: 26px 16px 0px 16px !important; }
 
-.mdl-card__supporting-text { padding: 0px 16px !important; }
+.mdl-card__supporting-text { padding: 16px 16px 0px 16px !important; }
 
 .mdl-card:hover { box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
-.mdl-card:hover > a > figure > img { color: white !important; transform: scale(110%); opacity: 70%; }
+.mdl-card__content { height: 100%; display: flex; flex-direction: column; }
+
+@media screen and (max-width: 600px) { .mdl-card { width: 90vw !important; } }
+
+.mdl-card:hover > a > figure > img { position: relative; color: white !important; transform: scale(110%); opacity: 70%; }
 
 .mdl-cell { margin: 8px 0px 25px 0px !important; }
 
-.post-title { text-align: center; }
+.post { width: 90%; }
+
+.post-title { text-align: center; font-size: 36px !important; }
 
 /** material-design-lite - Material Design Components in CSS, JS and HTML @version v1.0.1 @license Apache-2.0 @copyright 2015 Google, Inc. @link https://github.com/google/material-design-lite */
 html { color: rgba(0, 0, 0, 0.87); }

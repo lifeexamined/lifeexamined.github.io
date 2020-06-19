@@ -4,17 +4,18 @@
 		<div class="mdl-grid">
 
 			{% for post in site.posts %}
-
+			{% unless post.categories contains 'about' %}
 			<a href="{{ post.url }}">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
 					<img src="{{ post.image }}" alt="" />
 				</figure>
+				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h1 class="mdl-card__title-text">{{ post.title }}</h1>
+					<h3 class="mdl-card__title-text">{{ post.title }}</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
-					<p>{{ post.excerpt }}</p>
+					<p>{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
 				</div>
 								<div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
@@ -23,8 +24,9 @@
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
 	  </div>
 			</div>
+		</div>
 			</a>
-			
+			{% endunless %}
 			{% endfor %}
 
 			
