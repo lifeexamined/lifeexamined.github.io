@@ -6,4 +6,4 @@ permalink: /blog/
 
 This is the "Examined!" blog. You can subscribe by clicking the RSS button. 
 
-    {% include examined-card.html %}
+{% include post-feed.html %}

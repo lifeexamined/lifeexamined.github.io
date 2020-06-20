@@ -18,5 +18,8 @@ github_username:  lifeexamined
 #Permalink for Posts
 permalink: /blog/:categories/:year/:month/:day/:title:output_ext
 
+#Blog Directory
+blog_directory: /assets/blog/
+
 # Build settings
 markdown: kramdown
