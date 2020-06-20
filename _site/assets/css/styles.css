@@ -76,6 +76,8 @@ i { color: black; scale: 125%; }
 
 h2.post-title { font-size: 36px; }
 
+p > img { width: 100% !important; }
+
 @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v52/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"); }
 
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -moz-font-feature-settings: 'liga'; -moz-osx-font-smoothing: grayscale; }
@@ -144,7 +146,11 @@ a { text-decoration: none; color: inherit; }
 
 .row-wrapper { display: flex; flex-direction: row; align-items: center; }
 
+@media screen and (max-width: 600px) { .row-wrapper { flex-direction: column; } }
+
 .row-wrapper > .mdl-card { width: 50% !important; margin: 0px 10px !important; }
+
+@media screen and (max-width: 600px) { .row-wrapper > .mdl-card { width: 100% !important; margin: 10px 0px !important; } }
 
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text { display: none !important; }
 

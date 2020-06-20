@@ -3,7 +3,7 @@ layout: post
 title:  "Nikita Novik"
 date:   2016-06-16 14:54:36 -0700
 categories: about
-image: /assets/images/nikita-novik.jpg
+image: nikita-novik.jpg
 permalink: /:categories/:year/:month/:day/:title:output_ext
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

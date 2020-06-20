@@ -1,14 +1,20 @@
 <a href="{{ post.url }}">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
-					<img src="{{ site.blog_directory }}{{ post.image }}" alt="" />
+					<img src="
+					{% if page.url contains 'about' %}
+						{{ site.url }}/assets/images/{{ post.image }}
+					{% else %}
+						{{ site.blog_directory }}{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%d' }}-{{ post.title | slugify }}/{{ post.image }}
+					{% endif %}
+						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
 					<h3 class="mdl-card__title-text">{{ post.title }}</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
-					<p>{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+					<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
 				</div>
 								<div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
