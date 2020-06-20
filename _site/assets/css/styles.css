@@ -21,7 +21,7 @@ a { text-decoration: none; color: black; font-size: 24px; }
 
 .header-wrapper { display: flex; justify-content: center; flex-direction: row; align-items: center; }
 
-.page-content { display: flex; flex-direction: row; width: 100%; justify-content: center; }
+.page-content { display: flex; flex-direction: row; width: 100%; justify-content: center; padding-bottom: 25px; }
 
 body { background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: none; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
 
@@ -139,6 +139,14 @@ a { text-decoration: none; color: inherit; }
 .mdl-cell { margin: 8px 0px 25px 0px !important; }
 
 .post { width: 90%; }
+
+.examined-wrapper { display: flex; flex-direction: column; align-items: center; }
+
+.row-wrapper { display: flex; flex-direction: row; align-items: center; }
+
+.row-wrapper > .mdl-card { width: 50% !important; margin: 0px 10px !important; }
+
+.row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text { display: none !important; }
 
 .post-title { text-align: center; font-size: 36px !important; }
 
@@ -2476,5 +2484,7 @@ iframe.heightSet { overflow: hidden; }
 .demo-wrapper { margin: 24px; }
 
 .demo-wrapper iframe { border: 1px solid rgba(0, 0, 0, 0.5); }
+
+footer { margin: 25px 0px !important; }
 
 /*# sourceMappingURL=styles.css.map */

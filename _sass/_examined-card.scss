@@ -173,3 +173,27 @@ a {
 .post {
 	width: 90%;
 }
+
+.examined-wrapper {
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	align-items: center;
+}
+
+.row-wrapper {
+	display: flex;
+	flex-direction: row;
+	// justify-content: center;
+	align-items: center;
+}
+
+.row-wrapper > .mdl-card {
+	width: 50% !important;
+	margin: 0px 10px !important;
+
+}
+
+.row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text {
+		display: none !important;
+	}
