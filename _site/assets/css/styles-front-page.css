@@ -22,14 +22,6 @@ a { text-decoration: none; color: black; font-size: 24px; }
 
 .page-content { display: flex; flex-direction: row; width: 100%; justify-content: center; }
 
-body { background-position-x: center; background-position-y: -220px; background-size: 1900px; background-repeat: no-repeat; background-color: none; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ }
-
-@media screen and (max-width: 360px) { body { background-image: url("cover-photo.jpg"); background-position-x: center; background-position-y: 0px; background-size: 850px; background-repeat: no-repeat; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
-
-@media (min-width: 361px) and (max-width: 768px) { body { background-image: url("cover-photo.jpg"); background-position-x: center; background-position-y: 0px; background-size: 1000px; background-repeat: no-repeat; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
-
-@media (min-width: 769px) and (max-width: 1200px) { body { background-image: url("cover-photo.jpg"); background-position-x: center; background-position-y: 0px; background-size: 1200px; background-repeat: no-repeat; overflow-y: hidden; z-index: -1; /* transition: background-size 0.3s cubic-bezier(.25,.8,.25,1); */ } }
-
 #bg-cover { background-color: rgba(0, 0, 0, 0.33); background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
 
 .description { font-family: 'Roboto', sans-serif; font-size: 24px; text-align: center; /* text-shadow:  1px 1px 0px rgba(0,0,0,0.8), -1px 1px 0px rgba(0,0,0,0.8), 1px -1px 0px rgba(0,0,0,0.8), -1px -1px 0px rgba(0,0,0,0.8), 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); */ width: 500px; }
@@ -75,7 +67,7 @@ i { color: black; scale: 125%; }
 
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -moz-font-feature-settings: 'liga'; -moz-osx-font-smoothing: grayscale; }
 
-#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: calc(100% + 100px); background-position: 50% 50%; background-image: url(/assets/images/0.jpg); background-repeat: no-repeat; background-color: black; overflow-y: hidden; }
+#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: calc(100% + 100px); background-position: 50% 50%; background-image: url(/assets/images/cover-photo.jpg); background-repeat: no-repeat; background-color: black; overflow-y: hidden; }
 
 @media screen and (max-width: 800px) { #parallax { background-size: auto calc(100% + 100px); } }
 

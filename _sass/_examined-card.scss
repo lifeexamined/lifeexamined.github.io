@@ -186,14 +186,24 @@ a {
 	flex-direction: row;
 	// justify-content: center;
 	align-items: center;
+
+	@include media-query($on-palm){
+		flex-direction: column;
+	}
 }
 
 .row-wrapper > .mdl-card {
 	width: 50% !important;
 	margin: 0px 10px !important;
 
+	@include media-query($on-palm){
+		width: 100% !important;
+		margin: 10px 0px !important;
+	}
+
 }
 
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text {
 		display: none !important;
+
 	}
