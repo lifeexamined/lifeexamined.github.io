@@ -1,9 +1,17 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oleo+Script:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;700;900&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.1.1/css/all.css");
-h1 { font-size: 72px !important; font-family: 'Oleo Script', cursive !important; text-align: center; line-height: 10px; margin-top: 25px !important; margin-bottom: 0px !important; }
+h1 { font-size: 72px !important; font-family: 'Oleo Script', cursive !important; text-align: center; line-height: 10px; margin-top: 25px !important; margin-bottom: 0px !important; color: black; }
 
-h1, h2, h3, h4, h5, p, ul { color: black; }
+h4, h5, p { color: black; font-family: 'Lato', sans-serif !important; }
+
+ul { font-family: 'Roboto', sans-serif; font-weight: 400 !important; }
+
+h2 { font-family: 'Lato', sans-serif !important; font-weight: 400 !important; color: black; }
+
+h3 { font-family: 'Roboto', sans-serif; font-weight: 400 !important; }
+
+p { font-size: 18px !important; font-weight: 400 !important; }
 
 .front-page { color: white !important; }
 
@@ -74,7 +82,7 @@ i { color: black; scale: 125%; }
 
 .footer-icon { text-shadow: none; }
 
-h2.post-title { font-size: 36px; }
+h2.post-title { font-size: 36px; font-weight: 400; }
 
 p > img { width: 100% !important; }
 
@@ -100,6 +108,8 @@ a { text-decoration: none; color: inherit; }
 
 .mdl-button:hover { color: #18c5ff !important; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
+.mdl-button.mdl-button--colored { font-weight: 400; font-family: Arial, Helvetica, sans-serif; }
+
 .single-menu { color: grey; }
 
 .active { color: black !important; }
@@ -118,23 +128,25 @@ a { text-decoration: none; color: inherit; }
 
 .mdl-card__media { margin: 0; overflow: hidden; background-color: white !important; position: relative; }
 
-.mdl-card__media > img { max-width: 100%; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; }
+.mdl-card__media > img { width: 100%; max-width: 100%; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; }
 
 .mdl-card__actions { display: flex; box-sizing: border-box; align-items: center; }
 
 .mdl-card__actions > .mdl-button--icon { margin-right: 3px; margin-left: 3px; }
 
-.mdl-card { width: 90% !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.mdl-button--icon .material-icons { width: 1px !important; top: 60% !important; color: #009688; }
 
-.mdl-card__title { padding: 26px 16px 0px 16px !important; }
+.mdl-card { width: 100% !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
-.mdl-card__supporting-text { padding: 16px 16px 0px 16px !important; }
+.mdl-card__title { padding: 26px 16px 16px 16px !important; }
+
+.mdl-card__supporting-text { padding: 0px 16px 0px 16px !important; }
 
 .mdl-card:hover { box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 .mdl-card__content { height: 100%; display: flex; flex-direction: column; }
 
-@media screen and (max-width: 600px) { .mdl-card { width: 90vw !important; } }
+@media screen and (max-width: 600px) { .mdl-card { width: 100% !important; } }
 
 .mdl-card:hover > a > figure > img { position: relative; color: white !important; transform: scale(110%); opacity: 70%; }
 
@@ -153,6 +165,8 @@ a { text-decoration: none; color: inherit; }
 @media screen and (max-width: 600px) { .row-wrapper > .mdl-card { width: 100% !important; margin: 10px 0px !important; } }
 
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text { display: none !important; }
+
+.row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__title > .mdl-card__title-text { font-weight: 300 !important; }
 
 .post-title { text-align: center; font-size: 36px !important; }
 
@@ -2492,5 +2506,13 @@ iframe.heightSet { overflow: hidden; }
 .demo-wrapper iframe { border: 1px solid rgba(0, 0, 0, 0.5); }
 
 footer { margin: 25px 0px !important; }
+
+.gallery { display: flex; flex-direction: row; }
+
+.column { display: flex; flex-direction: column; width: 33.3333%; padding: 3px; }
+
+.column img { width: 100%; margin-bottom: 6px; }
+
+.column a { line-height: 0; }
 
 /*# sourceMappingURL=styles.css.map */
