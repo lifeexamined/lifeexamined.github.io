@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{% assign originalPhotos = '/assets/gi-original/' %}
+<article class="post">
+
+  <header class="post-header">
+    <h2 class="single-page post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="single-page post-content">
+    {{ content }}
+    
+    <div class="gallery">
+      {% assign image_files = site.static_files | where: "image", true %}
+
+      <div id="column-1" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+
+        {% if every_third == 1 %}
+       
+          <a href="{{ myimage.path }}"><img src="http://images.weserv.nl/?url=www.lifeexamined.github.io{{ myimage }}&w=200&h=200&output=jpg&q=65" /><img src="{{ myimage.path }}"></a>
+          
+        {% else %}
+        {% continue %}
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      <div id="column-2" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+
+        {% if every_third == 2 %}
+
+        <a href="{{ originalPhotos }}{{ myimage.path | remove: '/assets/gallery-images/'}}"><img src="{{ myimage.path }}"></a>
+          
+        {% else %}
+        {% continue %}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div id="column-3" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+
+        {% if every_third == 0 %}
+
+        <a href="{{ originalPhotos }}{{ myimage.path | remove: '/assets/gallery-images/'}}"><img src="{{ myimage.path }}"></a>
+          
+        {% else %}
+        {% continue %}
+        {% endif %}
+        {% endfor %}
+      </div>
+        
+
+      </div>
+                 
+    </div>
+      </div>
+
+</article>

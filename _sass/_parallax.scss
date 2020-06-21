@@ -9,7 +9,8 @@
     background-position-x: center;
     background-position-y: -220px;
     background-size: calc(100% + 100px);
-    background-position: 50% 50%;
+    --myRatio: calc(100vh / 100vw);
+    background-position: 50% calc(var(--myRatio) * 1000px);
 
     background-image: url(/assets/images/cover-photo.jpg);
 

@@ -23,3 +23,10 @@ blog_directory: /assets/blog/
 
 # Build settings
 markdown: kramdown
+
+#List Images
+defaults:
+  - scope:
+      path: "assets/gallery-images"
+    values:
+      image: true

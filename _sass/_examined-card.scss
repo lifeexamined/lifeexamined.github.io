@@ -54,6 +54,11 @@ a {
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
+.mdl-button.mdl-button--colored {
+	font-weight: 400;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 .single-menu {
 	color: grey;
 }
@@ -113,6 +118,7 @@ a {
 }
 
 .mdl-card__media > img {
+	width: 100%;
 	max-width: 100%;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
 
@@ -127,17 +133,23 @@ a {
 	margin-left: 3px;
 }
 
+.mdl-button--icon .material-icons {
+	width: 1px !important;
+	top: 60% !important;
+	color: #009688;
+}
+
 .mdl-card {
-	width: 90% !important;
+	width: 100% !important;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 	// height: 75vh !important;
 
 	&__title{
-		padding: 26px 16px 0px 16px !important;
+		padding: 26px 16px 16px 16px !important;
 	}
 
 	&__supporting-text {
-		padding: 16px 16px 0px 16px !important;
+		padding: 0px 16px 0px 16px !important;
 	}
 
 	&:hover{
@@ -153,7 +165,7 @@ a {
 	}
 
 	@include media-query($on-palm){
-		width: 90vw !important;
+		width: 100% !important;
 	}
 
 }
@@ -207,3 +219,7 @@ a {
 		display: none !important;
 
 	}
+
+.row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__title > .mdl-card__title-text {	
+	font-weight: 300 !important;
+}
