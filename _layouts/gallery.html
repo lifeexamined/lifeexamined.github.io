@@ -2,6 +2,8 @@
 layout: default
 ---
 {% assign originalPhotos = '/assets/gi-original/' %}
+{% assign thumbnailImg = '' %}
+
 <article class="post">
 
   <header class="post-header">
@@ -20,8 +22,8 @@ layout: default
 
         {% if every_third == 1 %}
        
-          <a href="{{ myimage.path }}"><img src="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65" /><img src="{{ myimage.path }}"></a>
-          
+          <a href="{{ myimage.path }}"><img src="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65" /></a>
+        
         {% else %}
         {% continue %}
         {% endif %}
@@ -34,7 +36,7 @@ layout: default
 
         {% if every_third == 2 %}
 
-        <a href="{{ originalPhotos }}{{ myimage.path | remove: '/assets/gallery-images/'}}"><img src="{{ myimage.path }}"></a>
+        <a href="{{ myimage.path }}"><img src="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65"></a>
           
         {% else %}
         {% continue %}
@@ -48,7 +50,7 @@ layout: default
 
         {% if every_third == 0 %}
 
-        <a href="{{ originalPhotos }}{{ myimage.path | remove: '/assets/gallery-images/'}}"><img src="{{ myimage.path }}"></a>
+        <a href="{{ myimage.path }}"><img src="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65"></a>
           
         {% else %}
         {% continue %}
