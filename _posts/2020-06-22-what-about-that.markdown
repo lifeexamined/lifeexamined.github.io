@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "What About That?"
+date:   2020-06-22 14:54:36 -0700
 categories: article
 tag: blog
 image: cover-photo.jpg

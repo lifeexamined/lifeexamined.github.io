@@ -84,7 +84,7 @@ body { background-position-x: center; background-position-y: -220px; background-
 
 h2.post-title { font-size: 36px; font-weight: 400; }
 
-p > img { width: 100% !important; }
+p > a > img { width: 100% !important; }
 
 @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v52/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"); }
 
