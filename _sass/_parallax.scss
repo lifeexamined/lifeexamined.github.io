@@ -1,4 +1,11 @@
+:root {
+  --myRatio: calc(100vw / 10);
+  --my-variable: calc(var(--myRatio) / 100vw);
+  --my-variable-two: calc(var(--my-variable) + 200px);
+}
+
 #parallax {
+
     position: absolute;
     z-index: -1;
     top: 0;
@@ -9,8 +16,7 @@
     background-position-x: center;
     background-position-y: -220px;
     background-size: calc(100% + 100px);
-    --myRatio: calc(100vh / 100vw);
-    background-position: 50% calc(var(--myRatio) * 1000px);
+    background-position: 50% 15%;
 
     background-image: url(/assets/images/cover-photo.jpg);
 
@@ -18,10 +24,14 @@
     background-color: black;
 
     overflow-y: hidden;
+  
   }
+
+
 
   @media screen and (max-width: 800px) {
     #parallax {
-    background-size: auto calc(100% + 100px);
+      background-size: auto calc(100% + 100px);
+      background-position: 50% 0%;
     }
 }

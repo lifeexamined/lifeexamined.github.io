@@ -1,8 +1,32 @@
 <div class="row-wrapper">
 
-{% for post in site.categories.about %}
+{% for about in site.about %}
 
-{% include examined-card.html %}
+<a href="{{ about.url }}">
+    <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+        <figure class="mdl-card__media">
+            <img src="
+                
+            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/{{ about.image }}&w=800&h=500&output=jpg&q=65
+                
+                " alt="" />
+        </figure>
+        <div class="mdl-card__content">
+        <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">{{ about.title }}</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>{{ about.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+<a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ about.url }}">Read More</a>
+<div class="mdl-layout-spacer"></div>
+<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+</div>
+    </div>
+</div>
+    </a>
 
 {% endfor %}
 

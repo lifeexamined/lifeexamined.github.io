@@ -1,66 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Blog</title>
-  <meta name="description" content="This is the “Examined!” blog. You can subscribe by clicking the RSS button.">
-
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <!-- <link rel="stylesheet" href="./src/font-awesome.min.css"> -->
-  <link rel="canonical" href="https://lifeexamined.github.io/blog/">
-  <link rel="alternate" type="application/rss+xml" title="Examined!" href="https://lifeexamined.github.io/feed.xml">
-</head>
-
-
-  <body>
-    <header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/"><h1>Examined!</h1></a>
-
-    <nav>
-<ul>
-    
-    <li><a href="/about/" 
-        >
-        About
-    </a></li>
-    
-    <li><a href="/blog/" 
-        
-        style="color: black !important;"
-        >
-        Blog
-    </a></li>
-    
-    <li><a href="/gallery/" 
-        >
-        Gallery
-    </a></li>
-    
-</ul>
-</nav>
-
-  </div>
-
-</header>
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h2 class="single-page post-title">Blog</h1>
-  </header>
-
-  <div class="single-page post-content">
-    <p>This is the “Examined!” blog. You can subscribe by clicking the RSS button.</p>
+I"�
+<p>This is the “Examined!” blog. You can subscribe by clicking the RSS button.</p>
 
 <div class="examined-wrapper">
 	
@@ -126,25 +65,4 @@
 	
 </div>
 
-
-  </div>
-
-</article>
-
-      </div>
-    </div>
-
-    <footer class="site-footer">
-
-  <div class="header-wrapper">
-    <a class="footer-icon" href="https://twitter.com/examined13" target="_blank"><div class="icon-container"><i class="fab fa-twitter"></i></div></a>
-    <a class="footer-icon" href="https://www.facebook.com/enigmus.der.cat" target="_blank"><div class="icon-container"><i class="fab fa-facebook"></i></div></a>
-    <a class="footer-icon" href="https://www.instagram.com/examinedblog" target="_blank"><div class="icon-container"><i class="fab fa-instagram"></i></div></a>
-  </div>
-
-</footer>
-
-
-  </body>
-
-</html>
+:ET

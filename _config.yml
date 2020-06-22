@@ -16,7 +16,7 @@ twitter_username: examined13
 github_username:  lifeexamined
 
 #Permalink for Posts
-permalink: /blog/:categories/:year/:month/:day/:title:output_ext
+permalink: /:categories/:year/:month/:day/:title:output_ext
 
 #Blog Directory
 blog_directory: /assets/blog/
@@ -30,3 +30,9 @@ defaults:
       path: "assets/gallery-images"
     values:
       image: true
+
+#About Permalink
+collections:
+  about:
+      output: true
+      permalink: /about/:path/
