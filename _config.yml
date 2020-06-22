@@ -16,7 +16,7 @@ twitter_username: examined13
 github_username:  lifeexamined
 
 #Permalink for Posts
-permalink: /:categories/:year/:month/:day/:title:output_ext
+permalink: /blog/:categories/:year/:month/:day/:title:output_ext
 
 #Blog Directory
 blog_directory: /assets/blog/

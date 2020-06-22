@@ -1,10 +1,39 @@
-I"�
-<p>This is the “Examined!” blog. You can subscribe by clicking the RSS button.</p>
+I"�<p>This is the “Examined!” blog. You can subscribe by clicking the RSS button.</p>
 
 <div class="examined-wrapper">
 	
 	
-	<a href="/article/2020/06/16/the-road.html">
+	<a href="/blog/article/2020/06/22/what-about-that.html">
+			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<figure class="mdl-card__media">
+					<img src="
+					
+					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/06/22-what-about-that/cover-photo.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+						
+					
+						" alt="" />
+				</figure>
+				<div class="mdl-card__content">
+				<div class="mdl-card__title">
+					<h3 class="mdl-card__title-text">What About That?</h3>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back ...</p>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/22/what-about-that.html">Read More</a>
+    <div class="mdl-layout-spacer"></div>
+    	<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+	  </div>
+			</div>
+		</div>
+			</a>
+ 
+	
+	
+	
+	<a href="/blog/article/2020/06/16/the-road.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
 					<img src="
@@ -22,7 +51,7 @@
 					<p>We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back ...</p>
 				</div>
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/article/2020/06/16/the-road.html">Read More</a>
+    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/16/the-road.html">Read More</a>
     <div class="mdl-layout-spacer"></div>
     	<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
@@ -34,7 +63,7 @@
 	
 	
 	
-	<a href="/article/2020/06/12/unexamined-life-is-not-worth-living.html">
+	<a href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
 					<img src="
@@ -52,7 +81,7 @@
 					<p>Unexamined Life is Not Worth Living. These words might seem a bit harsh but it’s true. Just like ...</p>
 				</div>
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/article/2020/06/12/unexamined-life-is-not-worth-living.html">Read More</a>
+    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">Read More</a>
     <div class="mdl-layout-spacer"></div>
     	<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
