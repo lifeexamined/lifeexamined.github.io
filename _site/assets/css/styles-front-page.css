@@ -67,8 +67,10 @@ i { color: black; scale: 125%; }
 
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -moz-font-feature-settings: 'liga'; -moz-osx-font-smoothing: grayscale; }
 
-#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: calc(100% + 100px); --myRatio: calc(100vh / 100vw); background-position: 50% calc(var(--myRatio) * 1000px); background-image: url(/assets/images/cover-photo.jpg); background-repeat: no-repeat; background-color: black; overflow-y: hidden; }
+:root { --myRatio: calc(100vw / 10); --my-variable: calc(var(--myRatio) / 100vw); --my-variable-two: calc(var(--my-variable) + 200px); }
 
-@media screen and (max-width: 800px) { #parallax { background-size: auto calc(100% + 100px); } }
+#parallax { position: absolute; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-repeat: no-repeat; background-position-x: center; background-position-y: -220px; background-size: calc(100% + 100px); background-position: 50% 15%; background-image: url(/assets/images/cover-photo.jpg); background-repeat: no-repeat; background-color: black; overflow-y: hidden; }
+
+@media screen and (max-width: 800px) { #parallax { background-size: auto calc(100% + 100px); background-position: 50% 0%; } }
 
 /*# sourceMappingURL=styles-front-page.css.map */

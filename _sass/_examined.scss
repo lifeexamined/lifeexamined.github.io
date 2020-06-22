@@ -130,7 +130,6 @@ body {
 
 @media screen and (max-width: 360px) {
     body {
-        background-image: url("cover-photo.jpg");
         background-position-x: center;
         background-position-y: 0px;
         background-size: 850px;
@@ -146,7 +145,6 @@ body {
 
 @media (min-width: 361px) and (max-width: 768px) {
     body {
-        background-image: url("cover-photo.jpg");
         background-position-x: center;
         background-position-y: 0px;
         background-size: 1000px;
@@ -162,7 +160,6 @@ body {
 
 @media (min-width: 769px) and (max-width: 1200px) {
     body {
-        background-image: url("cover-photo.jpg");
         background-position-x: center;
         background-position-y: 0px;
         background-size: 1200px;
@@ -254,10 +251,10 @@ body {
     width: 100%;
 }
 
-i {
-    color: black;
-    scale: 125%;
-}
+// i {
+//     color: black;
+//     font-size: ;
+// }
 
 /**
  * Site footer
@@ -324,7 +321,7 @@ i {
 }
 
 .icon-container {
-    background-color: rgba(255,255,255,.5);
+    background-color: black;
     width: 50px;
     height: 50px;
     border-radius: 100px;
@@ -334,6 +331,10 @@ i {
     align-items: center;
 
     margin: 0px 5px;
+}
+
+.icon-container > i {
+    color: white !important;
 }
 
 .footer-icon {

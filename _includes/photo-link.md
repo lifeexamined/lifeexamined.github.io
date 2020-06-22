@@ -1,0 +1,1 @@
+https://images.weserv.nl/?url=https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}/{{ photoName }}&w=800&h=500&output=jpg&q=65

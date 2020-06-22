@@ -30,3 +30,9 @@ defaults:
       path: "assets/gallery-images"
     values:
       image: true
+
+#About Permalink
+collections:
+  about:
+      output: true
+      permalink: /about/:path/

@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "The Road"
-date:   2020-06-16 14:54:36 -0700
+title:  "What About That?"
 categories: article
 tag: blog
 image: cover-photo.jpg

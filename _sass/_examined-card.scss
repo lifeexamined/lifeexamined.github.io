@@ -41,7 +41,19 @@ a {
 }
 
 .mdl-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	font-family: 'Roboto', sans-serif;
+	// background-color: black !important;
+	height: 50px !important;
+	width: 50px !important;
+}
+
+#read-more-button {
+	width: 100px !important;
+	display: flex;
 }
 
 .fa {
@@ -134,8 +146,8 @@ a {
 }
 
 .mdl-button--icon .material-icons {
-	width: 1px !important;
-	top: 60% !important;
+	font-size: 25px;
+	top: 50% !important;
 	color: #009688;
 }
 
