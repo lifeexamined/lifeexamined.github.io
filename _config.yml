@@ -40,6 +40,9 @@ keywords: # Keywords describing your site
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # your site's origin, e.g. https://forestry.io
 
+destination: public
+source: src
+
 exclude:
   - static-script.config.js
   - Gemfile
