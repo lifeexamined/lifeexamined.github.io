@@ -1,8 +1,8 @@
-_site
+_site/
 .sass-cache
 .jekyll-metadata
-public
+public/
 src/assets/javascripts/bundle.js
-_old
-_trash
-node_modules
+_old/
+_trash/
+node_modules/
