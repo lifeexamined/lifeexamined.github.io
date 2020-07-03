@@ -1,0 +1,12 @@
+<nav>
+<ul>
+    {% for item in site.data.navigation %}
+    <li><a href="{{ item.link }}" 
+        {% if page.url contains item.link and page.url %}
+        style="color: black !important;"
+        {% endif %}>
+        {{ item.name }}
+    </a></li>
+    {% endfor %}
+</ul>
+</nav>
