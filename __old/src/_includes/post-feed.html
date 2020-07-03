@@ -1,9 +1,0 @@
-<div class="examined-wrapper">
-	{% for post in site.posts %}
-	{% unless post.categories contains 'about' %}
-	{% include examined-card.html %}
-	{% endunless %}
-	{% endfor %}
-</div>
-
-{% include scripts.html %}
