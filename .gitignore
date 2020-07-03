@@ -5,3 +5,4 @@ public
 src/assets/javascripts/bundle.js
 _old
 _trash
+node_modules
