@@ -13,7 +13,7 @@ layout: gallery-wrapper
   <div class="single-page post-content">
     {{ content }}
 
-    <div class="gallery">
+    <div class="gallery" style="display: none !important;">
       {% assign image_files = site.static_files | where: "image", true %}
 
       <div id="column-1" class="column">
@@ -82,7 +82,7 @@ layout: gallery-wrapper
   }
 
   const backgroundStyle = {
-    'background-color': 'grey',
+    'background-color': 'black',
     width: '100vw',
     height: '100vh',
     display: 'flex',
@@ -98,19 +98,30 @@ layout: gallery-wrapper
 
   const closeGalleryStyle = {
     'align-self': 'flex-start',
-    padding: '20px'
+    padding: '20px',
+    position: 'absolute',
+    top:'0',
+    right:'0'
   }
 
   const cardWrapperStyle = {
     display: 'flex',
-    'flex-direction': 'column'
+    'flex-direction': 'column',
+    'justify-content':'center',
+    'align-items':'center'
   }
 
   const cardStyle = {
-    width: '800px',
-    height: '500px',
-    'background-color': 'white',
+    width: '80%',
+    height:'auto',
+    'background-color': 'black',
     position: 'relative'
+  }
+
+const subCardStyle = {
+    display:'flex',
+    'flex-direction':'column',
+    'align-items':'center'
   }
 
   const cardMetaStyle = {
@@ -127,10 +138,33 @@ layout: gallery-wrapper
   }
 
   const cardPhotoStyle = {
-    'background-color': 'green',
-    width: '100%',
-    height: '100%'
+    width: 'auto',
+    height: '100%',
+    display:'flex',
+    'flex-direction':'row',
+    'justify-content':'center',
+    'align-items':'center'
+  
   }
+
+  const buttonStyle = {
+  height: '50px',
+  width: '50px',
+  'background-color': 'white',
+  color: 'black',
+  border: 'none',
+  'border-radius': '100px',
+  margin: '20px',
+  'font-size': '25px',
+  margin: '20px'
+}
+
+const countStyle = {
+  'align-self': 'center',
+  'justify-self':'center',
+  color: 'white',
+  margin: '10px'
+}
 
   const cardObj = {
     "properties": [
@@ -276,14 +310,15 @@ prevProperty = () => {
         <Modal onClose={this.showModal} show={this.state.show}> 
         <div class="background" style={backgroundStyle}>
           <a onClick={e => {this.closeModal(e);}} class="close-gallery" style={closeGalleryStyle}>X</a>
-          <button onClick={e => {this.nextProperty(); console.log(this.state.property.index)}} disabled={property.index === cardObj.properties.length-1} class="card-text" >Next</button>
-          <button onClick={e => {this.prevProperty(); console.log(this.state.property.index)}} disabled={property.index === 1} class="card-text" >prev</button>
+          <button class="fa fa-chevron-circle-left" style={buttonStyle} onClick={e => {this.prevProperty(); console.log(this.state.property.index)}} disabled={property.index === 1}></button>
         <div class="card-wrapper" style={cardWrapperStyle}>
           <div class="card" style={cardStyle}>
             <CardSliderThing cardprop={this.props.cardprop} dataindex={this.props.dataindex} property={property} />
             </div>
+            
+            </div>
+            <button style={buttonStyle} class="fa fa-chevron-circle-right" onClick={e => {this.nextProperty(); console.log(this.state.property.index)}} disabled={property.index === cardObj.properties.length}></button>
           </div>
-        </div>
       </Modal>
         <a onClick={e => {this.showModal(e); console.log(e.target.id);}}><img id={this.props.id} src={this.props.cardminiimg} /></a>
         </div>
@@ -299,18 +334,11 @@ const { index, path } = property;
 
   return(
 
-    <div>
+    <div style={subCardStyle}>
   <div class="card-photo" style={cardPhotoStyle}>
               <img src={path} />
             </div>
-            <div class="card-meta" style={cardMetaStyle}>
-              <div class="card-title">            
-                <h1>Title</h1>
-              </div>
-              <div >
-                <p>{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</p>
-              </div>
-            </div>
+            <div class="count" style={countStyle}>{index}/{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</div>
             </div>
 
   )
