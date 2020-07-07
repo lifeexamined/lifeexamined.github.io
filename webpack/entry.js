@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Hello from './components/Hello';
+import Gallery from './components/Gallery';
 
 class App extends Component {
   render() {
@@ -10,4 +10,4 @@ class App extends Component {
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<Gallery />, document.getElementById('mygallery'));
