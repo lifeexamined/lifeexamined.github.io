@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: gallery-wrapper
 ---
 {% assign originalPhotos = '/assets/gi-original/' %}
 {% assign thumbnailImg = '' %}
@@ -12,7 +12,7 @@ layout: default
 
   <div class="single-page post-content">
     {{ content }}
-    
+
     <div class="gallery">
       {% assign image_files = site.static_files | where: "image", true %}
 
@@ -65,3 +65,258 @@ layout: default
       </div>
 
 </article>
+<div id="mygallery"></div>
+<div id="mydiv"></div>
+
+<script type="text/babel">
+  const divStyle = {
+    position: 'fixed',
+    width:'100%',
+    height: '100%',
+    display: 'flex',
+    top: '0',
+    left: '0',
+    'flex-direction': 'row',
+    'justify-content': 'center',
+    'align-items': 'center'
+  }
+
+  const backgroundStyle = {
+    'background-color': 'grey',
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    'flex-direction': 'row',
+    'justify-content': 'center',
+    'align-items': 'center',
+    position: 'fixed',
+    top: '0',
+    right: '0',
+    'z-index': '100'
+
+  }
+
+  const closeGalleryStyle = {
+    'align-self': 'flex-start',
+    padding: '20px'
+  }
+
+  const cardWrapperStyle = {
+    display: 'flex',
+    'flex-direction': 'column'
+  }
+
+  const cardStyle = {
+    width: '800px',
+    height: '500px',
+    'background-color': 'white',
+    position: 'relative'
+  }
+
+  const cardMetaStyle = {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    'background-color': 'rgba(200, 200, 200, 0.5)',
+    top: '0',
+    left: '0',
+    transition: 'all 0.2s ease-out',
+    display: 'flex',
+    'flex-direction': 'row',
+    'justify-content': 'space-between'
+  }
+
+  const cardPhotoStyle = {
+    'background-color': 'green',
+    width: '100%',
+    height: '100%'
+  }
+
+  const cardObj = {
+    "properties": [
+    {% for myimage in image_files %}
+    {% assign cardNumber = forloop.index %}
+    {
+      "index":{{ cardNumber }},
+      "path":"{{ myimage.path }}"
+    },
+    {% endfor %}
+    ]
+  }
+
+  console.log(cardObj);
+
+class Search extends React.Component {
+
+render(){
+    return (
+      <div class="gallery">
+          {% assign image_files = site.static_files | where: "image", true %}
+
+       <div id="column-1" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+        {% assign cardIndex = forloop.rindex0 %}
+
+        {% if every_third == 1 %}
+       
+          <CardProps cardminiimg="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65" cardprop="{{ myimage.path }}" id="{{ cardIndex }}" />
+        
+        {% else %}
+        {% continue %}
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      <div id="column-2" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+        {% assign cardIndex = forloop.rindex0 %}
+
+        {% if every_third == 2 %}
+
+        <CardProps cardminiimg="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65" cardprop="{{ myimage.path }}" id="{{ cardIndex }}" />
+          
+        {% else %}
+        {% continue %}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div id="column-3" class="column">
+        {% for myimage in image_files reversed %}
+        {% assign every_third = forloop.index | modulo:3 %}
+        {% assign cardIndex = forloop.rindex0 %}
+
+        {% if every_third == 0 %}
+
+          <CardProps cardminiimg="https://images.weserv.nl/?url=https://lifeexamined.github.io{{ myimage.path }}&w=200&h=200&output=jpg&q=65" cardprop="{{ myimage.path }}" id="{{ cardIndex }}" />
+          
+        {% else %}
+        {% continue %} 
+        {% endif %}
+        {% endfor %}
+      </div>
+      </div>
+      
+      )
+    }
+
+}
+
+class Modal extends React.Component {
+  constructor(props){
+    super(props)
+
+  }
+
+    render(){
+      if(!this.props.show){
+        return null;
+      }
+      return <div>{this.props.children}</div>;
+    }
+  }
+
+  class CardProps extends React.Component {
+    constructor(props){
+    super(props)
+    this.state = {
+      properties: cardObj.properties,
+      property: cardObj.properties[0]
+    }
+  }
+
+  currentProperty = e => {
+  const clickedImg = e.target.id;
+  this.setState({
+    property: cardObj.properties[clickedImg]
+  })
+}
+
+nextProperty = () => {
+  const newIndex = (this.state.property.index-1)+1;
+  this.setState({
+    property: cardObj.properties[newIndex]
+  })
+}
+
+prevProperty = () => {
+  const newIndex = (this.state.property.index-1)-1;
+  this.setState({
+    property: cardObj.properties[newIndex]
+  })
+}
+
+    state = {
+    show: false,
+    };
+
+    showModal = e => {
+    this.setState({
+      show: !this.state.show,
+      property: cardObj.properties[e.target.id]
+    });
+    };
+
+    closeModal = e => {
+    this.setState({
+      show: !this.state.show,
+    });
+    };
+
+    onClose = e => {
+      this.props.onClose && this.props.onClose(e);
+     };
+
+     render(){
+  const {properties, property} = this.state
+      return(
+        <div>
+        <Modal onClose={this.showModal} show={this.state.show}> 
+        <div class="background" style={backgroundStyle}>
+          <a onClick={e => {this.closeModal(e);}} class="close-gallery" style={closeGalleryStyle}>X</a>
+          <button onClick={e => {this.nextProperty(); console.log(this.state.property.index)}} disabled={property.index === cardObj.properties.length-1} class="card-text" >Next</button>
+          <button onClick={e => {this.prevProperty(); console.log(this.state.property.index)}} disabled={property.index === 1} class="card-text" >prev</button>
+        <div class="card-wrapper" style={cardWrapperStyle}>
+          <div class="card" style={cardStyle}>
+            <CardSliderThing cardprop={this.props.cardprop} dataindex={this.props.dataindex} property={property} />
+            </div>
+          </div>
+        </div>
+      </Modal>
+        <a onClick={e => {this.showModal(e); console.log(e.target.id);}}><img id={this.props.id} src={this.props.cardminiimg} /></a>
+        </div>
+      )
+    }
+
+  }
+  
+  
+ const CardSliderThing = ({property}) => {
+
+const { index, path } = property;
+
+  return(
+
+    <div>
+  <div class="card-photo" style={cardPhotoStyle}>
+              <img src={path} />
+            </div>
+            <div class="card-meta" style={cardMetaStyle}>
+              <div class="card-title">            
+                <h1>Title</h1>
+              </div>
+              <div >
+                <p>{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</p>
+              </div>
+            </div>
+            </div>
+
+  )
+}
+
+
+  ReactDOM.render(<Search />, document.querySelector('#mygallery'))
+
+</script>
