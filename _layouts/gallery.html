@@ -150,15 +150,22 @@ const subCardStyle = {
   }
 
   const buttonStyle = {
-  height: '50px',
-  width: '50px',
   'background-color': 'white',
   color: 'black',
   border: 'none',
   'border-radius': '100px',
   margin: '20px',
   'font-size': '25px',
-  margin: '20px'
+  margin: '30px',
+  padding: '10px'
+}
+
+const closeButtonStyle = {
+  'background-color': 'white',
+  color: 'black',
+  border: 'none',
+  'border-radius': '100px',
+  padding: '5px'
 }
 
 const countStyle = {
@@ -168,13 +175,17 @@ const countStyle = {
   padding: '10px',
   'background-color':'black',
   position:'absolute',
-  bottom:'0'
+  top:'0'
 }
 
 const imgStyle = {
   display:'flex',
   'flex-direction':'column',
   'justify-content':'flex-end'
+}
+
+const faStyle = {
+  color: 'white !important'
 }
 
   const cardObj = {
@@ -320,7 +331,8 @@ prevProperty = () => {
         <div>
         <Modal onClose={this.showModal} show={this.state.show}> 
         <div class="background" style={backgroundStyle}>
-          <a onClick={e => {this.closeModal(e);}} class="close-gallery" style={closeGalleryStyle}>X</a>
+          <a onClick={e => {this.closeModal(e);}} class="close-gallery" style={closeGalleryStyle}><button style={closeButtonStyle}><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+</a>
           <button class="fa fa-chevron-circle-left" style={buttonStyle} onClick={e => {this.prevProperty(); console.log(this.state.property.index)}} disabled={property.index === 1}></button>
         <div class="card-wrapper" style={cardWrapperStyle}>
           <div class="card" style={cardStyle}>
