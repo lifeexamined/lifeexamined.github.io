@@ -123,8 +123,7 @@ const subCardStyle = {
     display:'flex',
     'flex-direction':'column',
     'align-items':'center',
-    width: 'auto',
-    height:'100vh'
+    width: 'auto'
   }
 
   const cardMetaStyle = {
@@ -142,7 +141,7 @@ const subCardStyle = {
 
   const cardPhotoStyle = {
     width: 'auto',
-    height: '95vh',
+    height: '100vh',
     display:'flex',
     'flex-direction':'row',
     'justify-content':'center',
@@ -167,8 +166,15 @@ const countStyle = {
   'justify-self':'center',
   color: 'white',
   padding: '10px',
-  height: '5vh',
-  'background-color':'black'
+  'background-color':'black',
+  position:'absolute',
+  bottom:'0'
+}
+
+const imgStyle = {
+  display:'flex',
+  'flex-direction':'column',
+  'justify-content':'flex-end'
 }
 
   const cardObj = {
@@ -341,9 +347,12 @@ const { index, path } = property;
 
     <div style={subCardStyle}>
   <div class="card-photo" style={cardPhotoStyle}>
-              <img src={path} />
-            </div>
-            <div class="count" style={countStyle}>{index}/{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</div>
+              <div style={imgStyle}>
+                <img src={path} />
+                
+                </div>
+                <div class="count" style={countStyle}>{index}/{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</div>
+                </div>
             </div>
 
   )
