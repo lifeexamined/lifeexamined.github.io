@@ -1,6 +1,43 @@
-I"W<p>This is the “Examined!” blog. You can subscribe to our <a href="https://lifeexamined.github.io/feed.xml">RSS feed</a>.</p>
+I"&<p>This is the “Examined!” blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="examined-wrapper">
+	
+	
+	<a href="/blog/article/2020/07/20/the-lake-conundrum.html">
+			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<figure class="mdl-card__media">
+					<img src="
+					
+					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/20-the-lake-conundrum/cover-photo.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+						
+					
+						" alt="" />
+				</figure>
+				<div class="mdl-card__content">
+				<div class="mdl-card__title">
+					<h3 class="mdl-card__title-text">The Lake Conundrum</h3>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>I came across an interesting video, which was released by the project “Astra Nova,” which is rela...</p>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/07/20/the-lake-conundrum.html">Read More</a>
+    <div class="mdl-layout-spacer"></div>
+					
+					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
+
+					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+
+					<!-- <div class="lb-count-copy" data-cardnum="1"></div> -->
+					
+					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+	  </div>
+			</div>
+		</div>
+			</a>
+ 
+	
 	
 	
 	<a href="/blog/article/2020/06/16/the-road.html">
@@ -29,7 +66,7 @@
 
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
 
-					<!-- <div class="lb-count-copy" data-cardnum="1"></div> -->
+					<!-- <div class="lb-count-copy" data-cardnum="2"></div> -->
 					
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
 	  </div>
@@ -66,7 +103,7 @@
 
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
 
-					<!-- <div class="lb-count-copy" data-cardnum="2"></div> -->
+					<!-- <div class="lb-count-copy" data-cardnum="3"></div> -->
 					
 					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
 	  </div>
