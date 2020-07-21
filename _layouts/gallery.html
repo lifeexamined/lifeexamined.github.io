@@ -4,9 +4,6 @@ layout: gallery-wrapper
 {% assign originalPhotos = '/assets/gi-original/' %}
 {% assign thumbnailImg = '' %}
 
-<div id="root"></div>
-<script type="text/javascript" src="/assets/javascripts/bundle.js" charset="utf-8"></script>
-
 <article class="post">
 
   <header class="post-header">
@@ -69,7 +66,7 @@ layout: gallery-wrapper
       </div>
 
 </article>
-<!-- <div id="mygallery"></div> -->
+<div id="mygallery"></div>
 <div id="mydiv"></div>
 
 <script type="text/babel">
@@ -358,21 +355,12 @@ prevProperty = () => {
 
 const { index, path } = property;
 
-const Pic = styled.img`
-      
-      width: 100%;
-  
-  @media (max-width: 768px){
-    height: 100vh;
-  }
-`;
-
   return(
 
     <div style={subCardStyle}>
   <div class="card-photo" style={cardPhotoStyle}>
               <div style={imgStyle}>
-                <Pic src={path} />
+                <img src={path} />
                 
                 </div>
                 <div class="count" style={countStyle}>{index}/{% for myimage in image_files %}{% assign numberTotal = forloop.length %}{% if forloop.first == true %}{{ numberTotal }}{% break %}{% endif %}{% endfor %}</div>
