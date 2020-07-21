@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import data from './dataoutput';
 
 class Hello extends Component {
   render() {
@@ -7,4 +8,7 @@ class Hello extends Component {
     )
   }
 }
+
+console.log(data);
+
 export default Hello;

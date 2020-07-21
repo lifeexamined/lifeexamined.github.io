@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
-import {render} from 'react-dom';
-import Gallery from './components/Gallery';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
+import Gallery from "./components/Gallery";
 
-class App extends Component {
+// change Swipe.js options by query params
+class PhotoGallery extends React.Component {
   render() {
     return (
-      <Hello />
-    )
+      <div className="center">
+        <Gallery />
+      </div>
+    );
   }
 }
 
-render(<Gallery />, document.getElementById('mygallery'));
+ReactDOM.render(<PhotoGallery />, document.getElementById("root"));
