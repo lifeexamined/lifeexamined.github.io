@@ -13,7 +13,7 @@ The goal of philosophy is the determination of truth that is not a goal in itsel
 
 {% include post-files.md %}
 
-{% assign photoName = 'cover-photo.jpg' %}
+{% assign photoName = 'cover-photo.jpeg' %}
 [![image1]({% include photo-link.md %})]({{ postFiles }}/{{ photoName }})
 
 #### Language
