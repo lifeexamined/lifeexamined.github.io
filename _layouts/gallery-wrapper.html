@@ -4,6 +4,7 @@
   {% include head.html %}
 
   <body>
+    <div class="body-wrapper">
     {% include header.html %}
     <div id="gallery-slider"></div>
     <div class="page-content">
@@ -12,10 +13,14 @@
         {{ content }}
         </div>
       </div>
+
+      {% include footer.html %}
+
     </div>
 
-    {% include footer.html %}
 
+
+    </div>
   </body>
 
 </html>
