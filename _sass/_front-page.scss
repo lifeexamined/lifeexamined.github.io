@@ -40,12 +40,17 @@ $on-laptop:        800px;
     }
 }
 
+.site-title {
+    margin-top: 25px !important;
+}
+
 h1 {
     font-size: 72px !important;
     font-family: 'Oleo Script', cursive !important;
 
     text-align: center;
-    top: 25px !important;
+    margin-top:0 !important;
+
     margin-bottom: 0px !important;
 
     text-shadow: 0 1px 0 #ccc, 
