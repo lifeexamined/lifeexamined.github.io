@@ -4,7 +4,7 @@ title:  "Foundations of Philosophy"
 date:   2020-07-26 14:54:36 -0700
 categories: article
 tag: blog
-image: cover-photo.jpg
+image: cover-photo.jpeg
 ---
 
 Philosophy is a process of examination of consciousness.
