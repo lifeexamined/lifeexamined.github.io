@@ -24,6 +24,11 @@ blog_directory: /assets/blog/
 # Build settings
 markdown: kramdown
 
+#Sass
+sass:
+    sass_dir: _sass
+    style: :compressed
+
 #List Images
 defaults:
   - scope:
