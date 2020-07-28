@@ -23,7 +23,7 @@
   <meta name="twitter:site" content="https://lifeexamined.github.io/blog/{{ page.categories }}/{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}/{{ page.title | slugify }}.html" />
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }} Read more at Examined!" />
-  <meta name="twitter:image" content="https://lifeexamined.github.io/assets/images/000.jpg" />
+  <meta name="twitter:image" content="https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}/{{ page.image }}" />
 
   <meta property="og:url"                content="https://lifeexamined.github.io/blog/{{ page.categories }}/{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}/{{ page.title | slugify }}.html" />
   <meta property="og:title"              content="{{ page.title }}" />
