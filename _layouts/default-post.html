@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="./src/font-awesome.min.css"> -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon-32x32.png">
+  
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }} Read more at Examined!" />
+  <meta name="twitter:image" content="https://lifeexamined.github.io/assets/images/000.jpg" />
+
+  <meta property="og:url"                content="https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}" />
+  <meta property="og:title"              content="{{ page.title }}" />
+  <meta property="og:description"        content="{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }} Read more at Examined!" />
+  <meta property="og:image"              content="https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}/{{ page.image }}" />
+
+</head>
+
+  <body>
+    <div class="body-wrapper">
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    </div>
+  </body>
+
+</html>
