@@ -4,14 +4,14 @@ title:  "The Lake Conundrum"
 date:   2020-07-20 14:54:36 -0700
 categories: article
 tag: blog
-image: cover-photo.jpg
+image: cover-photo.jpeg
 ---
 
 I came across an interesting video, which was released by the project “Astra Nova,” which is related to the “Ad Astra” school created by Elon Musk.
 
 {% include post-files.md %}
 
-{% assign photoName = 'cover-photo.jpg' %}
+{% assign photoName = 'cover-photo.jpeg' %}
 [![image1]({% include photo-link.md %})]({{ postFiles }}/{{ photoName }})
 
 Even though this is a challenge for kids aged 8 to 13 years old, I still find it very curious, and wanted to use an opportunity to show my thought process on this.
