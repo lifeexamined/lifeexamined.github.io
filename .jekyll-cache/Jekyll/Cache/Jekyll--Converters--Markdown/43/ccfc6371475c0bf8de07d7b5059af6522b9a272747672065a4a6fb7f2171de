@@ -1,34 +1,6 @@
-I"�<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
+I"�<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
 
 <div class="row-wrapper">
-
-
-
-<a href="/about/nikita-novik/">
-    <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-        <figure class="mdl-card__media">
-            <img src="
-                
-            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita-novik.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
-                
-                " alt="" />
-        </figure>
-        <div class="mdl-card__content">
-        <div class="mdl-card__title">
-            <h3 class="mdl-card__title-text">Nikita Novik</h3>
-        </div>
-        <div class="mdl-card__supporting-text">
-            <p>Nikita is a full-stack web designer with an extensive experience. He built this website using Jek...</p>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-<a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/nikita-novik/">Read More</a>
-<div class="mdl-layout-spacer"></div>
-<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-</div>
-    </div>
-</div>
-    </a>
 
 
 
@@ -46,10 +18,38 @@
             <h3 class="mdl-card__title-text">Kirill Novik</h3>
         </div>
         <div class="mdl-card__supporting-text">
-            <p>Kirill is a senior web developer with an extensive experience. Along with Nikita Novik they are w...</p>
+            <p>The decision to start exploring the computer science direction came after I took a bioinformatics...</p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
 <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/kirill-novik/">Read More</a>
+<div class="mdl-layout-spacer"></div>
+<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+</div>
+    </div>
+</div>
+    </a>
+
+
+
+<a href="/about/nikita-novik/">
+    <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+        <figure class="mdl-card__media">
+            <img src="
+                
+            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+                
+                " alt="" />
+        </figure>
+        <div class="mdl-card__content">
+        <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Nikita Novik</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>I always thought my dream was to work in the film or game industry, making something millions of ...</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+<a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/nikita-novik/">Read More</a>
 <div class="mdl-layout-spacer"></div>
 <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
             <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
