@@ -4,7 +4,7 @@ title:  "Foundations of Philosophy"
 date:   2020-07-26 14:54:36 -0700
 categories: article
 tag: blog
-image: cover-photo.jpeg
+image: cover-photo.jpg
 ---
 
 Philosophy is a process of examination of consciousness.
@@ -13,7 +13,7 @@ The goal of philosophy is the determination of truth that is not a goal in itsel
 
 {% include post-files.md %}
 
-{% assign photoName = 'cover-photo.jpeg' %}
+{% assign photoName = 'cover-photo.jpg' %}
 [![image1]({% include photo-link.md %})]({{ postFiles }}/{{ photoName }})
 
 #### Language
