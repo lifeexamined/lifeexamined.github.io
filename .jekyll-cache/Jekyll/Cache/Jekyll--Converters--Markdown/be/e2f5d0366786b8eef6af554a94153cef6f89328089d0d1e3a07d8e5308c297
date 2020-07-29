@@ -1,4 +1,4 @@
-I"_<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
+I"�<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
 
 <div class="row-wrapper">
 
@@ -9,7 +9,7 @@
         <figure class="mdl-card__media">
             <img src="
                 
-            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/kirill-novik.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+            &lt;!-- https://images.weserv.nl/?url=https://lifeexamined.github.io/about/kirill.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65 --&gt;
                 
                 " alt="" />
         </figure>
@@ -18,7 +18,7 @@
             <h3 class="mdl-card__title-text">Kirill Novik</h3>
         </div>
         <div class="mdl-card__supporting-text">
-            <p>[]</p>
+            <p>The decision to start exploring the computer science direction came after I took a bioinformatics...</p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
 <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/kirill-novik/">Read More</a>
@@ -37,7 +37,7 @@
         <figure class="mdl-card__media">
             <img src="
                 
-            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita-novik.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+            &lt;!-- https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65 --&gt;
                 
                 " alt="" />
         </figure>

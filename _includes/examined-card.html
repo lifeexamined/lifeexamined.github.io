@@ -3,7 +3,7 @@
 				<figure class="mdl-card__media">
 					<img src="
 					{% if page.url contains 'about' %}
-						https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/images/{{ post.image }}&w=600&h=400&output=jpg&q=65
+						https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/images/{{ post.image }}&w=600&output=jpg&q=65
 						
 					{% else %}
 					https://images.weserv.nl/?url=https://lifeexamined.github.io{{ site.blog_directory }}{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%d' }}-{{ post.title | slugify }}/{{ post.image }}&w=800&h=500&output=jpg&q=65
