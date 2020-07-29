@@ -1,4 +1,4 @@
-I"�<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
+I"�<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
 
 <div class="row-wrapper">
 
@@ -9,7 +9,7 @@
         <figure class="mdl-card__media">
             <img src="
                 
-            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/kirill-novik.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+            &lt;!-- https://images.weserv.nl/?url=https://lifeexamined.github.io/about/ about.image &amp;w=800&amp;h=500&amp;output=jpg&amp;q=65 --&gt;
                 
                 " alt="" />
         </figure>
@@ -37,7 +37,7 @@
         <figure class="mdl-card__media">
             <img src="
                 
-            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+            &lt;!-- https://images.weserv.nl/?url=https://lifeexamined.github.io/about/ about.image &amp;w=800&amp;h=500&amp;output=jpg&amp;q=65 --&gt;
                 
                 " alt="" />
         </figure>
