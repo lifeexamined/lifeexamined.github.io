@@ -49,6 +49,7 @@
         {{ content }}
       </div>
     </div>
+    <div class="mdl-post-actions-wrapper">
     <div class="mdl-post-actions">
       <button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
       <div id="{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}-number"></div>
@@ -62,6 +63,7 @@
     <div id="{{page.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
     <input id="{{page.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ page.url }}" readonly>
     <button id="{{page.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+    </div>
     </div>
     <div class="mdl-card__actions mdl-card--border"></div>
 

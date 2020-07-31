@@ -362,8 +362,19 @@ p > a > img {
 }
 
 .mdl-post-actions {
+
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 540px;
+    padding-bottom: 8px;
+}
+
+.mdl-post-actions-wrapper {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
