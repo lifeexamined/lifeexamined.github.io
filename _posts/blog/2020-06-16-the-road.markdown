@@ -20,9 +20,6 @@ The night was cold and a bit scary, because that’s when coyotes come out on th
 
 For the longest time my brother and I were thinking about alternative ways of living, and owning a land totally allows for it.
 
-{% assign photoName = '001.jpg' %}
-[![image1]({% include photo-link.md %})]({{ postFiles }}/{{ photoName }})
-
 
 
 <span class="likebtn-wrapper" data-theme="heartcross" data-ef_voting="push" data-identifier="{{ page.title | slugify }}" data-dislike_enabled="false"></span>

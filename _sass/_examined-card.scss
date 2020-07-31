@@ -156,6 +156,11 @@ a {
 	margin-left: 14px;
 }
 
+.mdl-button-content-copy {
+	width: 60px !important;
+	// height: 60px !important;
+}
+
 .mdl-share-invisible {
 	display: none;
 	scale: 10%;
@@ -165,6 +170,7 @@ a {
 .mdl-share-visible {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 ._89n_ {

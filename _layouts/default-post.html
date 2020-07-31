@@ -60,12 +60,15 @@
 
 
     </div>
+    <div style="width: 100%;">
     <div id="{{page.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
     <input id="{{page.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ page.url }}" readonly>
-    <button id="{{page.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+    <div><button id="{{page.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+
     </div>
+    <div id="mdl-share-bottom" class="mdl-card__actions mdl-card--border mdl-share-invisible "></div>
+    </div> 
     </div>
-    <div class="mdl-card__actions mdl-card--border"></div>
 
 
     {% include footer.html %}
@@ -151,6 +154,7 @@
         mdlShare.classList.toggle("mdl-share-invisible");
         console.log(clicked);
         mdlShare.classList.toggle("mdl-share-visible");
+        document.getElementById("mdl-share-bottom").classList.toggle("mdl-share-invisible");
       }
 
         function copyCB(clickedCB){

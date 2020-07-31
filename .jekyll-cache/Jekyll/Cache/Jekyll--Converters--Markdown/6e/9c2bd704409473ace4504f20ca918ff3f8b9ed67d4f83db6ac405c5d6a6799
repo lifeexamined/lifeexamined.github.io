@@ -1,4 +1,4 @@
-I"�l<p>This is the “Examined!” blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"�l<p>This is the “Examined!” blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="examined-wrapper">
 	
@@ -28,7 +28,7 @@
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
 					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="2020-07-29-2-for-slow-4-for-fast" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
-					<div id="2020-07-29-2-for-slow-4-for-fast-number"></div>
+					<div id="2020-07-29-2-for-slow-4-for-fast-number">∞</div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="1"></div> -->
 					
@@ -38,7 +38,7 @@
 	  </div>
 	  <div id="2-for-slow-4-for-fast-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="2-for-slow-4-for-fast-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
-		<button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+		<div class="mdl-button-content-copy"><button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 		</div>
 			</div>
 		</div>
@@ -143,9 +143,9 @@
 
 						document.execCommand("copy");
 
-						alert("The link is copied to the clipboard!");
 					}
 				</script>
+
 	
 	
 	
@@ -174,7 +174,7 @@
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
 					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="2020-07-26-foundations-of-philosophy" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
-					<div id="2020-07-26-foundations-of-philosophy-number"></div>
+					<div id="2020-07-26-foundations-of-philosophy-number">∞</div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="2"></div> -->
 					
@@ -184,7 +184,7 @@
 	  </div>
 	  <div id="foundations-of-philosophy-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="foundations-of-philosophy-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
-		<button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+		<div class="mdl-button-content-copy"><button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 		</div>
 			</div>
 		</div>
@@ -289,9 +289,9 @@
 
 						document.execCommand("copy");
 
-						alert("The link is copied to the clipboard!");
 					}
 				</script>
+
 	
 	
 	
@@ -320,7 +320,7 @@
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
 					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="2020-07-20-the-lake-conundrum" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
-					<div id="2020-07-20-the-lake-conundrum-number"></div>
+					<div id="2020-07-20-the-lake-conundrum-number">∞</div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="3"></div> -->
 					
@@ -330,7 +330,7 @@
 	  </div>
 	  <div id="the-lake-conundrum-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="the-lake-conundrum-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
-		<button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+		<div class="mdl-button-content-copy"><button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 		</div>
 			</div>
 		</div>
@@ -435,9 +435,9 @@
 
 						document.execCommand("copy");
 
-						alert("The link is copied to the clipboard!");
 					}
 				</script>
+
 	
 	
 	
@@ -466,7 +466,7 @@
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
 					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="2020-06-16-the-road" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
-					<div id="2020-06-16-the-road-number"></div>
+					<div id="2020-06-16-the-road-number">∞</div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="4"></div> -->
 					
@@ -476,7 +476,7 @@
 	  </div>
 	  <div id="the-road-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="the-road-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/16/the-road.html" readonly="" />
-		<button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+		<div class="mdl-button-content-copy"><button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 		</div>
 			</div>
 		</div>
@@ -581,9 +581,9 @@
 
 						document.execCommand("copy");
 
-						alert("The link is copied to the clipboard!");
 					}
 				</script>
+
 	
 	
 	
@@ -612,7 +612,7 @@
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
 					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="2020-06-12-unexamined-life-is-not-worth-living" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
-					<div id="2020-06-12-unexamined-life-is-not-worth-living-number"></div>
+					<div id="2020-06-12-unexamined-life-is-not-worth-living-number">∞</div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="5"></div> -->
 					
@@ -622,7 +622,7 @@
 	  </div>
 	  <div id="unexamined-life-is-not-worth-living-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="unexamined-life-is-not-worth-living-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
-		<button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+		<div class="mdl-button-content-copy"><button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 		</div>
 			</div>
 		</div>
@@ -727,9 +727,9 @@
 
 						document.execCommand("copy");
 
-						alert("The link is copied to the clipboard!");
 					}
 				</script>
+
 	
 	
 </div>
