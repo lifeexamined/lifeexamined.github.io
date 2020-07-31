@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: about-post
 title:  "Kirill Novik"
 date:   1990-04-15 14:54:36 -0700
 categories: about
