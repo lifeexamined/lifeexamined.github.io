@@ -22,11 +22,121 @@
 <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ about.url }}">Read More</a>
 <div class="mdl-layout-spacer"></div>
 <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-</div>
-    </div>
-</div>
-    </a>
+            <div>∞</div>
+            <button id="{{about.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
+
+
+        </div>
+        <div id="{{about.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+          <input id="{{about.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ about.url }}" readonly>
+          <button id="{{about.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+          </div>
+              </div>
+          </div>
+              </a>
+              <script>
+                  // Your web app's Firebase configuration
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyCdoUqYQWuZzxiSJMdwXj3N0yidb6AP7EA",
+                    authDomain: "examined-like-button.firebaseapp.com",
+                    databaseURL: "https://examined-like-button.firebaseio.com",
+                    projectId: "examined-like-button",
+                    storageBucket: "examined-like-button.appspot.com",
+                    messagingSenderId: "199178087959",
+                    appId: "1:199178087959:web:a126b16c1abfad1e93f652",
+                    measurementId: "G-FDQNQNF2RE"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+                  firebase.analytics();
+                </script>
+              <script>
+                  var loopLngth = document.getElementsByClassName("mdl-button-like").length;
+                  var cards = document.getElementsByClassName("mdl-button-like");
+  
+                  
+  
+  
+                  // console.log(likeFillIn);
+  
+                       firebase.database().ref('/likes/').on("value", function(snapshot) {
+                  
+                      // document.getElementById(likeFillIn + "-number").innerHTML = snapshot.val();
+                      snapshot.forEach(function(childSnapshot){
+  
+                      // console.log(snapshot.val());
+                      console.log(childSnapshot.key);
+                      document.getElementById(childSnapshot.key + "-number").innerHTML = childSnapshot.val();
+                      // document.getElementById(cards[likeFillIn].id + "-number").innerHTML = snapshot.val();
+                      
+                      })
+  
+                  //   );
+  
+                  });
+                  
+                     function saveLike(clicked_id){
+                              // var id = 1;
+                              // var random = Math.random();
+                              // var timestamp = Math.round(random*100);
+                              // var obj = {};
+                              // obj[timestamp] = id + 1;
+                              // console.log(obj);
+                  
+                  
+                              // firebase.database().ref('/').update(obj, function(error) {
+                              //     if (error) {
+                              //         alert("Invalid email");
+                              //     } else {
+                              //         alert("Thank you for subscribing and happy learning");
+                              //     }
+                              // });
+                    // A about entry.
+  
+                                  console.log(clicked_id);
+  
+                    document.getElementById(clicked_id + "-number").innerHTML = Number(document.getElementById(clicked_id + "-number").innerHTML) + 1;
+                  
+                    firebase.database().ref('/likes/' + clicked_id + '/').set(
+                      Number(document.getElementById(clicked_id + "-number").innerHTML),
+                    );
+                  }
+                  
+                    
+                    
+                    // on("value", function(snapshot) {
+                    //   var postData =  number(likeFillIn.innerHTML) + 1;
+                    //   var updates = {};
+                    //   updates['/philosophy/'] = postData + 1;
+                  
+                    //   return firebase.database().ref().update(updates);
+                  
+                    // });
+                  
+                    // Write the new about's data simultaneously in the posts list and the user's about list.
+                  
+                  
+                  </script>
+                  <script>
+              
+                      function toggleClass(clicked) {
+                          var mdlShare = document.getElementById(clicked + "-mdl-share");
+                      mdlShare.classList.toggle("mdl-share-invisible");
+                      console.log(clicked);
+                      mdlShare.classList.toggle("mdl-share-visible");
+                  }
+  
+                      function copyCB(clickedCB){
+                          var copyText = document.getElementById(clickedCB + "-input");
+                          console.log(clickedCB);
+                          copyText.select();
+                          // copyText.setSelectRange(0, 99999);
+  
+                          document.execCommand("copy");
+  
+                      }
+                  </script>
+                  
 
 {% endfor %}
 

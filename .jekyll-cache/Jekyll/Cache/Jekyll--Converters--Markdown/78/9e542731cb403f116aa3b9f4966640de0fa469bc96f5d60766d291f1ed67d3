@@ -1,0 +1,310 @@
+I"17<p>“Unexamined life is not worth living,” the ancient philosopher said. This blog is dedicated to reflection on the vivid and memorable aspects of everyday life, for the life that is worth writing about is certainly worth living.</p>
+
+<div class="row-wrapper">
+
+
+
+<a href="/about/kirill-novik/">
+    <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+        <figure class="mdl-card__media">
+            <img src="
+                
+            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/kirill.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+                
+                " alt="" />
+        </figure>
+        <div class="mdl-card__content">
+        <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Kirill Novik</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>The decision to start exploring the computer science direction came after I took a bioinformatics...</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+<a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/kirill-novik/">Read More</a>
+<div class="mdl-layout-spacer"></div>
+<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <div>∞</div>
+            <button id="kirill-novik" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
+
+
+        </div>
+        <div id="kirill-novik-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+          <input id="kirill-novik-input" class="mdl-share-input" type="text" value="http://localhost:4000/about/kirill-novik/" readonly="" />
+          <button id="kirill-novik" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+          </div>
+              </div>
+          </div>
+              </a>
+              <script>
+                  // Your web app's Firebase configuration
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyCdoUqYQWuZzxiSJMdwXj3N0yidb6AP7EA",
+                    authDomain: "examined-like-button.firebaseapp.com",
+                    databaseURL: "https://examined-like-button.firebaseio.com",
+                    projectId: "examined-like-button",
+                    storageBucket: "examined-like-button.appspot.com",
+                    messagingSenderId: "199178087959",
+                    appId: "1:199178087959:web:a126b16c1abfad1e93f652",
+                    measurementId: "G-FDQNQNF2RE"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+                  firebase.analytics();
+                </script>
+              <script>
+                  var loopLngth = document.getElementsByClassName("mdl-button-like").length;
+                  var cards = document.getElementsByClassName("mdl-button-like");
+  
+                  
+  
+  
+                  // console.log(likeFillIn);
+  
+                       firebase.database().ref('/likes/').on("value", function(snapshot) {
+                  
+                      // document.getElementById(likeFillIn + "-number").innerHTML = snapshot.val();
+                      snapshot.forEach(function(childSnapshot){
+  
+                      // console.log(snapshot.val());
+                      console.log(childSnapshot.key);
+                      document.getElementById(childSnapshot.key + "-number").innerHTML = childSnapshot.val();
+                      // document.getElementById(cards[likeFillIn].id + "-number").innerHTML = snapshot.val();
+                      
+                      })
+  
+                  //   );
+  
+                  });
+                  
+                     function saveLike(clicked_id){
+                              // var id = 1;
+                              // var random = Math.random();
+                              // var timestamp = Math.round(random*100);
+                              // var obj = {};
+                              // obj[timestamp] = id + 1;
+                              // console.log(obj);
+                  
+                  
+                              // firebase.database().ref('/').update(obj, function(error) {
+                              //     if (error) {
+                              //         alert("Invalid email");
+                              //     } else {
+                              //         alert("Thank you for subscribing and happy learning");
+                              //     }
+                              // });
+                    // A about entry.
+  
+                                  console.log(clicked_id);
+  
+                    document.getElementById(clicked_id + "-number").innerHTML = Number(document.getElementById(clicked_id + "-number").innerHTML) + 1;
+                  
+                    firebase.database().ref('/likes/' + clicked_id + '/').set(
+                      Number(document.getElementById(clicked_id + "-number").innerHTML),
+                    );
+                  }
+                  
+                    
+                    
+                    // on("value", function(snapshot) {
+                    //   var postData =  number(likeFillIn.innerHTML) + 1;
+                    //   var updates = {};
+                    //   updates['/philosophy/'] = postData + 1;
+                  
+                    //   return firebase.database().ref().update(updates);
+                  
+                    // });
+                  
+                    // Write the new about's data simultaneously in the posts list and the user's about list.
+                  
+                  
+                  </script>
+                  <script>
+              
+                      function toggleClass(clicked) {
+                          var mdlShare = document.getElementById(clicked + "-mdl-share");
+                      mdlShare.classList.toggle("mdl-share-invisible");
+                      console.log(clicked);
+                      mdlShare.classList.toggle("mdl-share-visible");
+                  }
+  
+                      function copyCB(clickedCB){
+                          var copyText = document.getElementById(clickedCB + "-input");
+                          console.log(clickedCB);
+                          copyText.select();
+                          // copyText.setSelectRange(0, 99999);
+  
+                          document.execCommand("copy");
+  
+                      }
+                  </script>
+                  
+
+
+
+<a href="/about/nikita-novik/">
+    <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+        <figure class="mdl-card__media">
+            <img src="
+                
+            https://images.weserv.nl/?url=https://lifeexamined.github.io/about/nikita.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+                
+                " alt="" />
+        </figure>
+        <div class="mdl-card__content">
+        <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Nikita Novik</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>I always thought my dream was to work in the film or game industry, making something millions of ...</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+<a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/about/nikita-novik/">Read More</a>
+<div class="mdl-layout-spacer"></div>
+<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <div>∞</div>
+            <button id="nikita-novik" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
+
+
+        </div>
+        <div id="nikita-novik-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+          <input id="nikita-novik-input" class="mdl-share-input" type="text" value="http://localhost:4000/about/nikita-novik/" readonly="" />
+          <button id="nikita-novik" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+          </div>
+              </div>
+          </div>
+              </a>
+              <script>
+                  // Your web app's Firebase configuration
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyCdoUqYQWuZzxiSJMdwXj3N0yidb6AP7EA",
+                    authDomain: "examined-like-button.firebaseapp.com",
+                    databaseURL: "https://examined-like-button.firebaseio.com",
+                    projectId: "examined-like-button",
+                    storageBucket: "examined-like-button.appspot.com",
+                    messagingSenderId: "199178087959",
+                    appId: "1:199178087959:web:a126b16c1abfad1e93f652",
+                    measurementId: "G-FDQNQNF2RE"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+                  firebase.analytics();
+                </script>
+              <script>
+                  var loopLngth = document.getElementsByClassName("mdl-button-like").length;
+                  var cards = document.getElementsByClassName("mdl-button-like");
+  
+                  
+  
+  
+                  // console.log(likeFillIn);
+  
+                       firebase.database().ref('/likes/').on("value", function(snapshot) {
+                  
+                      // document.getElementById(likeFillIn + "-number").innerHTML = snapshot.val();
+                      snapshot.forEach(function(childSnapshot){
+  
+                      // console.log(snapshot.val());
+                      console.log(childSnapshot.key);
+                      document.getElementById(childSnapshot.key + "-number").innerHTML = childSnapshot.val();
+                      // document.getElementById(cards[likeFillIn].id + "-number").innerHTML = snapshot.val();
+                      
+                      })
+  
+                  //   );
+  
+                  });
+                  
+                     function saveLike(clicked_id){
+                              // var id = 1;
+                              // var random = Math.random();
+                              // var timestamp = Math.round(random*100);
+                              // var obj = {};
+                              // obj[timestamp] = id + 1;
+                              // console.log(obj);
+                  
+                  
+                              // firebase.database().ref('/').update(obj, function(error) {
+                              //     if (error) {
+                              //         alert("Invalid email");
+                              //     } else {
+                              //         alert("Thank you for subscribing and happy learning");
+                              //     }
+                              // });
+                    // A about entry.
+  
+                                  console.log(clicked_id);
+  
+                    document.getElementById(clicked_id + "-number").innerHTML = Number(document.getElementById(clicked_id + "-number").innerHTML) + 1;
+                  
+                    firebase.database().ref('/likes/' + clicked_id + '/').set(
+                      Number(document.getElementById(clicked_id + "-number").innerHTML),
+                    );
+                  }
+                  
+                    
+                    
+                    // on("value", function(snapshot) {
+                    //   var postData =  number(likeFillIn.innerHTML) + 1;
+                    //   var updates = {};
+                    //   updates['/philosophy/'] = postData + 1;
+                  
+                    //   return firebase.database().ref().update(updates);
+                  
+                    // });
+                  
+                    // Write the new about's data simultaneously in the posts list and the user's about list.
+                  
+                  
+                  </script>
+                  <script>
+              
+                      function toggleClass(clicked) {
+                          var mdlShare = document.getElementById(clicked + "-mdl-share");
+                      mdlShare.classList.toggle("mdl-share-invisible");
+                      console.log(clicked);
+                      mdlShare.classList.toggle("mdl-share-visible");
+                  }
+  
+                      function copyCB(clickedCB){
+                          var copyText = document.getElementById(clickedCB + "-input");
+                          console.log(clickedCB);
+                          copyText.select();
+                          // copyText.setSelectRange(0, 99999);
+  
+                          document.execCommand("copy");
+  
+                      }
+                  </script>
+                  
+
+
+
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ef152a79beda208"></script>  -->
+
+<!-- Facebook Script -->
+<!-- <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="3RHdeTUM"></script> -->
+<!-- Facebook Script END -->
+
+<!-- LikeBtn.com BEGIN -->
+<!-- <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script> -->
+<!-- LikeBtn.com END -->
+
+<!-- <script>
+
+var request = new XMLHttpRequest();
+request.open('GET', 'https://lifeexamined.github.io/', false);  // `false` makes the request synchronous
+request.send(null);
+
+if (request.status === 200) {
+  console.log(request.responseText);
+
+}
+
+</script> -->
+
+:ET
