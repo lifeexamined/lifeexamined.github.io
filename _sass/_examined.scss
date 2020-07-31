@@ -369,6 +369,10 @@ p > a > img {
     align-items: center;
     width: 540px;
     padding-bottom: 8px;
+
+    @include media-query($on-palm){
+        width: 90% !important;
+    }
 }
 
 .mdl-post-actions-wrapper {
