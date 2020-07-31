@@ -34,7 +34,7 @@
 
 
 	  </div>
-	  <div id="{{post.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible mdl-share-visible">
+	  <div id="{{post.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
 		<input id="{{post.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ post.url }}" readonly>
 		<button id="{{post.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
@@ -130,6 +130,7 @@
 						var mdlShare = document.getElementById(clicked + "-mdl-share");
 					mdlShare.classList.toggle("mdl-share-invisible");
 					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
 				}
 
 					function copyCB(clickedCB){
@@ -140,6 +141,6 @@
 
 						document.execCommand("copy");
 
-						alert("Link is copied to the clipboard!");
+						alert("The link is copied to the clipboard!");
 					}
 				</script>

@@ -30,6 +30,13 @@
   <meta property="og:description"        content="{{ page.excerpt | strip_html | strip_newlines | truncate: 100 }} Read more at Examined!" />
   <meta property="og:image"              content="https://lifeexamined.github.io{{ site.blog_directory }}{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%d' }}-{{ page.title | slugify }}/{{ page.image }}" />
 
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
 
 </head>
 
@@ -42,10 +49,121 @@
         {{ content }}
       </div>
     </div>
+    <div class="mdl-post-actions-wrapper">
+    <div class="mdl-post-actions">
+      <button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
+      <div id="{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}-number"></div>
+
+      <!-- <div class="lb-count-copy" data-cardnum="{{ forloop.index }}"></div> -->
+      
+      <button id="{{page.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
+
+
+    </div>
+    <div id="{{page.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+    <input id="{{page.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ page.url }}" readonly>
+    <button id="{{page.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
+    </div>
+    </div>
+    <div class="mdl-card__actions mdl-card--border"></div>
+
 
     {% include footer.html %}
 
     </div>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCdoUqYQWuZzxiSJMdwXj3N0yidb6AP7EA",
+        authDomain: "examined-like-button.firebaseapp.com",
+        databaseURL: "https://examined-like-button.firebaseio.com",
+        projectId: "examined-like-button",
+        storageBucket: "examined-like-button.appspot.com",
+        messagingSenderId: "199178087959",
+        appId: "1:199178087959:web:a126b16c1abfad1e93f652",
+        measurementId: "G-FDQNQNF2RE"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      </script>
+    <script>
+      				var loopLngth = document.getElementsByClassName("mdl-button-like").length;
+				var cards = document.getElementsByClassName("mdl-button-like");
+
+				
+
+
+				// console.log(likeFillIn);
+
+				 	firebase.database().ref("/likes/{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}").on("value", function(snapshot) {
+				
+            document.getElementById("{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}-number").innerHTML = snapshot.val();
+
+				});
+				
+				   function saveLike(clicked_id){
+							// var id = 1;
+							// var random = Math.random();
+							// var timestamp = Math.round(random*100);
+							// var obj = {};
+							// obj[timestamp] = id + 1;
+							// console.log(obj);
+				
+				
+							// firebase.database().ref('/').update(obj, function(error) {
+							//     if (error) {
+							//         alert("Invalid email");
+							//     } else {
+							//         alert("Thank you for subscribing and happy learning");
+							//     }
+							// });
+				  // A post entry.
+
+								console.log(clicked_id);
+
+				  document.getElementById(clicked_id + "-number").innerHTML = Number(document.getElementById(clicked_id + "-number").innerHTML) + 1;
+				
+				  firebase.database().ref('/likes/' + clicked_id + '/').set(
+					Number(document.getElementById(clicked_id + "-number").innerHTML),
+				  );
+				}
+      
+        
+        
+        // on("value", function(snapshot) {
+        //   var pageData =  number(likeFillIn.innerHTML) + 1;
+        //   var updates = {};
+        //   updates['/philosophy/'] = pageData + 1;
+      
+        //   return firebase.database().ref().update(updates);
+      
+        // });
+      
+        // Write the new page's data simultaneously in the pages list and the user's page list.
+      
+      
+      </script>
+      <script>
+    
+        function toggleClass(clicked) {
+          var mdlShare = document.getElementById(clicked + "-mdl-share");
+        mdlShare.classList.toggle("mdl-share-invisible");
+        console.log(clicked);
+        mdlShare.classList.toggle("mdl-share-visible");
+      }
+
+        function copyCB(clickedCB){
+          var copyText = document.getElementById(clickedCB + "-input");
+          console.log(clickedCB);
+          copyText.select();
+          // copyText.setSelectRange(0, 99999);
+
+          document.execCommand("copy");
+
+          alert("The link is copied to the clipboard!");
+        }
+      </script>
   </body>
 
 </html>

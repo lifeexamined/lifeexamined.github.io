@@ -153,12 +153,18 @@ a {
 
 .mdl-share-input {
 	width: 100%;
+	margin-left: 14px;
 }
 
 .mdl-share-invisible {
 	display: none;
 	scale: 10%;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
+}
+
+.mdl-share-visible {
+	display: flex;
+	flex-direction: row;
 }
 
 ._89n_ {
