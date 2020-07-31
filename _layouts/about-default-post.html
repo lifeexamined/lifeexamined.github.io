@@ -94,18 +94,7 @@
       				var loopLngth = document.getElementsByClassName("mdl-button-like").length;
 				var cards = document.getElementsByClassName("mdl-button-like");
 
-				
-
-
-				// console.log(likeFillIn);
-
-				 	firebase.database().ref("/likes/{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}").on("value", function(snapshot) {
-				
-            document.getElementById("{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}-{{ page.title | slugify }}-number").innerHTML = snapshot.val();
-
-				});
-				
-				   
+					   
       
         
         
