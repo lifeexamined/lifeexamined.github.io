@@ -1,4 +1,4 @@
-I"�\<p>This is the “Examined!” blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"�l<p>This is the “Examined!” blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="examined-wrapper">
 	
@@ -32,13 +32,13 @@
 
 					<!-- <div class="lb-count-copy" data-cardnum="1"></div> -->
 					
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+					<button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
 
 
 	  </div>
-	  <div id="mdl-share" class="mdl-card__actions mdl-card--border">
-		<input type="text" value="/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
-		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">copy</i></button>
+	  <div id="2-for-slow-4-for-fast-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+		<input id="2-for-slow-4-for-fast-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
+		<button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
 			</div>
 		</div>
@@ -125,6 +125,26 @@
 				  // Write the new post's data simultaneously in the posts list and the user's post list.
 				
 				
+				</script>
+				<script>
+			
+					function toggleClass(clicked) {
+						var mdlShare = document.getElementById(clicked + "-mdl-share");
+					mdlShare.classList.toggle("mdl-share-invisible");
+					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
+				}
+
+					function copyCB(clickedCB){
+						var copyText = document.getElementById(clickedCB + "-input");
+						console.log(clickedCB);
+						copyText.select();
+						// copyText.setSelectRange(0, 99999);
+
+						document.execCommand("copy");
+
+						alert("Link is copied to the clipboard!");
+					}
 				</script>
 	
 	
@@ -158,13 +178,13 @@
 
 					<!-- <div class="lb-count-copy" data-cardnum="2"></div> -->
 					
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+					<button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
 
 
 	  </div>
-	  <div id="mdl-share" class="mdl-card__actions mdl-card--border">
-		<input type="text" value="/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
-		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">copy</i></button>
+	  <div id="foundations-of-philosophy-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+		<input id="foundations-of-philosophy-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
+		<button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
 			</div>
 		</div>
@@ -251,6 +271,26 @@
 				  // Write the new post's data simultaneously in the posts list and the user's post list.
 				
 				
+				</script>
+				<script>
+			
+					function toggleClass(clicked) {
+						var mdlShare = document.getElementById(clicked + "-mdl-share");
+					mdlShare.classList.toggle("mdl-share-invisible");
+					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
+				}
+
+					function copyCB(clickedCB){
+						var copyText = document.getElementById(clickedCB + "-input");
+						console.log(clickedCB);
+						copyText.select();
+						// copyText.setSelectRange(0, 99999);
+
+						document.execCommand("copy");
+
+						alert("Link is copied to the clipboard!");
+					}
 				</script>
 	
 	
@@ -284,13 +324,13 @@
 
 					<!-- <div class="lb-count-copy" data-cardnum="3"></div> -->
 					
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+					<button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
 
 
 	  </div>
-	  <div id="mdl-share" class="mdl-card__actions mdl-card--border">
-		<input type="text" value="/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
-		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">copy</i></button>
+	  <div id="the-lake-conundrum-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+		<input id="the-lake-conundrum-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
+		<button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
 			</div>
 		</div>
@@ -377,6 +417,26 @@
 				  // Write the new post's data simultaneously in the posts list and the user's post list.
 				
 				
+				</script>
+				<script>
+			
+					function toggleClass(clicked) {
+						var mdlShare = document.getElementById(clicked + "-mdl-share");
+					mdlShare.classList.toggle("mdl-share-invisible");
+					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
+				}
+
+					function copyCB(clickedCB){
+						var copyText = document.getElementById(clickedCB + "-input");
+						console.log(clickedCB);
+						copyText.select();
+						// copyText.setSelectRange(0, 99999);
+
+						document.execCommand("copy");
+
+						alert("Link is copied to the clipboard!");
+					}
 				</script>
 	
 	
@@ -410,13 +470,13 @@
 
 					<!-- <div class="lb-count-copy" data-cardnum="4"></div> -->
 					
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+					<button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
 
 
 	  </div>
-	  <div id="mdl-share" class="mdl-card__actions mdl-card--border">
-		<input type="text" value="/blog/article/2020/06/16/the-road.html" readonly="" />
-		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">copy</i></button>
+	  <div id="the-road-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+		<input id="the-road-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/16/the-road.html" readonly="" />
+		<button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
 			</div>
 		</div>
@@ -504,6 +564,26 @@
 				
 				
 				</script>
+				<script>
+			
+					function toggleClass(clicked) {
+						var mdlShare = document.getElementById(clicked + "-mdl-share");
+					mdlShare.classList.toggle("mdl-share-invisible");
+					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
+				}
+
+					function copyCB(clickedCB){
+						var copyText = document.getElementById(clickedCB + "-input");
+						console.log(clickedCB);
+						copyText.select();
+						// copyText.setSelectRange(0, 99999);
+
+						document.execCommand("copy");
+
+						alert("Link is copied to the clipboard!");
+					}
+				</script>
 	
 	
 	
@@ -536,13 +616,13 @@
 
 					<!-- <div class="lb-count-copy" data-cardnum="5"></div> -->
 					
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+					<button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored" onclick="toggleClass(this.id)"><i class="material-icons">share</i></button>
 
 
 	  </div>
-	  <div id="mdl-share" class="mdl-card__actions mdl-card--border">
-		<input type="text" value="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
-		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">copy</i></button>
+	  <div id="unexamined-life-is-not-worth-living-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
+		<input id="unexamined-life-is-not-worth-living-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
+		<button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
 		</div>
 			</div>
 		</div>
@@ -629,6 +709,26 @@
 				  // Write the new post's data simultaneously in the posts list and the user's post list.
 				
 				
+				</script>
+				<script>
+			
+					function toggleClass(clicked) {
+						var mdlShare = document.getElementById(clicked + "-mdl-share");
+					mdlShare.classList.toggle("mdl-share-invisible");
+					console.log(clicked);
+					mdlShare.classList.toggle("mdl-share-visible");
+				}
+
+					function copyCB(clickedCB){
+						var copyText = document.getElementById(clickedCB + "-input");
+						console.log(clickedCB);
+						copyText.select();
+						// copyText.setSelectRange(0, 99999);
+
+						document.execCommand("copy");
+
+						alert("Link is copied to the clipboard!");
+					}
 				</script>
 	
 	

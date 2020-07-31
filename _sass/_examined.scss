@@ -360,3 +360,10 @@ h2.post-title {
 p > a > img {
     width: 100% !important;
 }
+
+.mdl-post-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
