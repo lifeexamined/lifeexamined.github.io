@@ -25,7 +25,8 @@
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
 					<!-- <div class="addthis_inline_share_toolbox"></div>  -->
 
-					<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+					<button class="mdl-button mdl-button-like mdl-button--icon mdl-button--colored" id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}" onclick="saveLike(this.id)"><i class="material-icons">favorite</i></button>
+					<div id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}-number"></div>
 
 					<!-- <div class="lb-count-copy" data-cardnum="{{ forloop.index }}"></div> -->
 					
@@ -34,4 +35,86 @@
 			</div>
 		</div>
 			</a>
- 
+			<script>
+				// Your web app's Firebase configuration
+				var firebaseConfig = {
+				  apiKey: "AIzaSyCdoUqYQWuZzxiSJMdwXj3N0yidb6AP7EA",
+				  authDomain: "examined-like-button.firebaseapp.com",
+				  databaseURL: "https://examined-like-button.firebaseio.com",
+				  projectId: "examined-like-button",
+				  storageBucket: "examined-like-button.appspot.com",
+				  messagingSenderId: "199178087959",
+				  appId: "1:199178087959:web:a126b16c1abfad1e93f652",
+				  measurementId: "G-FDQNQNF2RE"
+				};
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				firebase.analytics();
+			  </script>
+			<script>
+				var loopLngth = document.getElementsByClassName("mdl-button-like").length;
+				var cards = document.getElementsByClassName("mdl-button-like");
+
+				
+
+
+				// console.log(likeFillIn);
+
+				 	firebase.database().ref('/likes/').on("value", function(snapshot) {
+				
+					// document.getElementById(likeFillIn + "-number").innerHTML = snapshot.val();
+					snapshot.forEach(function(childSnapshot){
+
+					// console.log(snapshot.val());
+					console.log(childSnapshot.key);
+					document.getElementById(childSnapshot.key + "-number").innerHTML = childSnapshot.val();
+					// document.getElementById(cards[likeFillIn].id + "-number").innerHTML = snapshot.val();
+					
+					})
+
+				//   );
+
+				});
+				
+				   function saveLike(clicked_id){
+							// var id = 1;
+							// var random = Math.random();
+							// var timestamp = Math.round(random*100);
+							// var obj = {};
+							// obj[timestamp] = id + 1;
+							// console.log(obj);
+				
+				
+							// firebase.database().ref('/').update(obj, function(error) {
+							//     if (error) {
+							//         alert("Invalid email");
+							//     } else {
+							//         alert("Thank you for subscribing and happy learning");
+							//     }
+							// });
+				  // A post entry.
+
+								console.log(clicked_id);
+
+				  document.getElementById(clicked_id + "-number").innerHTML = Number(document.getElementById(clicked_id + "-number").innerHTML) + 1;
+				
+				  firebase.database().ref('/likes/' + clicked_id + '/').set(
+					Number(document.getElementById(clicked_id + "-number").innerHTML),
+				  );
+				}
+				
+				  
+				  
+				  // on("value", function(snapshot) {
+				  //   var postData =  number(likeFillIn.innerHTML) + 1;
+				  //   var updates = {};
+				  //   updates['/philosophy/'] = postData + 1;
+				
+				  //   return firebase.database().ref().update(updates);
+				
+				  // });
+				
+				  // Write the new post's data simultaneously in the posts list and the user's post list.
+				
+				
+				</script>
