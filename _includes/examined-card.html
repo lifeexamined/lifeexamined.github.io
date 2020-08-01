@@ -36,12 +36,13 @@
 
 
 	  </div>
-	  <div id="{{post.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="{{post.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ post.url }}" readonly>
-		<div class="mdl-button-content-copy"><button id="{{post.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="{{post.title | slugify}}-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="{{post.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ post.url }}" readonly>
+			<div class="mdl-button-content-copy"><button id="{{post.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>

@@ -169,9 +169,24 @@ a {
 }
 
 .mdl-share-input {
-	width: 100%;
+	width: 60%;
 	margin-left: 14px;
 
+	@include media-query($on-palm){
+		width: 100% !important;
+	}
+
+}
+
+@function share-width($property, $selector: null) {
+	@return $magic;
+}
+
+.mdl-share__actions {
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	position: absolute;
+	z-index: 10;
+	width: 213.6px !important;
 }
 
 .mdl-about-share-input {
@@ -206,7 +221,7 @@ a {
 }
 
 .mdl-card {
-	height: 240px;
+	// height: 240px;
 	width: 100% !important;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 	// height: 75vh !important;
@@ -275,7 +290,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	// justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 
 	@include media-query($on-palm){
 		flex-direction: column;
@@ -322,7 +337,8 @@ a {
 .mdl-card__title {
 
 	padding-top: 14px !important;
-	padding-bottom: 8px !important;	
+	padding-bottom: 8px !important;
+	height: 60px;
 
 	@include media-query($on-palm){
 

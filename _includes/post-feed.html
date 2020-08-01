@@ -1,3 +1,4 @@
+<div class="my-wrapper">
 <div class="examined-wrapper">
 	{% for post in site.posts %}
 	{% unless post.categories contains 'about' %}
@@ -5,5 +6,5 @@
 	{% endunless %}
 	{% endfor %}
 </div>
-
+</div>
 {% include scripts.html %}
