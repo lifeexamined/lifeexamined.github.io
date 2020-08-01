@@ -28,7 +28,7 @@
 
         </div>
         <div id="{{about.title | slugify}}-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-          <input id="{{about.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ about.url }}" readonly>
+          <input id="{{about.title | slugify}}-input" class="mdl-about-share-input" type="text" value="{{ site.url }}{{ about.url }}" readonly>
           <button id="{{about.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored" onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button>
           </div>
               </div>
