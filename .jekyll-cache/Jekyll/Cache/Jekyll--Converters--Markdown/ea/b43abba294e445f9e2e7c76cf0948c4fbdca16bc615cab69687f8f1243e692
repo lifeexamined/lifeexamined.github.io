@@ -1,0 +1,118 @@
+I"�3<p>I want to share some of my experiences getting to know WebRTC, and try to explain why it is MUCH harder than it seems. Yet, I hope that my insights will help you to get started with your WebRTC projects.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/WebRTC">WebRTC</a> (Web Real-Time Communication) is an API that can be used by video-chat, voice-calling, and P2P-file-sharing Web apps.</p>
+
+<p>WebRTC is not a new technology, and there have been many articles about it. (check out some links at the end!) However, the impression I got from reading those articles is that it is easy to get started with simple WebRTC real-world use case scenarios.</p>
+
+<p>Just look at <a href="https://youtu.be/p2HzZkd2A40">this Google I/O presentation </a> dating back to 2013. I watched this video just a couple of days ago, and it got me really excited! Sam Dutton and Justin Uberti have done a great job at the presentation. They were able to clearly explain what this project accomplished and what challenges their team has overcome. This video, as well as many other resources, made it look like WebRTC is pretty easy to get into.</p>
+
+<p>However, as I started implementing a simple client, I soon realized that it is not that easy, and here is why.</p>
+
+<p>P.S. No, I’m not going to talk about NAT, STUN or TURN, but the API itself</p>
+
+<p>First of all, to establish some context, I was trying to build a simple client that can send and receive connections from RTC peers whether local or remote.</p>
+
+<p>I started with a <a href="https://webrtc.github.io/samples/src/content/peerconnection/pc1/">peer connection sample</a> that the WebRTC team has provided. As I was examining the source, one thing was immediately apparent — a really huge mess associated with event handling. It is really hard to follow, and trace what follows what. Most importantly, it was very confusing where the most important steps of connection establishment, namely ‘offer’ and ‘answer,’ happen.</p>
+
+<p>Once I got over the confusion and the steps were clear to me, and I understood how the metadata exchange happens, I went to the next step trying to learn how to use signaling to establish remote connections.</p>
+
+<p>Trying to understand how to properly do signaling was also very disappointing. Mainly, because interacting with an external system is always prone to errors and is extremely hard and time-consuming to debug. To clarify: I wanted to recreate my personal signaling server, to make sure I understand the underlying logic.</p>
+
+<p>Here is the path I took in order to accomplish recreate my personal signaling.</p>
+
+<p>I decided to mock the WebSocket server by having a simple Pub/Sub interface to represent it. For these purposes I used RxJS. Working locally, I could have used it as an abstraction, and just swap the underlying logic behind the interface once my client was in the remote mode.</p>
+
+<p>However, once I started writing the local-mode code, it got really bulky. There was a lot of interconnection between basic signaling, RTC-related messages, connection, and channel handling. It didn’t take long before it all has become one big spaghetti-like mess.</p>
+
+<p>It was clear that I need to somehow separate those concerns.</p>
+
+<p>After some thinking, I came to the conclusion that it would be absolutely great if the only thing my client object knew was when a new connection gets established, and I could subscribe to various media or data channel events accordingly. That’s it. This minimal representation of WebRTC could be just enough to hide all the implementation details. Of course, it doesn’t mean I didn’t need to take care of the underlying logic, and, moreover, it didn’t mean that I was going to do it declaratively via some configuration (because I am really against such approach for many reasons, especially due to the difficulties with debugging and testing).</p>
+
+<p>Here is what the client class looks like:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">  
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">Client</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">generateId</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+
+  <span class="c1">// Channels</span>
+  <span class="kr">private</span> <span class="nx">dataChannels</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">]:</span> <span class="nx">RTCDataChannel</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kr">private</span> <span class="nx">streams</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">]:</span> <span class="nx">MediaStream</span><span class="p">[]</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="c1">// Agents</span>
+  <span class="kr">private</span> <span class="nx">BroadcastingAgent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BroadcastingAgent</span><span class="p">(</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+    <span class="nx">CommunicationSubject</span>
+  <span class="p">);</span>
+  <span class="kr">private</span> <span class="nx">RTCMessagingAgent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RTCMessagingAgent</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">BroadcastingAgent</span><span class="p">);</span>
+  <span class="kr">private</span> <span class="nx">ConnectionManager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ConnectionManager</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">RTCMessagingAgent</span><span class="p">);</span>
+
+  <span class="c1">// Subjects</span>
+  <span class="kr">private</span> <span class="nx">OnDataChannelMessageSubject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="o">&lt;</span><span class="p">[</span><span class="nx">string</span><span class="p">,</span> <span class="nx">string</span><span class="p">]</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="kr">private</span> <span class="nx">OnDataChannelSubject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="o">&lt;</span><span class="p">[</span><span class="nx">string</span><span class="p">,</span> <span class="nx">RTCDataChannel</span><span class="p">]</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="kr">private</span> <span class="nx">OnStreamSubject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="o">&lt;</span><span class="p">[</span><span class="nx">string</span><span class="p">,</span> <span class="nx">MediaStream</span><span class="p">]</span><span class="o">&gt;</span><span class="p">();</span>
+
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">OnDataChannelMessageSubject</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">onDataChannelMessageSubjectHandler</span>
+    <span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ConnectionManager</span><span class="p">.</span><span class="nx">OnConnectionCreatedSubject</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">onConnectionCreatedHandler</span>
+    <span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ConnectionManager</span><span class="p">.</span><span class="nx">OnStreamSubject</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onStreamHandler</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">BroadcastingAgent</span><span class="p">.</span><span class="nx">sendGreeting</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Connection</span>
+  <span class="nx">onConnectionCreatedHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">message</span><span class="p">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">,</span> <span class="nx">RTCPeerConnection</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="c1">// Stream</span>
+  <span class="nx">addStreamToConnection</span> <span class="o">=</span> <span class="p">(</span><span class="nx">connection</span><span class="p">:</span> <span class="nx">RTCPeerConnection</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">addStream</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">stream</span><span class="p">:</span> <span class="nx">MediaStream</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">onStreamHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">stream</span><span class="p">:</span> <span class="nx">MediaStream</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">onTrackHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">ev</span><span class="p">:</span> <span class="nx">RTCTrackEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="c1">// Data Channel</span>
+  <span class="nx">sendDataToChannel</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">message</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">onDataChannelHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">ev</span><span class="p">:</span> <span class="nx">RTCDataChannelEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">onDataChannelMessageHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">ev</span><span class="p">:</span> <span class="nx">MessageEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+
+  <span class="nx">onDataChannelMessageSubjectHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">message</span><span class="p">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">,</span> <span class="nx">string</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>I split the underlying logic into three categories:</p>
+
+<ol>
+  <li>Broadcasting</li>
+  <li>RTC-Messaging</li>
+  <li>Connection Management</li>
+</ol>
+
+<p>Broadcasting</p>
+
+<p>I decided to use the simplest broadcasting, where the broadcasting agent broadcasts to every participant. This would allow us to abstract away the implementation of server-side WebSocket signaling.</p>
+
+<p>Here is what the broadcasting agent class looks like:</p>
+:ET
