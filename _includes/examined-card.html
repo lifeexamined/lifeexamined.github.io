@@ -1,3 +1,5 @@
+<div class="one-third">
+	<div class="examined-card-wrapper">
 <a href="{{ post.url }}">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -13,7 +15,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">{{ post.title }}</h3>
+					<h3 class="mdl-card__title-text-adj">{{ post.title }}</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
@@ -41,6 +43,9 @@
 			</div>
 		</div>
 			</a>
+			</div>
+			</div>
+
 			<script>
 				// Your web app's Firebase configuration
 				var firebaseConfig = {
@@ -143,3 +148,4 @@
 
 					}
 				</script>
+

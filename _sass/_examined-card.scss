@@ -54,6 +54,12 @@ a {
 #read-more-button {
 	width: 100px !important;
 	display: flex;
+	font-size: 8px !important;
+
+	@include media-query($on-palm){
+		font-size: 12px !important;
+	}
+
 }
 
 .fa {
@@ -67,8 +73,10 @@ a {
 }
 
 .mdl-button.mdl-button--colored {
+
 	font-weight: 400;
 	font-family: Arial, Helvetica, sans-serif;
+	
 }
 
 .single-menu {
@@ -103,14 +111,17 @@ a {
 // }
 
 .content-wrapper {
+
 	padding-top: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .mdl-grid {
+
 	max-width: 600px;
 	display: flex !important;
 	flex-direction: column !important;
@@ -120,6 +131,7 @@ a {
 	@include media-query($on-palm) {
 		width: 100vw !important;
 	}
+
 }
 
 .mdl-card__media {
@@ -139,6 +151,11 @@ a {
 	display: flex;
 	box-sizing:border-box;
 	align-items: center;
+	padding: 0 !important;
+
+	@include media-query($on-palm){
+		padding: 8px !important;
+	}
 }
 .mdl-card__actions > .mdl-button--icon {
 	margin-right: 3px;
@@ -189,6 +206,7 @@ a {
 }
 
 .mdl-card {
+	height: 240px;
 	width: 100% !important;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 	// height: 75vh !important;
@@ -210,11 +228,14 @@ a {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between !important;
 
 	}
 
 	@include media-query($on-palm){
 		width: 100% !important;
+		height: auto !important;
+
 	}
 
 }
@@ -228,7 +249,15 @@ a {
 
 
 .mdl-cell {
-	margin: 8px 0px 25px 0px !important;
+
+	margin: 0 !important;
+
+	@include media-query($on-palm){
+
+		margin: 8px 0px 25px 0px !important;
+
+	}
+
 }
 
 .post {
@@ -267,8 +296,83 @@ a {
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text {
 		display: none !important;
 
+
+		@include media-query($on-palm){
+			justify-content: flex-start;
+		}
+
 	}
 
+ .mdl-card__title-text-adj {	
+	font-weight: 400 !important;
+	font-size: 14px !important;
+	margin: 0;
+	line-height: 18px;
+
+	@include media-query($on-palm){
+		font-weight: 100 !important !important;
+		font-size: 24px !important;
+		line-height: 32px;
+
+
+	}
+
+}
+
+.mdl-card__title {
+
+	padding-top: 14px !important;
+	padding-bottom: 8px !important;	
+
+	@include media-query($on-palm){
+
+		padding-top: 20px !important;
+		padding-bottom: 10px !important;	
+	
+	}
+
+}
+
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__title > .mdl-card__title-text {	
-	font-weight: 300 !important;
+	font-weight: 100 !important;
+	font-size: 18px !important;
+
+	@include media-query($on-palm){
+		font-weight: 400 !important !important;
+	}
+
+}
+
+.examined-wrapper {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+
+}
+
+.examined-card-wrapper {
+
+	padding: 6px;
+
+}
+
+.one-third {
+
+	width: calc(100% / 3);
+
+	@include media-query($on-palm) {
+		width: 100%;
+	}
+
+}
+
+.mdl-card__supporting-text {
+
+	display: none;
+
+	@include media-query($on-palm) {
+		display: inline-block;
+	}
 }
