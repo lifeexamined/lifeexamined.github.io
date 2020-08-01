@@ -1,4 +1,4 @@
-I"–l<p>This is the ‚ÄúExamined!‚Äù blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I" l<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="examined-wrapper">
 	
@@ -602,7 +602,7 @@
 					<h3 class="mdl-card__title-text">Unexamined Life is Not Worth Living</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
-					<p>Unexamined Life is Not Worth Living. These words might seem a bit harsh but it‚Äôs true. Just like ...</p>
+					<p>Unexamined Life is Not Worth Living. These words might seem a bit harsh but it's true. Just like ...</p>
 				</div>
 				<div class="mdl-card__actions mdl-card--border">
     <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">Read More</a>

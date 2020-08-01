@@ -16,6 +16,6 @@ I have always tried to figure out how to write songs easily. I studied music the
 
 After I analyzed my experience a little further I came up with what I call _the golden rule of songwriting_:
 
->2 chords for a slow song and 4 chords for a fast one -- that's all you need to have to know what the song will be like in its entirety.
+<blockquote>2 chords for a slow song and 4 chords for a fast one -- that's all you need to have to know what the song will be like in its entirety.</blockquote>
 
 Here are some examples. I just play F#m followed by E with the 6/8 rhythm and automatically (the people who have heard this timeless classic, of course) it's clear what song I'm playing. Or, for example, if I play am dm E am D C E, you realize that this is the theme song from the movie Le Jouet. I chose these songs because they have the most recognizable and clear-cut melodies that I've heard. These are the songs that I personally would be proud of if I wrote them myself because in my opinion, they represent the pinnacle of songwriting.
