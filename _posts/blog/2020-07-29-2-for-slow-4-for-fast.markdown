@@ -4,7 +4,7 @@ title:  "2 for Slow, 4 for Fast"
 date:   2020-07-29 14:54:36 -0700
 categories: article
 tag: blog
-image: cover-photo.jpg
+image: cover-photo-2.jpg
 ---
 
 I have always tried to figure out how to write songs easily. I studied music theory, learned how to play hundreds of songs and composed about 20 of my own. As I was summing up my knowledge I saw the pattern of how my musical intuition works. I noticed that as I was playing two chords of every song that I've ever played my brain was always filling in the blanks and guiding me in what direction the song should progress. It's truly amazing how the song is right there after you have strummed just two chords. I'm not saying that everyone experiences it exactly the same way as I do, but for me, it works like that.

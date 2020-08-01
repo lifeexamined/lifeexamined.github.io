@@ -1,5 +1,6 @@
-I"}n<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"žn<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
+<div class="my-wrapper">
 <div class="examined-wrapper">
 	
 	
@@ -10,7 +11,7 @@
 				<figure class="mdl-card__media">
 					<img src="
 					
-					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo-2.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
 						
 					
 						" alt="" />
@@ -763,7 +764,7 @@
 	
 	
 </div>
-
+</div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ef152a79beda208"></script>  -->
 

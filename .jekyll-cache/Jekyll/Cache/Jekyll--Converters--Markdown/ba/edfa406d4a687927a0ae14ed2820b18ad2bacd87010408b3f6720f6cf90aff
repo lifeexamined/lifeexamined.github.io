@@ -1,10 +1,11 @@
-I"n<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"�n<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
+<div class="my-wrapper">
 <div class="examined-wrapper">
 	
 	
+	<div class="one-third">
 	<div class="examined-card-wrapper">
-	<div>
 <a href="/blog/article/2020/07/29/2-for-slow-4-for-fast.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -17,7 +18,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">2 for Slow, 4 for Fast</h3>
+					<h3 class="mdl-card__title-text-adj">2 for Slow, 4 for Fast</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>I have always tried to figure out how to write songs easily. I studied music theory, learned how ...</p>
@@ -155,8 +156,8 @@
 	
 	
 	
+	<div class="one-third">
 	<div class="examined-card-wrapper">
-	<div>
 <a href="/blog/article/2020/07/26/foundations-of-philosophy.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -169,7 +170,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">Foundations of Philosophy</h3>
+					<h3 class="mdl-card__title-text-adj">Foundations of Philosophy</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>Philosophy is a process of examination of consciousness.</p>
@@ -307,8 +308,8 @@
 	
 	
 	
+	<div class="one-third">
 	<div class="examined-card-wrapper">
-	<div>
 <a href="/blog/article/2020/07/20/the-lake-conundrum.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -321,7 +322,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">The Lake Conundrum</h3>
+					<h3 class="mdl-card__title-text-adj">The Lake Conundrum</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>I came across an interesting video, which was released by the project “Astra Nova,” which is rela...</p>
@@ -459,8 +460,8 @@
 	
 	
 	
+	<div class="one-third">
 	<div class="examined-card-wrapper">
-	<div>
 <a href="/blog/article/2020/06/16/the-road.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -473,7 +474,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">The Road</h3>
+					<h3 class="mdl-card__title-text-adj">The Road</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back ...</p>
@@ -611,8 +612,8 @@
 	
 	
 	
+	<div class="one-third">
 	<div class="examined-card-wrapper">
-	<div>
 <a href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 				<figure class="mdl-card__media">
@@ -625,7 +626,7 @@
 				</figure>
 				<div class="mdl-card__content">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text">Unexamined Life is Not Worth Living</h3>
+					<h3 class="mdl-card__title-text-adj">Unexamined Life is Not Worth Living</h3>
 				</div>
 				<div class="mdl-card__supporting-text">
 					<p>Unexamined Life is Not Worth Living. These words might seem a bit harsh but it's true. Just like ...</p>
@@ -763,7 +764,7 @@
 	
 	
 </div>
-
+</div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ef152a79beda208"></script>  -->
 
