@@ -275,7 +275,7 @@ body {
     width: 100%;
 
     @include media-query($on-palm){
-        width: 350px !important;
+        max-width: 460px !important;
     }
 }
 
