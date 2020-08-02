@@ -183,10 +183,16 @@ a {
 }
 
 .mdl-share__actions {
-	background-color: rgba(255, 255, 255, 0.7) !important;
+	background-color: rgba(255, 255, 255, 0.5) !important;
 	position: absolute;
 	z-index: 10;
-	width: 213.6px !important;
+	width: 228px !important;
+
+	@include media-query($on-palm){
+		position: relative;
+		width: 100% !important;
+	}
+
 }
 
 .mdl-about-share-input {
@@ -269,13 +275,17 @@ a {
 
 	@include media-query($on-palm){
 
-		margin: 8px 0px 25px 0px !important;
+		margin: 14px 0px 0px 0px !important;
 
 	}
 
 }
 
 .post {
+	width: 100%;
+}
+
+.blog-post {
 	width: 90%;
 }
 
@@ -343,15 +353,17 @@ a {
 	@include media-query($on-palm){
 
 		padding-top: 20px !important;
-		padding-bottom: 10px !important;	
+		padding-bottom: 10px !important;
+		height: 100%;
+	
 	
 	}
 
 }
 
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__title > .mdl-card__title-text {	
-	font-weight: 100 !important;
-	font-size: 18px !important;
+	font-weight: 300 !important;
+	font-size: 24px !important;
 
 	@include media-query($on-palm){
 		font-weight: 400 !important !important;

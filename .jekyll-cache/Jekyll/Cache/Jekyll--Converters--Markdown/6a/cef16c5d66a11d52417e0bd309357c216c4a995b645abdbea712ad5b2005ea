@@ -1,4 +1,4 @@
-I"žn<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"o<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="my-wrapper">
 <div class="examined-wrapper">
@@ -11,7 +11,7 @@
 				<figure class="mdl-card__media">
 					<img src="
 					
-					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo-2.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo-3.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
 						
 					
 						" alt="" />
@@ -39,12 +39,13 @@
 
 
 	  </div>
-	  <div id="2-for-slow-4-for-fast-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="2-for-slow-4-for-fast-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
-		<div class="mdl-button-content-copy"><button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="2-for-slow-4-for-fast-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="2-for-slow-4-for-fast-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
+			<div class="mdl-button-content-copy"><button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>
@@ -191,12 +192,13 @@
 
 
 	  </div>
-	  <div id="foundations-of-philosophy-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="foundations-of-philosophy-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
-		<div class="mdl-button-content-copy"><button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="foundations-of-philosophy-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="foundations-of-philosophy-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
+			<div class="mdl-button-content-copy"><button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>
@@ -343,12 +345,13 @@
 
 
 	  </div>
-	  <div id="the-lake-conundrum-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="the-lake-conundrum-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
-		<div class="mdl-button-content-copy"><button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="the-lake-conundrum-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="the-lake-conundrum-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
+			<div class="mdl-button-content-copy"><button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>
@@ -495,12 +498,13 @@
 
 
 	  </div>
-	  <div id="the-road-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="the-road-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/16/the-road.html" readonly="" />
-		<div class="mdl-button-content-copy"><button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="the-road-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="the-road-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/16/the-road.html" readonly="" />
+			<div class="mdl-button-content-copy"><button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>
@@ -647,12 +651,13 @@
 
 
 	  </div>
-	  <div id="unexamined-life-is-not-worth-living-mdl-share" class="mdl-card__actions mdl-card--border mdl-share-invisible">
-		<input id="unexamined-life-is-not-worth-living-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
-		<div class="mdl-button-content-copy"><button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-		</div>
+
 			</div>
 		</div>
+		<div id="unexamined-life-is-not-worth-living-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
+			<input id="unexamined-life-is-not-worth-living-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
+			<div class="mdl-button-content-copy"><button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
+			</div>
 			</a>
 			</div>
 			</div>
