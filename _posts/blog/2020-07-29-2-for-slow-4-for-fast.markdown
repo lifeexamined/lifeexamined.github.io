@@ -11,7 +11,7 @@ I have always tried to figure out how to write songs easily. I studied music the
 
 {% include post-files.md %}
 
-{% assign photoName = 'cover-photo.jpg' %}
+{% assign photoName = 'cover-photo-3.jpg' %}
 [![image1]({% include photo-link.md %})]({{ postFiles }}/{{ photoName }})
 
 After I analyzed my experience a little further I came up with what I call _the golden rule of songwriting_:
