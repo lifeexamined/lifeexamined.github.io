@@ -54,10 +54,10 @@ a {
 #read-more-button {
 	width: 100px !important;
 	display: flex;
-	font-size: 8px !important;
+	font-size: 12px !important;
 
 	@include media-query($on-palm){
-		font-size: 12px !important;
+		font-size: 14px !important;
 	}
 
 }
