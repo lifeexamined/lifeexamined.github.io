@@ -1,4 +1,4 @@
-I"öp<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"o<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="my-wrapper">
 <div class="examined-wrapper">
@@ -11,7 +11,7 @@
 				<figure class="mdl-card__media">
 					<img src="
 					
-					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo-2.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
+					https://images.weserv.nl/?url=https://lifeexamined.github.io/assets/blog/2020/07/29-2-for-slow-4-for-fast/cover-photo-4.jpg&amp;w=800&amp;h=500&amp;output=jpg&amp;q=65
 						
 					
 						" alt="" />
@@ -151,9 +151,6 @@
 						document.execCommand("copy");
 
 					}
-				</script>
-				<script>
-					var shareActions = document.getElementById("mdl-share__actions");
 				</script>
 
 
@@ -308,9 +305,6 @@
 
 					}
 				</script>
-				<script>
-					var shareActions = document.getElementById("mdl-share__actions");
-				</script>
 
 
 	
@@ -463,9 +457,6 @@
 						document.execCommand("copy");
 
 					}
-				</script>
-				<script>
-					var shareActions = document.getElementById("mdl-share__actions");
 				</script>
 
 
@@ -620,9 +611,6 @@
 
 					}
 				</script>
-				<script>
-					var shareActions = document.getElementById("mdl-share__actions");
-				</script>
 
 
 	
@@ -775,9 +763,6 @@
 						document.execCommand("copy");
 
 					}
-				</script>
-				<script>
-					var shareActions = document.getElementById("mdl-share__actions");
 				</script>
 
 

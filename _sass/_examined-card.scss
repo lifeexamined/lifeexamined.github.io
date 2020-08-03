@@ -382,7 +382,12 @@ a {
 
 .examined-card-wrapper {
 
+	margin-bottom: 18px;
 	padding: 6px;
+
+	@include media-query($on-palm) {
+		margin-bottom: 0;
+	}
 
 }
 
