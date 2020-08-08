@@ -79,6 +79,13 @@ a {
 	
 }
 
+.show-more-button {
+	width: 50% !important;
+	@include media-query($on-palm){
+		width: 40% !important;
+	}
+}
+
 .single-menu {
 	color: grey;
 }
@@ -237,10 +244,13 @@ a {
 
 	&__title{
 		padding: 26px 16px 16px 16px !important;
+
+		text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 	}
 
 	&__supporting-text {
 		padding: 0px 16px 0px 16px !important;
+		display: flex ;
 	}
 
 	&:hover{
@@ -256,14 +266,32 @@ a {
 
 	}
 
+	&__content-wrapper {
+		position: absolute;
+		bottom: 50px;
+	}
+
 	@include media-query($on-palm){
 		width: 100% !important;
 		height: auto !important;
+
+		&__content-wrapper {
+			position: absolute;
+			bottom: 60px;
+		}
+	
 
 	}
 
 }
 
+.visible-content {
+	display: none !important;
+}
+
+.white-bg {
+	background-color: white !important;
+}
 
 .mdl-card:hover > a > figure > img {
 		position: relative;
@@ -322,12 +350,9 @@ a {
 }
 
 .row-wrapper > .mdl-card > .mdl-card__content > a > .mdl-card__supporting-text {
-		display: none !important;
 
-
-		@include media-query($on-palm){
 			justify-content: flex-start;
-		}
+		
 
 	}
 
@@ -336,6 +361,25 @@ a {
 	font-size: 14px !important;
 	margin: 0;
 	line-height: 18px;
+	color: white !important;
+	text-shadow:  1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+
+	@include media-query($on-palm){
+		font-weight: 100 !important !important;
+		font-size: 24px !important;
+		line-height: 32px;
+
+
+	}
+
+}
+
+.mdl-card__title-text-adj-2 {	
+	font-weight: 400 !important;
+	font-size: 14px !important;
+	margin: 0;
+	line-height: 18px;
+	color: black !important;
 
 	@include media-query($on-palm){
 		font-weight: 100 !important !important;
@@ -404,11 +448,11 @@ a {
 
 }
 
-.mdl-card__supporting-text {
+.mdl-card__supporting-text > p {
 
-	display: none;
-
+	font-size: 12px !important;
+	
 	@include media-query($on-palm) {
-		display: inline-block;
+		font-size: 18px !important;
 	}
 }

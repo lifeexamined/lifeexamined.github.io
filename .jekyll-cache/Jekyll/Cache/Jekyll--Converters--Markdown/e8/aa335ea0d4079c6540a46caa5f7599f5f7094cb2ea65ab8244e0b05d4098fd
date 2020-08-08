@@ -1,4 +1,4 @@
-I"o<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
+I"úÄ<p>This is the "Examined!" blog. You can subscribe to our <a href="http://localhost:4000/feed.xml">RSS feed</a>.</p>
 
 <div class="my-wrapper">
 <div class="examined-wrapper">
@@ -6,8 +6,9 @@
 	
 	<div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="/blog/article/2020/07/29/2-for-slow-4-for-fast.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="/blog/article/2020/07/29/2-for-slow-4-for-fast.html">
+
 				<figure class="mdl-card__media">
 					<img src="
 					
@@ -17,14 +18,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="2020-07-29-2-for-slow-4-for-fast-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">2 for Slow, 4 for Fast</h3>
+					<h3 id="2020-07-29-2-for-slow-4-for-fast-read-more-button-text-adj" class="mdl-card__title-text-adj">2 for Slow, 4 for Fast</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="2020-07-29-2-for-slow-4-for-fast-read-more-button-supporting-text" class="visible-content">
 					<p>I have always tried to figure out how to write songs easily. I studied music theory, learned how ...</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/07/29/2-for-slow-4-for-fast.html">Read More</a>
+    <button id="2020-07-29-2-for-slow-4-for-fast-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -46,8 +52,6 @@
 			<input id="2-for-slow-4-for-fast-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/29/2-for-slow-4-for-fast.html" readonly="" />
 			<div class="mdl-button-content-copy"><button id="2-for-slow-4-for-fast" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 			</div>
-			</a>
-			</div>
 			</div>
 
 			<script>
@@ -152,6 +156,18 @@
 
 					}
 				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
+				</script>
 
 
 	
@@ -159,8 +175,9 @@
 	
 	<div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="/blog/article/2020/07/26/foundations-of-philosophy.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="/blog/article/2020/07/26/foundations-of-philosophy.html">
+
 				<figure class="mdl-card__media">
 					<img src="
 					
@@ -170,14 +187,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="2020-07-26-foundations-of-philosophy-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">Foundations of Philosophy</h3>
+					<h3 id="2020-07-26-foundations-of-philosophy-read-more-button-text-adj" class="mdl-card__title-text-adj">Foundations of Philosophy</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="2020-07-26-foundations-of-philosophy-read-more-button-supporting-text" class="visible-content">
 					<p>Philosophy is a process of examination of consciousness.</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/07/26/foundations-of-philosophy.html">Read More</a>
+    <button id="2020-07-26-foundations-of-philosophy-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -199,8 +221,6 @@
 			<input id="foundations-of-philosophy-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/26/foundations-of-philosophy.html" readonly="" />
 			<div class="mdl-button-content-copy"><button id="foundations-of-philosophy" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 			</div>
-			</a>
-			</div>
 			</div>
 
 			<script>
@@ -305,6 +325,18 @@
 
 					}
 				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
+				</script>
 
 
 	
@@ -312,8 +344,9 @@
 	
 	<div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="/blog/article/2020/07/20/the-lake-conundrum.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="/blog/article/2020/07/20/the-lake-conundrum.html">
+
 				<figure class="mdl-card__media">
 					<img src="
 					
@@ -323,14 +356,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="2020-07-20-the-lake-conundrum-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">The Lake Conundrum</h3>
+					<h3 id="2020-07-20-the-lake-conundrum-read-more-button-text-adj" class="mdl-card__title-text-adj">The Lake Conundrum</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="2020-07-20-the-lake-conundrum-read-more-button-supporting-text" class="visible-content">
 					<p>I came across an interesting video, which was released by the project ‚ÄúAstra Nova,‚Äù which is rela...</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/07/20/the-lake-conundrum.html">Read More</a>
+    <button id="2020-07-20-the-lake-conundrum-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -352,8 +390,6 @@
 			<input id="the-lake-conundrum-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/07/20/the-lake-conundrum.html" readonly="" />
 			<div class="mdl-button-content-copy"><button id="the-lake-conundrum" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 			</div>
-			</a>
-			</div>
 			</div>
 
 			<script>
@@ -458,6 +494,18 @@
 
 					}
 				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
+				</script>
 
 
 	
@@ -465,8 +513,9 @@
 	
 	<div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="/blog/article/2020/06/16/the-road.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="/blog/article/2020/06/16/the-road.html">
+
 				<figure class="mdl-card__media">
 					<img src="
 					
@@ -476,14 +525,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="2020-06-16-the-road-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">The Road</h3>
+					<h3 id="2020-06-16-the-road-read-more-button-text-adj" class="mdl-card__title-text-adj">The Road</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="2020-06-16-the-road-read-more-button-supporting-text" class="visible-content">
 					<p>We decided to take a vacation and visit our land in Hartsel, Colorado, a land Kirill bought back ...</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/16/the-road.html">Read More</a>
+    <button id="2020-06-16-the-road-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -505,8 +559,6 @@
 			<input id="the-road-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/16/the-road.html" readonly="" />
 			<div class="mdl-button-content-copy"><button id="the-road" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 			</div>
-			</a>
-			</div>
 			</div>
 
 			<script>
@@ -611,6 +663,18 @@
 
 					}
 				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
+				</script>
 
 
 	
@@ -618,8 +682,9 @@
 	
 	<div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">
+
 				<figure class="mdl-card__media">
 					<img src="
 					
@@ -629,14 +694,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="2020-06-12-unexamined-life-is-not-worth-living-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">Unexamined Life is Not Worth Living</h3>
+					<h3 id="2020-06-12-unexamined-life-is-not-worth-living-read-more-button-text-adj" class="mdl-card__title-text-adj">Unexamined Life is Not Worth Living</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="2020-06-12-unexamined-life-is-not-worth-living-read-more-button-supporting-text" class="visible-content">
 					<p>Unexamined Life is Not Worth Living. These words might seem a bit harsh but it's true. Just like ...</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html">Read More</a>
+    <button id="2020-06-12-unexamined-life-is-not-worth-living-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -658,8 +728,6 @@
 			<input id="unexamined-life-is-not-worth-living-input" class="mdl-share-input" type="text" value="http://localhost:4000/blog/article/2020/06/12/unexamined-life-is-not-worth-living.html" readonly="" />
 			<div class="mdl-button-content-copy"><button id="unexamined-life-is-not-worth-living" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
 			</div>
-			</a>
-			</div>
 			</div>
 
 			<script>
@@ -763,6 +831,18 @@
 						document.execCommand("copy");
 
 					}
+				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
 				</script>
 
 

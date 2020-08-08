@@ -1,7 +1,8 @@
 <div class="one-third">
 	<div class="examined-card-wrapper">
-<a href="{{ post.url }}">
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+				<a href="{{ post.url }}">
+
 				<figure class="mdl-card__media">
 					<img src="
 					{% if page.url contains 'about' %}
@@ -14,14 +15,19 @@
 						" alt="" />
 				</figure>
 				<div class="mdl-card__content">
+					<div id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}-read-more-button-content-wrapper" class="mdl-card__content-wrapper">
 				<div class="mdl-card__title">
-					<h3 class="mdl-card__title-text-adj">{{ post.title }}</h3>
+					<h3 id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}-read-more-button-text-adj" class="mdl-card__title-text-adj">{{ post.title }}</h3>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}-read-more-button-supporting-text" class="visible-content">
 					<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
 				</div>
+					</div>
+				</div>
+				</a>
+
 				<div class="mdl-card__actions mdl-card--border">
-    <a id="read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url }}">Read More</a>
+    <button id="{{ post.date | date: '%Y' }}-{{ post.date | date: '%m' }}-{{ post.date | date: '%d' }}-{{ post.title | slugify }}-read-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect show-more-button" onclick="showMore(this.id)">Show More</button>
     <div class="mdl-layout-spacer"></div>
 					
 					<!-- Go to www.addthis.com/dashboard to customize your tools --> 
@@ -42,8 +48,6 @@
 		<div id="{{post.title | slugify}}-mdl-share" class="mdl-share__actions mdl-card__actions mdl-card--border mdl-share-invisible">
 			<input id="{{post.title | slugify}}-input" class="mdl-share-input" type="text" value="{{ site.url }}{{ post.url }}" readonly>
 			<div class="mdl-button-content-copy"><button id="{{post.title | slugify}}" class="mdl-button mdl-button--icon mdl-button--colored " onclick="copyCB(this.id)"><i class="material-icons">content_copy</i></button></div>
-			</div>
-			</a>
 			</div>
 			</div>
 
@@ -148,5 +152,17 @@
 						document.execCommand("copy");
 
 					}
+				</script>
+				<script>
+					function showMore(selectedId) {
+				
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("visible-content");
+					console.log("hi!!!!");
+					document.getElementById(selectedId + "-supporting-text").classList.toggle("mdl-card__supporting-text");
+					document.getElementById(selectedId + "-content-wrapper").classList.toggle("white-bg");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj");
+					document.getElementById(selectedId + "-text-adj").classList.toggle("mdl-card__title-text-adj-2");
+
+				}
 				</script>
 
