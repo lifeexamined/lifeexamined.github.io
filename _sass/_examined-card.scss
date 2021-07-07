@@ -146,6 +146,7 @@ a {
 	overflow: hidden;
 	background-color: white !important;
 	position: relative;
+	margin: 2.2%;
 }
 
 .mdl-card__media > img {
@@ -360,6 +361,7 @@ a {
 	font-weight: 900 !important;
 	font-size: 21px !important;
 	margin: 0;
+
 	line-height: 24px;
 	color: white !important;
 	-webkit-text-stroke: 1px black;
@@ -396,7 +398,6 @@ a {
 
 	padding-top: 14px !important;
 	padding-bottom: 14px !important;
-	height: 60px;
 
 	@include media-query($on-palm){
 
